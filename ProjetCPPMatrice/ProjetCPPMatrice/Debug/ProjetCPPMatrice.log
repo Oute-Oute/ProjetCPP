@@ -1,0 +1,40 @@
+﻿  CException.cpp
+  CMatrice.cpp
+  COperationsMatrice.cpp
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(28): error C2804: trop de paramètres pour l'opérateur binaire 'operator *'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(30): error C2804: trop de paramètres pour l'opérateur binaire 'operator *'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(32): error C2804: trop de paramètres pour l'opérateur binaire 'operator /'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(36): error C2143: erreur de syntaxe : absence de ';' avant '&'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(36): error C2182: 'ostream' : utilisation non conforme du type 'void'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(36): error C2433: 'ostream' : 'friend' non autorisé sur les déclarations de données
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(36): error C2238: jetons inattendus avant ';'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(8): error C2533: 'COperationsMatrice::{ctor}' : type de retour non autorisé pour les constructeurs
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(23): error C2589: '&' : jeton non conforme à droite de '::'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(23): error C2062: type 'unknown-type' inattendu
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(24): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(24): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(28): error C2589: '&' : jeton non conforme à droite de '::'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(28): error C2062: type 'unknown-type' inattendu
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(29): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(29): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(33): error C2589: '&' : jeton non conforme à droite de '::'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(33): error C2062: type 'unknown-type' inattendu
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(34): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(34): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(38): error C2589: '&' : jeton non conforme à droite de '::'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(38): error C2062: type 'unknown-type' inattendu
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(39): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(39): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(43): error C2589: '&' : jeton non conforme à droite de '::'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(43): error C2062: type 'unknown-type' inattendu
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(44): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(44): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(48): error C2589: '&' : jeton non conforme à droite de '::'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(48): error C2062: type 'unknown-type' inattendu
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(49): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(49): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(53): error C2589: 'friend' : jeton non conforme à droite de '::'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(53): error C2062: type 'unknown-type' inattendu
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(54): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(54): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+  Génération de code en cours...
