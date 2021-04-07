@@ -5,18 +5,22 @@
 #include <iostream>
 using namespace std;
 
+template <class nomType>
 class CMatrice
 {
 private:
-	int iMATnbLignes;
+	unsigned int iMATnbLignes;
 
-	int iMATnbColonnes;
+	unsigned int iMATnbColonnes;
 
+	char* cMATnomType;
+
+	nomType * pMATtabValeurs;
 
 public:
 	CMatrice();
 
-	CMatrice(int MATnbL, int MATnbC);
+	CMatrice(int MATnbL, int MATnbC,char* MATnT, nomType * MATtV);
 
 	CMatrice(CMatrice &MATM1);
 
@@ -26,9 +30,13 @@ public:
 
 	int MATGetnbColonne();
 
-	void MATSetnbLigne();
+	char* MATGetnomType();
 
-	void MATSetnbColonne();
+	void MATSetnbLigne(int MATnbL);
+
+	void MATSetnbColonne(int MATnbC);
+	
+	void MATSetnomType(char* MATnT);
 
 	friend ostream& operator<<(ostream& os, CMatrice &MATM1);
 
