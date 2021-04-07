@@ -39,17 +39,24 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator+(COperationsMatrice<nomT
 template<class nomType>
 CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomType> &OMAM1)
 {
-	unsigned int uiNbColonnes = OMAM1.pmOMAMatrice.MATGetnbColonne();
-	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
-
-	//TRAITEMENT OPERATION
+	unsigned int uiNbColonnes = pmOMAMatrice.MATGetnbColonne();
+	unsigned int uiNbLignes = pmOMAMatrice.MATGetnbLigne();
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
+	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+
+			pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
+
+		}
+	}
 
 	return MATMatriceResultat;
 }
 
-/*template<class nomType>
+/*
+template<class nomType>
 CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomType>& OMAM1, int &iElem)
 {
 	unsigned int uiNbColonnes = OMAM1.pmOMAMatrice.MATGetnbColonne();
@@ -66,7 +73,8 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 	}
 
 	return MATMatriceResultat;
-}*/
+}
+*/
 
 template<class nomType>
 CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
@@ -95,7 +103,13 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator/(int &iElem)
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
-	//TRAITEMENT OPERATION
+	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+
+			pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] / iElem;
+
+		}
+	}
 
 	return MATMatriceResultat;
 }
@@ -116,5 +130,18 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator-(COperationsMatrice<nomT
 template<class nomType>
 CMatrice<nomType> COperationsMatrice<nomType>::MATCalculTransposee(COperationsMatrice<nomType> OMAM1)
 {
-	return 0;
+	unsigned int uiNbColonnes = pmOMAMatrice.MATGetnbColonne();
+	unsigned int uiNbLignes = pmOMAMatrice.MATGetnbLigne();
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
+	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+
+			MATMatriceResultat.pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
+
+		}
+	}
+
+	return MATMatriceResultat;
 }
