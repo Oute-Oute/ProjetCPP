@@ -3,34 +3,35 @@
 
 #include "CMatrice.h"
 
+template <class nomType>
 class COperationsMatrice
 {
 private:
-	CMatrice pmOMAMatrice;
+	CMatrice<nomType> pmOMAMatrice;
 
 
 public:
 	COperationsMatrice();
 
-	COperationsMatrice(COperationsMatrice &OMAM1);
+	COperationsMatrice(COperationsMatrice<nomType> &OMAM1);
 
 	COperationsMatrice(int pmOMAMat);
 
 	~COperationsMatrice();
 
-	COperationsMatrice operator+(COperationsMatrice &OMAM1);
+	CMatrice<nomType> operator+(COperationsMatrice<nomType> &OMAM1);
 
-	COperationsMatrice operator*(COperationsMatrice &OMAM1);
+	CMatrice<nomType> operator*(COperationsMatrice<nomType> &OMAM1);
 
-	COperationsMatrice operator*(COperationsMatrice &OMAM1, int &iElem);
+	CMatrice<nomType> operator*(int &iElem);
 
-	COperationsMatrice operator*(int &iElem, COperationsMatrice &OMAM1);
+	//CMatrice<nomType> operator*(int &iElem * COperationsMatrice<nomType> &OMAM1);
 
-	COperationsMatrice operator/(int &iElem, COperationsMatrice &OMAM1);
+	CMatrice<nomType> operator/(int &iElem);
 
-	COperationsMatrice operator-(COperationsMatrice &OMAM1);
+	CMatrice<nomType> operator-(COperationsMatrice<nomType> &OMAM1);
 
-	COperationsMatrice MATCalculTransposee(COperationsMatrice OMAM1);
+	CMatrice<nomType> MATCalculTransposee(COperationsMatrice<nomType> OMAM1);
 
 };
 #endif
