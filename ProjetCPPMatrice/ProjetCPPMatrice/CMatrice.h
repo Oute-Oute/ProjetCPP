@@ -8,9 +8,9 @@ using namespace std;
 class CMatrice
 {
 private:
-	int iMATnbLignes;
+	unsigned int iMATnbLignes;
 
-	int iMATnbColonnes;
+	unsigned int iMATnbColonnes;
 
 
 public:
