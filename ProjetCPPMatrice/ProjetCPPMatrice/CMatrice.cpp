@@ -3,42 +3,85 @@
 
 #include "CMatrice.h"
 
-
-CMatrice::CMatrice()
+template<class nomType>
+CMatrice<nomType>::CMatrice()
 {
+	iMATnbColonnes = 0;
+	iMATnbLignes = 0;
+	cMATnomType = nullptr;
 }
 
-CMatrice::CMatrice(int MATnbL, int MATnbC)
+template<class nomType>
+CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType * MATtV)
 {
+	iMATnbLignes = MATnbL;
+	iMATnbColonnes = MATnbC;
+	cMATnomType = MATnT;
 }
 
-CMatrice::CMatrice(CMatrice &MATM1)
+template<class nomType>
+CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 {
+	iMATnbLignes = MATM1.MATGetnbLigne();
+	iMATnbColonnes = MATM1.MATGetnbColonne();
+	cMATnomType = MATM1.MATGetnomType();
 }
 
-CMatrice::~CMatrice()
+template<class nomType>
+CMatrice<nomType>::~CMatrice()
 {
+	iMATnbColonnes = 0;
+	iMATnbLignes = 0;
+	delete cMATnomType;
 }
 
-int CMatrice::MATGetnbLigne()
+template<class nomType>
+int CMatrice<nomType>::MATGetnbLigne()
 {
-	return 0;
+	return iMATnbLignes;
 }
 
-int CMatrice::MATGetnbColonne()
+template<class nomType>
+int CMatrice<nomType>::MATGetnbColonne()
 {
-	return 0;
+	return iMATnbColonnes;
 }
 
-void CMatrice::MATSetnbLigne()
+template<class nomType>
+char * CMatrice<nomType>::MATGetnomType()
 {
+	return cMATnomType;
 }
 
-void CMatrice::MATSetnbColonne()
+template<class nomType>
+void CMatrice<nomType>::MATSetnbLigne(int MATnbL)
 {
+	iMATnbLignes = MATnbL;
 }
 
-ostream & operator<<(ostream & os, CMatrice & MATM1)
+template<class nomType>
+void CMatrice<nomType>::MATSetnbColonne(int MATnbC)
 {
-	// TODO: insérer une instruction return ici
+	iMATnbColonnes = MATnbC;
+}
+
+template<class nomType>
+void CMatrice<nomType>::MATSetnomType(char * MATnT)
+{
+	cMATnomType = MATnT;
+}
+
+template<class nomType>
+ostream & operator<<(ostream & os, CMatrice<class nomType> &MATM1)
+{
+	for (int iboucleLignes = 0; iboucleLignes < MATM1.iMATnbLignes; iboucleLignes++)
+	{
+		for (int iboucleColonnes = 0; iboucleColonnes < MATM1.iMATnbColonnes; iboucleColonnes++)
+		{
+			os << MATM1.pMATtabValeurs[iboucleLignes[iboucleColonnes] << "  ";
+		}
+		os << endl;
+	}
+	os << endl << endl;
+	return(os);
 }
