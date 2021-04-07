@@ -31,6 +31,8 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator+(COperationsMatrice<nomT
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
+	//TRAITEMENT OPERATION
+
 	return MATMatriceResultat;
 }
 
@@ -39,6 +41,8 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 {
 	unsigned int uiNbColonnes = OMAM1.pmOMAMatrice.MATGetnbColonne();
 	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
+
+	//TRAITEMENT OPERATION
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
@@ -72,6 +76,14 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
+	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+
+			pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * iElem;
+
+		}
+	}
+
 	return MATMatriceResultat;
 }
 
@@ -83,6 +95,8 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator/(int &iElem)
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
+	//TRAITEMENT OPERATION
+
 	return MATMatriceResultat;
 }
 
@@ -93,6 +107,8 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator-(COperationsMatrice<nomT
 	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
+	//TRAITEMENT OPERATION
 
 	return MATMatriceResultat;
 }
