@@ -6,45 +6,45 @@
 template<class nomType>
 CMatrice<nomType>::CMatrice()
 {
-	iMATnbColonnes = 0;
-	iMATnbLignes = 0;
+	uiMATnbColonnes = 0;
+	uiMATnbLignes = 0;
 	cMATnomType = nullptr;
 }
 
 template<class nomType>
 CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType * MATtV)
 {
-	iMATnbLignes = MATnbL;
-	iMATnbColonnes = MATnbC;
+	uiMATnbLignes = MATnbL;
+	uiMATnbColonnes = MATnbC;
 	cMATnomType = MATnT;
 }
 
 template<class nomType>
 CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 {
-	iMATnbLignes = MATM1.MATGetnbLigne();
-	iMATnbColonnes = MATM1.MATGetnbColonne();
+	uiMATnbLignes = MATM1.MATGetnbLigne();
+	uiMATnbColonnes = MATM1.MATGetnbColonne();
 	cMATnomType = MATM1.MATGetnomType();
 }
 
 template<class nomType>
 CMatrice<nomType>::~CMatrice()
 {
-	iMATnbColonnes = 0;
-	iMATnbLignes = 0;
+	uiMATnbColonnes = 0;
+	uiMATnbLignes = 0;
 	delete cMATnomType;
 }
 
 template<class nomType>
 int CMatrice<nomType>::MATGetnbLigne()
 {
-	return iMATnbLignes;
+	return uiMATnbLignes;
 }
 
 template<class nomType>
 int CMatrice<nomType>::MATGetnbColonne()
 {
-	return iMATnbColonnes;
+	return uiMATnbColonnes;
 }
 
 template<class nomType>
@@ -56,13 +56,13 @@ char * CMatrice<nomType>::MATGetnomType()
 template<class nomType>
 void CMatrice<nomType>::MATSetnbLigne(int MATnbL)
 {
-	iMATnbLignes = MATnbL;
+	uiMATnbLignes = MATnbL;
 }
 
 template<class nomType>
 void CMatrice<nomType>::MATSetnbColonne(int MATnbC)
 {
-	iMATnbColonnes = MATnbC;
+	uiMATnbColonnes = MATnbC;
 }
 
 template<class nomType>
@@ -72,13 +72,13 @@ void CMatrice<nomType>::MATSetnomType(char * MATnT)
 }
 
 template<class nomType>
-ostream & operator<<(ostream & os, CMatrice<class nomType> &MATM1)
+ostream & operator<<(ostream & os, CMatrice<nomType> &MATM1)
 {
-	for (int iboucleLignes = 0; iboucleLignes < MATM1.iMATnbLignes; iboucleLignes++)
+	for (int iboucleLignes = 0; iboucleLignes < MATM1.uiMATnbLignes; iboucleLignes++)
 	{
-		for (int iboucleColonnes = 0; iboucleColonnes < MATM1.iMATnbColonnes; iboucleColonnes++)
+		for (int iboucleColonnes = 0; iboucleColonnes < MATM1.uiMATnbColonnes; iboucleColonnes++)
 		{
-			os << MATM1.pMATtabValeurs[iboucleLignes[iboucleColonnes] << "  ";
+			os << MATM1.pMATtabValeurs[iboucleLignes][iboucleColonnes] << "  ";
 		}
 		os << endl;
 	}

@@ -36,7 +36,7 @@ COperationsMatrice COperationsMatrice::operator*(COperationsMatrice& OMAM1, int 
 	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
 	CMatrice mMatriceResultat;
 
-	mMatriceResultat.CMatrice(uniNbLignes,uiNbColonnes);
+	mMatriceResultat.CMatrice(uiNbLignes,uiNbColonnes);
 
 	for (int iLigne = 0 ; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0 ; iColonne < uiNbColonnes ; iColonne ++){

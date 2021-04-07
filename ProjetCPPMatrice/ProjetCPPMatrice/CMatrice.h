@@ -9,9 +9,9 @@ template <class nomType>
 class CMatrice
 {
 private:
-	unsigned int iMATnbLignes;
+	unsigned int uiMATnbLignes;
 
-	unsigned int iMATnbColonnes;
+	unsigned int uiMATnbColonnes;
 
 	char* cMATnomType;
 
