@@ -36,39 +36,51 @@ CMatrice<nomType>::~CMatrice()
 }
 
 template<class nomType>
-int CMatrice<nomType>::MATGetnbLigne()
+int CMatrice<nomType>::MATGetNbLigne()
 {
 	return uiMATnbLignes;
 }
 
 template<class nomType>
-int CMatrice<nomType>::MATGetnbColonne()
+int CMatrice<nomType>::MATGetNbColonne()
 {
 	return uiMATnbColonnes;
 }
 
 template<class nomType>
-char * CMatrice<nomType>::MATGetnomType()
+char * CMatrice<nomType>::MATGetNomType()
 {
 	return cMATnomType;
 }
 
 template<class nomType>
-void CMatrice<nomType>::MATSetnbLigne(int MATnbL)
+inline nomType CMatrice<nomType>::MATgetTabValeur()
+{
+	return pMATtabValeurs;
+}
+
+template<class nomType>
+void CMatrice<nomType>::MATSetNbLigne(int MATnbL)
 {
 	uiMATnbLignes = MATnbL;
 }
 
 template<class nomType>
-void CMatrice<nomType>::MATSetnbColonne(int MATnbC)
+void CMatrice<nomType>::MATSetNbColonne(int MATnbC)
 {
 	uiMATnbColonnes = MATnbC;
 }
 
 template<class nomType>
-void CMatrice<nomType>::MATSetnomType(char * MATnT)
+void CMatrice<nomType>::MATSetNomType(char * MATnT)
 {
 	cMATnomType = MATnT;
+}
+
+template<class nomType>
+void CMatrice<nomType>::MATSetTabValeur(nomType * MATtV)
+{
+	*pMATtabValeurs = *MATtV;
 }
 
 template<class nomType>

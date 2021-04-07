@@ -26,19 +26,25 @@ public:
 
 	~CMatrice();
 
-	int MATGetnbLigne();
+	int MATGetNbLigne();
 
-	int MATGetnbColonne();
+	int MATGetNbColonne();
 
-	char* MATGetnomType();
+	char* MATGetNomType();
 
-	void MATSetnbLigne(int MATnbL);
+	nomType MATgetTabValeur();
 
-	void MATSetnbColonne(int MATnbC);
+	void MATSetNbLigne(int MATnbL);
+
+	void MATSetNbColonne(int MATnbC);
 	
-	void MATSetnomType(char* MATnT);
+	void MATSetNomType(char* MATnT);
+
+	void MATSetTabValeur(nomType *MATtV);
 
 	friend ostream& operator<<(ostream& os, CMatrice &MATM1);
 
 };
 #endif
+
+
