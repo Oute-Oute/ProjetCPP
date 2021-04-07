@@ -3,40 +3,55 @@
 
 #include "COperationsMatrice.h"
 
-
-COperationsMatrice::COperationsMatrice()
+template<class nomType>
+COperationsMatrice<nomType>::COperationsMatrice()
 {
 }
 
-COperationsMatrice::COperationsMatrice(COperationsMatrice &OMAM1)
+template<class nomType>
+COperationsMatrice<nomType>::COperationsMatrice(COperationsMatrice<nomType> &OMAM1)
 {
 }
 
-COperationsMatrice::COperationsMatrice(int pmOMAMat)
+template<class nomType>
+COperationsMatrice<nomType>::COperationsMatrice(int pmOMAMat)
 {
 }
 
-COperationsMatrice::~COperationsMatrice()
+template<class nomType>
+COperationsMatrice<nomType>::~COperationsMatrice()
 {
 }
 
-COperationsMatrice COperationsMatrice::operator+(COperationsMatrice &OMAM1)
-{
-	return MATMatriceResultat;
-}
-
-COperationsMatrice COperationsMatrice::operator*(COperationsMatrice &OMAM1)
-{
-	return MATMatriceResultat;
-}
-
-COperationsMatrice COperationsMatrice::operator*(COperationsMatrice& OMAM1, int &iElem)
+template<class nomType>
+CMatrice<nomType> COperationsMatrice<nomType>::operator+(COperationsMatrice<nomType> &OMAM1)
 {
 	unsigned int uiNbColonnes = OMAM1.pmOMAMatrice.MATGetnbColonne();
 	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
-	CMatrice mMatriceResultat;
 
-	mMatriceResultat.CMatrice(uniNbLignes,uiNbColonnes);
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
+	return MATMatriceResultat;
+}
+
+template<class nomType>
+CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomType> &OMAM1)
+{
+	unsigned int uiNbColonnes = OMAM1.pmOMAMatrice.MATGetnbColonne();
+	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
+	return MATMatriceResultat;
+}
+
+/*template<class nomType>
+CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomType>& OMAM1, int &iElem)
+{
+	unsigned int uiNbColonnes = OMAM1.pmOMAMatrice.MATGetnbColonne();
+	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
 	for (int iLigne = 0 ; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0 ; iColonne < uiNbColonnes ; iColonne ++){
@@ -46,25 +61,44 @@ COperationsMatrice COperationsMatrice::operator*(COperationsMatrice& OMAM1, int 
 		}
 	}
 
-	return mMatriceResultat;
-}
+	return MATMatriceResultat;
+}*/
 
-COperationsMatrice COperationsMatrice::operator*(int &iElem, COperationsMatrice &OMAM1)
+template<class nomType>
+CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
 {
+	unsigned int uiNbColonnes = pmOMAMatrice.MATGetnbColonne();
+	unsigned int uiNbLignes = pmOMAMatrice.MATGetnbLigne();
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
 	return MATMatriceResultat;
 }
 
-COperationsMatrice COperationsMatrice::operator/(int &iElem, COperationsMatrice &OMAM1)
+template<class nomType>
+CMatrice<nomType> COperationsMatrice<nomType>::operator/(int &iElem)
 {
+	unsigned int uiNbColonnes = pmOMAMatrice.MATGetnbColonne();
+	unsigned int uiNbLignes = pmOMAMatrice.MATGetnbLigne();
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
 	return MATMatriceResultat;
 }
 
-COperationsMatrice COperationsMatrice::operator-(COperationsMatrice &OMAM1)
+template<class nomType>
+CMatrice<nomType> COperationsMatrice<nomType>::operator-(COperationsMatrice<nomType> &OMAM1)
 {
+	unsigned int uiNbColonnes = OMAM1.pmOMAMatrice.MATGetnbColonne();
+	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+
 	return MATMatriceResultat;
 }
 
-COperationsMatrice COperationsMatrice::MATCalculTransposee(COperationsMatrice OMAM1)
+template<class nomType>
+CMatrice<nomType> COperationsMatrice<nomType>::MATCalculTransposee(COperationsMatrice<nomType> OMAM1)
 {
 	return 0;
 }

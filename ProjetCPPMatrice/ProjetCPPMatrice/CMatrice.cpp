@@ -72,13 +72,13 @@ void CMatrice<nomType>::MATSetnomType(char * MATnT)
 }
 
 template<class nomType>
-ostream & operator<<(ostream & os, CMatrice<class nomType> &MATM1)
+ostream & operator<<(ostream & os, CMatrice<nomType> &MATM1)
 {
 	for (int iboucleLignes = 0; iboucleLignes < MATM1.iMATnbLignes; iboucleLignes++)
 	{
 		for (int iboucleColonnes = 0; iboucleColonnes < MATM1.iMATnbColonnes; iboucleColonnes++)
 		{
-			os << MATM1.pMATtabValeurs[iboucleLignes[iboucleColonnes] << "  ";
+			os << MATM1.pMATtabValeurs[iboucleLignes][iboucleColonnes] << "  ";
 		}
 		os << endl;
 	}

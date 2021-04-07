@@ -1,16 +1,3 @@
-﻿  CMatrice.cpp
-  COperationsMatrice.cpp
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(25): error C2804: trop de paramètres pour l'opérateur binaire 'operator *'
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(27): error C2804: trop de paramètres pour l'opérateur binaire 'operator *'
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.h(29): error C2804: trop de paramètres pour l'opérateur binaire 'operator /'
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(25): error C2065: 'MATMatriceResultat' : identificateur non déclaré
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(30): error C2065: 'MATMatriceResultat' : identificateur non déclaré
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(39): error C2274: 'cast de style fonction' : non conforme à droite de l'opérateur '.'
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(39): error C2065: 'uniNbLignes' : identificateur non déclaré
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(41): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(42): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(54): error C2065: 'MATMatriceResultat' : identificateur non déclaré
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(59): error C2065: 'MATMatriceResultat' : identificateur non déclaré
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(64): error C2065: 'MATMatriceResultat' : identificateur non déclaré
-  Génération de code en cours...
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(44): error C4716: 'operator<<' : doit retourner une valeur
+﻿  COperationsMatrice.cpp
+  LINK : D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
