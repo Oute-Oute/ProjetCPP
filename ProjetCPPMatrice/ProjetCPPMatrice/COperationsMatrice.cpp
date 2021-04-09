@@ -6,17 +6,19 @@
 template<class nomType>
 COperationsMatrice<nomType>::COperationsMatrice()
 {
-
+	pmOMAMatrice = new CMatrice();
 }
 
 template<class nomType>
 COperationsMatrice<nomType>::COperationsMatrice(COperationsMatrice<nomType> &OMAM1)
 {
+	//REPARE CA ADAM
 
+	pmOMAMatrice<OMAM1.pmOMAMatrice.MATGetNomType> = new CMartice(OMAM1.pmOMAMatrice);
 }
 
 template<class nomType>
-COperationsMatrice<nomType>::COperationsMatrice(int pmOMAMat)
+COperationsMatrice<nomType>::COperationsMatrice(CMatrice<nomType>* pmOMAMat)
 {
 
 }

@@ -15,7 +15,7 @@ public:
 
 	COperationsMatrice(COperationsMatrice<nomType> &OMAM1);
 
-	COperationsMatrice(int pmOMAMat);
+	COperationsMatrice(CMatrice<nomType>* pmOMAMat);
 
 	~COperationsMatrice();
 

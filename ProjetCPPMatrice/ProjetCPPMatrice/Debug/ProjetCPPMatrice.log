@@ -1,3 +1,2 @@
 ﻿  COperationsMatrice.cpp
-  LINK : D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
-  ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\coperationsmatrice.cpp(17): error C2760: erreur de syntaxe : jeton inattendu '=', attendu 'expression'
