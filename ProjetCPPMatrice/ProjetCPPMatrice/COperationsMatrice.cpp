@@ -55,8 +55,16 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 
 	//EXCEPTIONS
 
+	//types differents
+	if ((pmOMAMatrice.MATGetnomType != OMAM1.pmOMAMatrice.MATGetnomType) {
+		throw "Types incompatibles!";
+	}
+
+	MATMatriceResultat.MATSetnomType(pmOMAMatrice.MATGetnomType);
+
+	//dimensions incorrectes
 	if (pmOMAMatrice.MATGetnbColonne != OMAM1.pmOMAMatrice.MATGetnbLigne) {
-		throw "Dimensiosn incorrectes!";
+		throw "Dimensiosn incompatibles!";
 	}
 
 	//TRAITEMENT
