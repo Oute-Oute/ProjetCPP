@@ -44,7 +44,7 @@ public:
 
 	void MATAfficherMatrice();
 	
-	ostream& operator<<(ostream& os, CMatrice<nomType> const& MATM1);
+	ostream& operator<<(ostream& os);
 
 };
 
@@ -131,16 +131,24 @@ void CMatrice<nomType>::MATSetTabValeur(nomType * MATtV)
 template<class nomType>
 inline void CMatrice<nomType>::MATAfficherMatrice()
 {
+	for (int iboucleLignes = 0; iboucleLignes < uiMATnbLignes; iboucleLignes++)
+	{
+		for (int iboucleColonnes = 0; iboucleColonnes < uiMATnbColonnes; iboucleColonnes++)
+		{
+			cout << pMATtabValeurs[iboucleLignes][iboucleColonnes] << "  ";
+		}
+		cout << endl;
+	}
 }
 
 template<class nomType>
-inline ostream & CMatrice<nomType>::operator<<(ostream & os, CMatrice<nomType> const & MATM1)
+inline ostream & CMatrice<nomType>::operator<<(ostream & os)
 {	
-	for (int iboucleLignes = 0; iboucleLignes < MATM1.uiMATnbLignes; iboucleLignes++)
+	for (int iboucleLignes = 0; iboucleLignes < uiMATnbLignes; iboucleLignes++)
 	{
-		for (int iboucleColonnes = 0; iboucleColonnes < MATM1.uiMATnbColonnes; iboucleColonnes++)
+		for (int iboucleColonnes = 0; iboucleColonnes < uiMATnbColonnes; iboucleColonnes++)
 		{
-			os << MATM1.pMATtabValeurs[iboucleLignes][iboucleColonnes] << "  ";
+			os << pMATtabValeurs[iboucleLignes][iboucleColonnes] << "  ";
 		}
 		os << endl;
 	}

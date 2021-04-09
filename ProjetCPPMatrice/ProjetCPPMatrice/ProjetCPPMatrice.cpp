@@ -1,11 +1,14 @@
 // ProjetCPPMatrice.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
 
-#include <iostream>
+#include "CMatrice.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	CMatrice<int>  MatriceTest;
+	MatriceTest.MATSetNbLigne(2);
+	MatriceTest.MATSetNbColonne(2);
+
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
