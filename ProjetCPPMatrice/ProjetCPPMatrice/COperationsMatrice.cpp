@@ -41,19 +41,40 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 {
 	unsigned int uiNbColonnes = pmOMAMatrice.MATGetnbColonne();
 	unsigned int uiNbLignes = pmOMAMatrice.MATGetnbLigne();
+	
+	//INITIALISATION DE LA MATRICE RESULTAT
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+	
+	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = 0;
+		}
+
+	}
+
+	//EXCEPTIONS
+
+	if (pmOMAMatrice.MATGetnbColonne != OMAM1.pmOMAMatrice.MATGetnbLigne) {
+		throw "Dimensiosn incorrectes!";
+	}
+
+	//TRAITEMENT
 
 	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+			for (int iElement = 0; iElement < pmOMAMatrice.MATGetnbColonne; iElement++) {
+				MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] += pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
+			}
 
-			pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
 
 		}
+
 	}
 
 	return MATMatriceResultat;
 }
+
 
 /*
 template<class nomType>
@@ -87,7 +108,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
 	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
-			pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * iElem;
+			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * iElem;
 
 		}
 	}
@@ -106,7 +127,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator/(int &iElem)
 	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
-			pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] / iElem;
+			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] / iElem;
 
 		}
 	}
@@ -138,7 +159,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::MATCalculTransposee(COperationsMa
 	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
-			MATMatriceResultat.pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] = OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
+			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
 
 		}
 	}
