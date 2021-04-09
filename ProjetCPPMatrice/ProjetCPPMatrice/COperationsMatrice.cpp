@@ -6,21 +6,25 @@
 template<class nomType>
 COperationsMatrice<nomType>::COperationsMatrice()
 {
+
 }
 
 template<class nomType>
 COperationsMatrice<nomType>::COperationsMatrice(COperationsMatrice<nomType> &OMAM1)
 {
+
 }
 
 template<class nomType>
 COperationsMatrice<nomType>::COperationsMatrice(int pmOMAMat)
 {
+
 }
 
 template<class nomType>
 COperationsMatrice<nomType>::~COperationsMatrice()
 {
+
 }
 
 template<class nomType>
@@ -56,7 +60,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 	//EXCEPTIONS
 
 	//types differents
-	if ((pmOMAMatrice.MATGetnomType != OMAM1.pmOMAMatrice.MATGetnomType) {
+	if (pmOMAMatrice.MATGetnomType != OMAM1.pmOMAMatrice.MATGetnomType) {
 		throw "Types incompatibles!";
 	}
 
