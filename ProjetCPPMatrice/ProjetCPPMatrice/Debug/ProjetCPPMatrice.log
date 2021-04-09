@@ -1,2 +1,4 @@
 ﻿  COperationsMatrice.cpp
-  ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(45): error C2804: trop de paramètres pour l'opérateur binaire 'operator <<'
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(47): note: voir la référence à l'instanciation de classe modèle 'CMatrice<nomType>' en cours de compilation
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(131): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
