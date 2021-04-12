@@ -11,15 +11,21 @@ private:
 
 
 public:
+	//constructeur par defaut
 	COperationsMatrice();
 
+	//constructeur de recopie
 	COperationsMatrice(COperationsMatrice<nomType> &OMAM1);
 
-	COperationsMatrice(int pmOMAMat);
+	//constructeur a partir d une CMatrice*
+	COperationsMatrice(CMatrice<nomType>* pmOMAMat);
 
+	//destructeur
 	~COperationsMatrice();
 
 	CMatrice<nomType> operator+(COperationsMatrice<nomType> &OMAM1);
+
+	CMatrice<nomType> operator-(COperationsMatrice<nomType> &OMAM1);
 
 	CMatrice<nomType> operator*(COperationsMatrice<nomType> &OMAM1);
 
@@ -28,8 +34,6 @@ public:
 	//CMatrice<nomType> operator*(int &iElem * COperationsMatrice<nomType> &OMAM1);
 
 	CMatrice<nomType> operator/(int &iElem);
-
-	CMatrice<nomType> operator-(COperationsMatrice<nomType> &OMAM1);
 
 	CMatrice<nomType> MATCalculTransposee(COperationsMatrice<nomType> OMAM1);
 

@@ -1,13 +1,2 @@
 ﻿  COperationsMatrice.cpp
-  ProjetCPPMatrice.cpp
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(143): warning C4018: '<' : incompatibilité signed/unsigned
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(141): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(11): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<int>::MATSetTabValeur(void)' en cours de compilation
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(8): note: voir la référence à l'instanciation de classe modèle 'CMatrice<int>' en cours de compilation
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(145): warning C4018: '<' : incompatibilité signed/unsigned
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(156): warning C4018: '<' : incompatibilité signed/unsigned
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(155): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(12): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<int>::MATAfficherMatrice(void)' en cours de compilation
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(158): warning C4018: '<' : incompatibilité signed/unsigned
-  Génération de code en cours...
-  ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
+  ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
