@@ -56,7 +56,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 	//EXCEPTIONS
 
 	//types differents
-	if ((pmOMAMatrice.MATGetnomType != OMAM1.pmOMAMatrice.MATGetnomType) {
+	if (pmOMAMatrice.MATGetnomType != OMAM1.pmOMAMatrice.MATGetnomType) {
 		throw "Types incompatibles!";
 	}
 
