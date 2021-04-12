@@ -12,11 +12,11 @@ CException::~CException() {
 }
 
 int CException::EXCAddition() {
-
+	/*
 	catch (CException & EXCexception) {
 		cerr << "Exception: " << EXCexception.getMessage() << endl;
 	}
-
+	*/
 	return 0;
 }
 
