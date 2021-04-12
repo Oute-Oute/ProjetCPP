@@ -8,7 +8,8 @@ int main()
 	CMatrice<int>  MatriceTest;
 	MatriceTest.MATSetNbLigne(2);
 	MatriceTest.MATSetNbColonne(2);
-
+	MatriceTest.MATSetTabValeur();
+	MatriceTest.MATAfficherMatrice();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

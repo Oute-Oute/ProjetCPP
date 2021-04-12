@@ -15,7 +15,7 @@ private:
 
 	char* cMATnomType;
 
-	nomType * pMATtabValeurs;
+	nomType ** pMATtabValeurs;
 
 public:
 	CMatrice();
@@ -40,7 +40,9 @@ public:
 	
 	void MATSetNomType(char* MATnT);
 
-	void MATSetTabValeur(nomType *MATtV);
+	void MATSetTabValeur(nomType **MATtV);
+
+	void MATSetTabValeur();
 
 	void MATAfficherMatrice();
 	
@@ -123,9 +125,29 @@ void CMatrice<nomType>::MATSetNomType(char * MATnT)
 }
 
 template<class nomType>
-void CMatrice<nomType>::MATSetTabValeur(nomType * MATtV)
+void CMatrice<nomType>::MATSetTabValeur(nomType ** MATtV)
 {
-	*pMATtabValeurs = *MATtV;
+	for (int iboucleLignes = 0; iboucleLignes < uiMATnbLignes; iboucleLignes++)
+	{
+		for (int iboucleColonnes = 0; iboucleColonnes < uiMATnbColonnes; iboucleColonnes++)
+		{
+			pMATtabValeurs[iboucleLignes][iboucleColonnes] = MATtV[iboucleLignes][iboucleColonnes];
+		}
+	}
+}
+
+template<class nomType>
+inline void CMatrice<nomType>::MATSetTabValeur()
+{
+	int k = 0;
+	for (int iboucleLignes = 0; iboucleLignes < uiMATnbLignes; iboucleLignes++)
+	{
+		for (int iboucleColonnes = 0; iboucleColonnes < uiMATnbColonnes; iboucleColonnes++)
+		{
+			pMATtabValeurs[iboucleLignes][iboucleColonnes] =k;
+			k++;
+		}
+	}
 }
 
 template<class nomType>
