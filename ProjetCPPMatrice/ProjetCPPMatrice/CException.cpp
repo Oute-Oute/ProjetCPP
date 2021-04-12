@@ -1,30 +1,43 @@
 #include <fstream>
 #include <iostream>
-
 #include "CException.h"
+using namespace std;
 
+CException::CException(const char* sMessage) {
+	sEXCMessage = sMessage;
+}
 
-int CException::EXCAddition()
-{
+CException::~CException() {
+
+}
+
+int CException::EXCAddition() {
+	/*
+	catch (CException & EXCexception) {
+		cerr << "Exception: " << EXCexception.getMessage() << endl;
+	}
+	*/
 	return 0;
 }
 
-int CException::EXCSoustraction()
-{
+int CException::EXCSoustraction() {
+
 	return 0;
 }
 
-int CException::EXCMultiplicationSimple()
-{
+int CException::EXCMultiplicationSimple() {
+
 	return 0;
 }
 
-int CException::EXCMultiplicationDouble()
-{
+int CException::EXCMultiplicationDouble() {
+
 	return 0;
 }
 
-int CException::EXCDivision()
-{
+int CException::EXCDivision() {
+
 	return 0;
 }
+
+
