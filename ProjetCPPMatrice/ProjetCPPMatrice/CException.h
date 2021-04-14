@@ -8,15 +8,24 @@
 class CException
 {
 private:
-	const char* sEXCMessage;
+	char cEXCOperation;
+	char* sEXCMessage;
 
 public:
-	//constructeur a partir d un message d exception
-	CException(const char* sMessage);
+
+	CException();
+	//constructeur a partir d une operation et un message d exception
+	CException(char cOpreation, char* sMessage);
 
 	~CException();
 
-	char* getMessage();
+	char* EXCGetMessage();
+
+	void EXCSetMessage(char* smessage);
+
+	char EXCGetOperation();
+
+	void EXCSetOperation(char cOperation);
 
 	int EXCAddition();
 
