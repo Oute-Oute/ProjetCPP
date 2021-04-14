@@ -159,14 +159,15 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 
 	//INITIALISATION DE LA MATRICE RESULTAT EN MATRICE NULLE
 			//ADAM REPARE: pas assez d'arguments ici, comprends a quoi sert MATtv
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
-
+	int** piTabValeurs;
 	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
-			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = 0;
+			piTabValeurs[iLigne][iColonne] = 0;
 		}
 
 	}
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType, piTabValeurs);
 
 	try {
 	//EXCEPTIONS

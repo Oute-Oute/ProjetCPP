@@ -155,7 +155,6 @@
   <ItemGroup>
     <ClCompile Include="CException.cpp" />
     <ClCompile Include="CLecture.cpp" />
-    <ClCompile Include="COperationsMatrice.cpp" />
     <ClCompile Include="ProjetCPPMatrice.cpp" />
   </ItemGroup>
   <ItemGroup>
