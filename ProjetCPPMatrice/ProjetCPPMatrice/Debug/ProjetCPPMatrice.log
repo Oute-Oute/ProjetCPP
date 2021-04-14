@@ -1,7 +1,2 @@
-﻿  CException.cpp
-  CLecture.cpp
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\clecture.cpp(65): error C2177: constante trop grande
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\clecture.cpp(66): error C2143: erreur de syntaxe : absence de ';' avant '}'
-  COperationsMatrice.cpp
-c1xx : fatal error C1083: Impossible d'ouvrir le fichier source : 'COperationsMatrice.cpp' : No such file or directory
-  Génération de code en cours...
+﻿  ProjetCPPMatrice.cpp
+  ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe

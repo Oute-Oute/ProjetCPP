@@ -1,6 +1,9 @@
 #include <string>
 #include <iostream>
 #include "CLecture.h"
+#include <fstream>
+
+using namespace std;
 
 CLecture::CLecture()
 {
@@ -32,7 +35,7 @@ CLecture::CLecture(CLecture &LEClecture)
 CLecture::~CLecture()
 {
 	delete pLECnomType;
-	delete pLECnomFichier;
+	//delete pLECnomFichier;
 	delete pLECtabValeurs;
 }
 
@@ -58,16 +61,46 @@ double** CLecture::LECGetTabValeurs()
 
 void CLecture::LECSetNbLigne()
 {
-	FILE* myFile;
+	ifstream fmyFile;
+	char cLigne[50];
+	char* cParse;
+	char* context = NULL;
+	int inbLignes;
+	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+		fmyFile.getline(cLigne,50);
+		fmyFile.getline(cLigne, 50);
+		cParse = strtok_s(cLigne, "=",&context);
+		cParse = strtok_s(NULL, "=",&context);
+		inbLignes = atoi(cParse);
+		cout << inbLignes;
 
-	fopen_s(&myFile, pLECnomFichier, "r");
-	if (myFile) {
-
+		fmyFile.close();
 	}
+
+	//exception
 }
 
 void CLecture::LECSetNbColonne()
 {
+	ifstream fmyFile;
+	char cLigne[50];
+	char* cParse;
+	char* context = NULL;
+	int inbLignes;
+	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		cParse = strtok_s(cLigne, "=", &context);
+		cParse = strtok_s(NULL, "=", &context);
+		inbLignes = atoi(cParse);
+		cout << inbLignes;
+
+		fmyFile.close();
+	}
+	//exception
 }
 
 void CLecture::LECSetNomType()

@@ -2,14 +2,14 @@
 //
 
 #include "CMatrice.h"
+#include "CLecture.h"
 
 int main()
 {
-	CMatrice<int>  MatriceTest;
-	MatriceTest.MATSetNbLigne(2);
-	MatriceTest.MATSetNbColonne(2);
-	MatriceTest.MATSetTabValeur();
-	MatriceTest.MATAfficherMatrice();
+	CLecture test;
+	test.pLECnomFichier = "test.txt";
+	test.LECSetNbLigne();
+	test.LECSetNbColonne();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
