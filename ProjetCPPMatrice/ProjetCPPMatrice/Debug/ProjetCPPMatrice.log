@@ -1,3 +1,13 @@
-﻿  LINK : D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
-ProjetCPPMatrice.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu être trouvé avec 'ProjetCPPMatrice.obj' ou sur 'D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\vc141.pdb' ; l'objet sera lié sans informations de débogage
+﻿  CException.cpp
+  ProjetCPPMatrice.cpp
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(146): warning C4018: '<' : incompatibilité signed/unsigned
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(144): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(11): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<int>::MATSetTabValeur(void)' en cours de compilation
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(8): note: voir la référence à l'instanciation de classe modèle 'CMatrice<int>' en cours de compilation
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(148): warning C4018: '<' : incompatibilité signed/unsigned
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(159): warning C4018: '<' : incompatibilité signed/unsigned
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(158): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(12): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<int>::MATAfficherMatrice(void)' en cours de compilation
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(161): warning C4018: '<' : incompatibilité signed/unsigned
+  Génération de code en cours...
   ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe

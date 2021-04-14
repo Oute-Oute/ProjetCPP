@@ -229,7 +229,6 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
-	try {
 		for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 			for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
@@ -238,8 +237,6 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
 			}
 
 		}
-
-	}
 
 	return MATMatriceResultat;
 }

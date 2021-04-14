@@ -29,12 +29,11 @@ char CException::EXCGetOperation() {
 	return cEXCOperation;
 }
 
-
-//////////////////////////////////////////////////////
 void CException::EXCSetOperation(char cOperation) {
 	cEXCOperation = cOperation;
 }
 
+//////////////////////////////////////////////////////
 int CException::EXCAddition() {
 	return 0;
 }
