@@ -9,8 +9,8 @@
 
 class CLecture
 {
-private:
-	char* pLECnomFichier;
+public:
+	const char* pLECnomFichier;
 
 	unsigned int uiLECnbLignes;
 
