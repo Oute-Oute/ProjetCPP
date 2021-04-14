@@ -3,20 +3,39 @@
 #include "CException.h"
 using namespace std;
 
-CException::CException(const char* sMessage) {
+CException::CException() {
+
+}
+
+CException::CException(char cOpreation, char * sMessage)
+{
 	sEXCMessage = sMessage;
+	cEXCOperation = cOpreation;
 }
 
 CException::~CException() {
 
 }
 
+char* CException::EXCGetMessage() {
+	return sEXCMessage;
+}
+
+void CException::EXCSetMessage(char* sMessage) {
+	sEXCMessage = sMessage;
+}
+
+char CException::EXCGetOperation() {
+	return cEXCOperation;
+}
+
+
+//////////////////////////////////////////////////////
+void CException::EXCSetOperation(char cOperation) {
+	cEXCOperation = cOperation;
+}
+
 int CException::EXCAddition() {
-	/*
-	catch (CException & EXCexception) {
-		cerr << "Exception: " << EXCexception.getMessage() << endl;
-	}
-	*/
 	return 0;
 }
 

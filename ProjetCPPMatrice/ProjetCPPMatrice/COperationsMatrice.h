@@ -4,6 +4,8 @@
 #include "CMatrice.h"
 #include "CException.h"
 
+using namespace std;
+
 template <class nomType>
 class COperationsMatrice
 {
@@ -75,7 +77,16 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator+(COperationsMatrice<nomT
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
+	//initialisation de l'objet exception
 	CException EXCexception = new CException();
+	EXCexception.EXCSetOperation('+');
+
+	try{
+	//EXCEPTIONS
+		if (uiNbColonnes != pmOMAMatrice.MATGetnbColonne() || uiNbLignes != pmOMAMatrice.MATGetnbLigne()) {
+			EXCexception.EXCSetMessage("Dimensions incompatibles!");
+			throw (EXCexception);
+		}
 
 	//TRAITEMENT OPERATION
 		for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
@@ -87,7 +98,12 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator+(COperationsMatrice<nomT
 
 		}
 
-	EXCexception.EXCAddition();
+	}
+
+	//LEVER LES EXCEPTIONS
+	catch (CException EXCexception) {
+		cout<< "Opération" <<EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
+	}
 
 	return MATMatriceResultat;
 }
@@ -100,16 +116,31 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator-(COperationsMatrice<nomT
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
-	//TRAITEMENT OPERATION
+	//initialisation de l'objet exception
+	CException EXCexception = new CException();
+	EXCexception.EXCSetOperation('-');
 
+	try {
+		//EXCEPTIONS
+		if (uiNbColonnes != pmOMAMatrice.MATGetnbColonne() || uiNbLignes != pmOMAMatrice.MATGetnbLigne()) {
+			EXCexception.EXCSetMessage("Dimensions incompatibles!");
+			throw (EXCexception);
+		}
 
-	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
-		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
-
-			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] - OMAM1.pmOMAMatrice.pMATtabValeurs[iLigne][iColonne];
+		//TRAITEMENT
+		for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+			for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+				MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] - OMAM1.pmOMAMatrice.pMATtabValeurs[iLigne][iColonne];
+			}
 
 		}
 
+	}
+
+
+	//LEVER LES EXCEPTIONS
+	catch (CException EXCexception) {
+		cout << "Opération" << EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
 	}
 
 	return MATMatriceResultat;
@@ -122,41 +153,36 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 	unsigned int uiNbLignes = OMAM1.pmOMAMatrice.MATGetnbLigne();
 	char* sNomType = pmOMAMatrice.MATGetNomType();
 
+	//initialisation de l'objet exception
 	CException EXCexception = new CException();
+	EXCexception.EXCSetOperation('*');
 
 	//INITIALISATION DE LA MATRICE RESULTAT EN MATRICE NULLE
-
-			//ADAM: pas assez d'arguments ici, comprends a quoi sert MATtv
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
-
+			//ADAM REPARE: pas assez d'arguments ici, comprends a quoi sert MATtv
+	int** piTabValeurs;
 	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
-			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = 0;
+			piTabValeurs[iLigne][iColonne] = 0;
 		}
 
 	}
 
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType, piTabValeurs);
+
 	try {
-		//EXCEPTIONS
-
-			//types differents
-		if (pmOMAMatrice.MATGetnomType != OMAM1.pmOMAMatrice.MATGetnomType) {
-			throw "Types incompatibles!";
-		}
-
-		MATMatriceResultat.MATSetnomType(pmOMAMatrice.MATGetnomType);
+	//EXCEPTIONS
 
 		//dimensions incorrectes
 		if (pmOMAMatrice.MATGetnbColonne != OMAM1.pmOMAMatrice.MATGetnbLigne) {
-			throw "Dimensions incompatibles!";
+			EXCexception.EXCSetMessage("Dimensions incompatibles!");
+			throw (EXCexception);
 		}
 
-		//TRAITEMENT
+	//TRAITEMENT
 
 		for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
 			for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 				for (int iElement = 0; iElement < pmOMAMatrice.MATGetnbColonne; iElement++) {
-
 					MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] += pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
 				}
 
@@ -166,7 +192,9 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 
 	}
 	
-	EXCexception.EXCMultiplicationDouble();
+	catch (CException EXCexception) {
+		cout << "Opération" << EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
+	}
 
 	return MATMatriceResultat;
 }
@@ -201,12 +229,16 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
-	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
-		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+	try {
+		for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+			for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
-			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * iElem;
+				MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] * iElem;
+
+			}
 
 		}
+
 	}
 
 	return MATMatriceResultat;
@@ -220,20 +252,33 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator/(int &iElem)
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
+
+	//initialisation de l'objet exception
+	CException EXCexception = new CException();
+	EXCexception.EXCSetOperation('/');
+
+	try {
 	//EXCEPTIONS
 		//division par 0
-	if (iElem == 0) {
-		throw "Division par 0!";
-		throw "Division par 0!";
-	}
+		if (iElem == 0) {
+			EXCexception.EXCSetMessage("Division par 0!");
+			throw (EXCexception);
+		}
 
 	//TRAITEMENT
-	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
-		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+		for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+			for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
-			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] / iElem;
+				MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pmOMAMatrice.pMATtabValeurs[iLigne][iColonne] / iElem;
+
+			}
 
 		}
+
+	}
+
+	catch(CException EXCexception) {
+		cout << "Opération" << EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
 	}
 
 	return MATMatriceResultat;
@@ -247,20 +292,34 @@ CMatrice<nomType> COperationsMatrice<nomType>::MATCalculTransposee(COperationsMa
 
 	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
 
+	//initialisation de l'objet exception
+	CException EXCexception = new CException();
+	EXCexception.EXCSetOperation('T');
+
+	try {
 	//EXCEPTIONS
 		//matrice non carree
-	if (uiNbColonnes != uiNbLignes) {
-		throw "Taille invalide (matrice non carree)!";
-	}
+		if (uiNbColonnes != uiNbLignes) {
+			EXCexception.EXCSetMessage("Taille de matrice invalide (matrice non carrée) !");
+			throw (EXCexception);
+		}
 
 	//TRAITEMENT
-	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
-		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
+		for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+			for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
-			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
+				MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = OMAM1.pmOMAMatrice.pMATtabValeurs[iColonne][iLigne];
+
+			}
 
 		}
+
 	}
+
+	catch (CException EXCexception) {
+		cout << "Opération" << EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
+	}
+		
 
 	return MATMatriceResultat;
 }
