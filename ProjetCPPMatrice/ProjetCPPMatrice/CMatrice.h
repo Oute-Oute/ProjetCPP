@@ -20,7 +20,7 @@ private:
 public:
 	CMatrice();
 
-	CMatrice(int MATnbL, int MATnbC,char* MATnT, nomType * MATtV);
+	CMatrice(int MATnbL, int MATnbC,char* MATnT, nomType ** MATtV);
 
 	CMatrice(CMatrice &MATM1);
 
@@ -56,22 +56,25 @@ CMatrice<nomType>::CMatrice()
 	uiMATnbColonnes = 0;
 	uiMATnbLignes = 0;
 	cMATnomType = nullptr;
+	pMATtabValeurs = nullptr;
 }
 
 template<class nomType>
-CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType * MATtV)
+CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType ** MATtV)
 {
 	uiMATnbLignes = MATnbL;
 	uiMATnbColonnes = MATnbC;
 	cMATnomType = MATnT;
+	pMATtabValeurs = MATtV;
 }
 
 template<class nomType>
 CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 {
-	uiMATnbLignes = MATM1.MATGetnbLigne();
-	uiMATnbColonnes = MATM1.MATGetnbColonne();
-	cMATnomType = MATM1.MATGetnomType();
+	uiMATnbLignes = MATM1.MATGetNbLigne();
+	uiMATnbColonnes = MATM1.MATGetNbColonne();
+	cMATnomType = MATM1.MATGetNomType();
+	pMATtabValeurs = MATM1.MATGetTabValeur;
 }
 
 template<class nomType>
