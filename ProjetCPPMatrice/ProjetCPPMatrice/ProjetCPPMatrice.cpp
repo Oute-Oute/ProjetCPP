@@ -10,6 +10,7 @@ int main()
 	test.pLECnomFichier = "test.txt";
 	test.LECSetNbLigne();
 	test.LECSetNbColonne();
+	test.LECSetNomType();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
