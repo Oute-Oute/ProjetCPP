@@ -16,16 +16,16 @@ CLecture::CLecture()
 
 CLecture::CLecture(char* pnF)
 {
-	uiLECnbColonnes = 0;
-	uiLECnbLignes = 0;
-	pLECnomType = nullptr;
-	pLECtabValeurs = nullptr;
 	pLECnomFichier = pnF;
+	LECSetNbLigne();
+	LECSetNbColonne();
+	LECSetNomType();
+	LECSetTabValeurs();
 }
 
 CLecture::CLecture(CLecture &LEClecture)
 {
-	uiLECnbColonnes = LEClecture.LECGetnbColonne();
+	uiLECnbColonnes = LEClecture.LECGetNbColonnes();
 	uiLECnbLignes = LEClecture.LECGetNbLignes();
 	pLECnomType = LEClecture.LECGetnomType();
 	pLECtabValeurs = LEClecture.LECGetTabValeurs();
@@ -44,7 +44,7 @@ int CLecture::LECGetNbLignes()
 	return uiLECnbLignes;
 }
 
-int CLecture::LECGetnbColonne()
+int CLecture::LECGetNbColonnes()
 {
 	return uiLECnbColonnes;
 }
@@ -111,11 +111,42 @@ void CLecture::LECSetNomType()
 		cParse = strtok_s(cLigne, "=", &context);
 		cParse = strtok_s(NULL, "=", &context);
 		pLECnomType = cParse;
-		cout << pLECnomType;
 		fmyFile.close();
 	}
 }
 
 void CLecture::LECSetTabValeurs()
 {
+	ifstream fmyFile;
+	char cLigne[50];
+	char* cParse=new char[50];
+	char* context = NULL;
+	unsigned int uiBoucleLignes;
+	unsigned int uiBoucleColonnes;
+	unsigned int uiboucleTab;
+	double** ptabVal=new double*[uiLECnbLignes];
+	for (uiboucleTab = 0; uiboucleTab < uiLECnbLignes; uiboucleTab++) {
+		ptabVal[uiboucleTab] = new double[uiLECnbColonnes];
+	}
+	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		for (uiBoucleLignes = 0; uiBoucleLignes < uiLECnbLignes; uiBoucleLignes++) {
+			cParse = strtok_s(cLigne, "\t", &context);
+			cParse = strtok_s(cParse, " ", &context);
+			for (uiBoucleColonnes = 0; uiBoucleColonnes < uiLECnbColonnes; uiBoucleColonnes++) {
+				
+				ptabVal[uiBoucleLignes][uiBoucleColonnes] = atof(cParse);
+				cParse = strtok_s(NULL, " ", &context);
+				cout << ptabVal[uiBoucleLignes][uiBoucleColonnes];
+			}
+			fmyFile.getline(cLigne, 50);
+		}
+		
+		fmyFile.close();
+	}
 }

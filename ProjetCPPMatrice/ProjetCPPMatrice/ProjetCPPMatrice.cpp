@@ -3,14 +3,17 @@
 
 #include "CMatrice.h"
 #include "CLecture.h"
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
 
 int main()
 {
-	CLecture test;
-	test.pLECnomFichier = "test.txt";
-	test.LECSetNbLigne();
-	test.LECSetNbColonne();
-	test.LECSetNomType();
+	char* file;
+	file = (char*)"test.txt";
+	CLecture test(file);
+	_CrtDumpMemoryLeaks();
+	return 0;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
