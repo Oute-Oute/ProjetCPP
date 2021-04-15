@@ -1,19 +1,38 @@
 // ProjetCPPMatrice.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
 
-#include "CMatrice.h"
-#include "CLecture.h"
-#define _CRTDBG_MAP_ALLOC
-#include <stdlib.h>
-#include <crtdbg.h>
+#include "COperationsMatrice.h"
+using namespace std;
 
-int main()
+int main(int argv, char** argc)
 {
-	char* file;
-	file = (char*)"test.txt";
-	CLecture test(file);
-	_CrtDumpMemoryLeaks();
-	return 0;
+	
+	CMatrice<int>  MATMatriceTemp;
+
+	CMatrice<int>  MATMatriceRes;
+
+	double C;
+	//point 1
+
+	//point 2
+	cout << "entrez la valeur de C" << endl;
+	cin >> C;
+
+	//point 3
+	for (int i = 0; i < argv-1; i++) {
+		//lire la matrice du fichier n°i et stocker dans MatriceTemp
+		
+		//
+	}
+
+	//point 4
+
+	//point 5
+
+	//point 6
+
+	//point 7
+
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

@@ -4,7 +4,8 @@
 using namespace std;
 
 CException::CException() {
-
+	sEXCMessage = (char*) "Exception innatendue";
+	cEXCOperation = '0';
 }
 
 CException::CException(char cOpreation, char * sMessage)
@@ -29,12 +30,11 @@ char CException::EXCGetOperation() {
 	return cEXCOperation;
 }
 
-
-//////////////////////////////////////////////////////
 void CException::EXCSetOperation(char cOperation) {
 	cEXCOperation = cOperation;
 }
 
+//////////////////////////////////////////////////////
 int CException::EXCAddition() {
 	return 0;
 }
