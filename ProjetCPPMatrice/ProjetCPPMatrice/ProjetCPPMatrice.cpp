@@ -19,11 +19,6 @@ int main(int argv, char** argc)
 	cin >> C;
 
 	//point 3
-	for (int i = 0; i < argv-1; i++) {
-		//lire la matrice du fichier n°i et stocker dans MatriceTemp
-		
-		//
-	}
 
 	//point 4
 
