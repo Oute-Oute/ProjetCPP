@@ -15,8 +15,10 @@ int main(int argv, char** argc)
 	//point 1
 
 	//point 2
+	/*
 	cout << "entrez la valeur de C" << endl;
 	cin >> C;
+	*/
 
 	//point 3
 

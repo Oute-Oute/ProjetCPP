@@ -1,3 +1,10 @@
+///
+/// @file CMatrice.h
+/// @author BLUMSTEIN Thomas
+/// @coauthor NASSIRI Adam
+/// @date 2021-04-15
+///
+
 #ifndef C_MATRICE_H
 #define C_MATRICE_H
 
@@ -18,32 +25,67 @@ private:
 	nomType ** pMATtabValeurs;
 
 public:
+	//constructeur de CMatrice par defaut
 	CMatrice();
 
+	//constructeur avec indication des donnees
 	CMatrice(int MATnbL, int MATnbC,char* MATnT, nomType ** MATtV);
 
+	//constructeur de CMatrice de recopie
 	CMatrice(CMatrice &MATM1);
 
+	//destructeur de CMatrice
 	~CMatrice();
 
+	/// @brief renvoie le nombre de lignes de la matrice
+	/// @param RIEN
+	/// @return uiMATnbLignes le nombre de lignes de la matrice
 	int MATGetNbLigne();
 
+	/// @brief renvoie le nombre de colonnes de la matrice
+	/// @param RIEN
+	/// @return uiMATnbColonnes le nombre de colonnes de la matrice
 	int MATGetNbColonne();
 
+
+	/// @brief renvoie le type des elements dde la matrice
+	/// @param RIEN
+	/// @return cMATnomTypele le type des elements de la matrice
 	char* MATGetNomType();
 
+	/// @brief renvoie le tableau d'elements de la matrice
+	/// @param RIEN
+	/// @return pMATtabValuerse le tableau des elements de la matrices
 	nomType MATgetTabValeur();
 
+	/// @brief definit le nombre de lignes d'une CMatrice
+	/// @param MATnb nombre de lignes qu'on impose
+	/// @return RIEN
 	void MATSetNbLigne(int MATnbL);
 
+	/// @brief definit le nombre de colonnes d'une CMatrice
+	/// @param MATnbC nombre de colonnes qu'on impose
+	/// @return RIEN
 	void MATSetNbColonne(int MATnbC);
 	
+	/// @brief definit le nom du type des elements de la matrice
+	/// @param MATnT nombre de lignes qu'on impose
+	/// @return RIEN
 	void MATSetNomType(char* MATnT);
 
+	/// @brief definit le tableau des elements de la CMatrice
+	/// @param MATtV nombre de lignes qu'on impose
+	/// @return RIEN
 	void MATSetTabValeur(nomType **MATtV);
 
+	/// @brief definit le tableau des elements de la CMatrice 
+	/// @param RIEN
+	/// @return RIEN
 	void MATSetTabValeur();
 
+	/// @brief affiche le contenu de la CMatrice: repmlit le tableau avec des entiers croissants en partant de 0
+	/// @param RIEN
+	/// @return RIEN
 	void MATAfficherMatrice();
 	
 	ostream& operator<<(ostream& os);
@@ -147,7 +189,7 @@ inline void CMatrice<nomType>::MATSetTabValeur()
 	{
 		for (int iboucleColonnes = 0; iboucleColonnes < uiMATnbColonnes; iboucleColonnes++)
 		{
-			pMATtabValeurs[iboucleLignes][iboucleColonnes] =k;
+			pMATtabValeurs[iboucleLignes][iboucleColonnes] = k;
 			k++;
 		}
 	}
