@@ -1,7 +1,7 @@
-aypeMatrice=int
+TypeMatrice=int
 	NBLignes=2
-	NBColonnes=3
+	NBColonnes=4
 	Matrice=[
-	5 3 6
-	1 -2 8
+	5 3 6 5
+	1 -2 8 7
 ]

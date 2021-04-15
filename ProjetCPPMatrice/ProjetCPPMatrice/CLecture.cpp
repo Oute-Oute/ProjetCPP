@@ -2,7 +2,7 @@
 #include <iostream>
 #include "CLecture.h"
 #include <fstream>
-#include "CException.h"
+
 using namespace std;
 
 CLecture::CLecture()
@@ -16,16 +16,16 @@ CLecture::CLecture()
 
 CLecture::CLecture(char* pnF)
 {
-	uiLECnbColonnes = 0;
-	uiLECnbLignes = 0;
-	pLECnomType = nullptr;
-	pLECtabValeurs = nullptr;
 	pLECnomFichier = pnF;
+	LECSetNbLigne();
+	LECSetNbColonne();
+	LECSetNomType();
+	LECSetTabValeurs();
 }
 
 CLecture::CLecture(CLecture &LEClecture)
 {
-	uiLECnbColonnes = LEClecture.LECGetnbColonne();
+	uiLECnbColonnes = LEClecture.LECGetNbColonnes();
 	uiLECnbLignes = LEClecture.LECGetNbLignes();
 	pLECnomType = LEClecture.LECGetnomType();
 	pLECtabValeurs = LEClecture.LECGetTabValeurs();
@@ -44,7 +44,7 @@ int CLecture::LECGetNbLignes()
 	return uiLECnbLignes;
 }
 
-int CLecture::LECGetnbColonne()
+int CLecture::LECGetNbColonnes()
 {
 	return uiLECnbColonnes;
 }
@@ -61,80 +61,42 @@ double** CLecture::LECGetTabValeurs()
 
 void CLecture::LECSetNbLigne()
 {
-	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('L');
-
 	ifstream fmyFile;
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
 	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+		fmyFile.getline(cLigne,50);
+		fmyFile.getline(cLigne, 50);
+		cParse = strtok_s(cLigne, "=",&context);
+		cParse = strtok_s(NULL, "=",&context);
+		uiLECnbLignes = atoi(cParse);
 
-	try {
-		if (fmyFile) {
-			fmyFile.getline(cLigne, 50);
-			fmyFile.getline(cLigne, 50);
-			cParse = strtok_s(cLigne, "=", &context);
-			cParse = strtok_s(NULL, "=", &context);
-			uiLECnbLignes = atoi(cParse);
-
-			fmyFile.close();
-		}
-
-		//exception
-		else {
-			EXCexception.EXCSetMessage((char*)"Erreur d'ouverture de fichier!");
-			throw(EXCexception);
-		}
-
+		fmyFile.close();
 	}
 
-	catch (CException EXCexception) {
-		cout << "Opération" << EXCexception.EXCGetOperation() << ", exception: " << EXCexception.EXCGetMessage() << endl;
-	}
-
+	//exception
 }
 
 void CLecture::LECSetNbColonne()
 {
-
-
 	ifstream fmyFile;
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
 	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		cParse = strtok_s(cLigne, "=", &context);
+		cParse = strtok_s(NULL, "=", &context);
+		uiLECnbColonnes = atoi(cParse);
 
-	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('L');
-
-	//traitement
-	try {
-
-		if (fmyFile) {
-			fmyFile.getline(cLigne, 50);
-			fmyFile.getline(cLigne, 50);
-			fmyFile.getline(cLigne, 50);
-			cParse = strtok_s(cLigne, "=", &context);
-			cParse = strtok_s(NULL, "=", &context);
-			uiLECnbColonnes = atoi(cParse);
-
-			fmyFile.close();
-		}
-
-		else {
-			EXCexception.EXCSetMessage((char*)"Erreur d'ouverture de fichier!");
-			throw(EXCexception);
-		}
-
+		fmyFile.close();
 	}
-
-	//lever l exception
-	catch (CException EXCexception) {
-		cout << "Opération" << EXCexception.EXCGetOperation() << ", exception: " << EXCexception.EXCGetMessage() << endl;
-	}
+	//exception
 }
 
 void CLecture::LECSetNomType()
@@ -144,42 +106,47 @@ void CLecture::LECSetNomType()
 	char* cParse;
 	char* context = NULL;
 	fmyFile.open(pLECnomFichier);
-
-	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('L');
-
-	try {
-		if (fmyFile) {
-			fmyFile.getline(cLigne, 50);
-			cParse = strtok_s(cLigne, "=", &context);
-			cParse = strtok_s(NULL, "=", &context);
-			pLECnomType = cParse;
-			cout << pLECnomType;
-			fmyFile.close();
-
-			if (pLECnomType != "double") {
-				EXCexception.EXCSetMessage((char*)"La matrice ne doit contenir que des doubles");
-				throw(EXCexception);
-			}
-
-		}
-
-		else {
-			EXCexception.EXCSetMessage((char*)"Erreur d'ouverture de fichier!");
-			throw(EXCexception);
-		}
-
+	if (fmyFile) {
+		fmyFile.getline(cLigne, 50);
+		cParse = strtok_s(cLigne, "=", &context);
+		cParse = strtok_s(NULL, "=", &context);
+		pLECnomType = cParse;
+		fmyFile.close();
 	}
-
-	//lever l exception
-	catch (CException EXCexception) {
-		cout << "Opération" << EXCexception.EXCGetOperation() << ", exception: " << EXCexception.EXCGetMessage() << endl;
-	}
-
 }
 
 void CLecture::LECSetTabValeurs()
 {
-
+	ifstream fmyFile;
+	char cLigne[50];
+	char* cParse=new char[50];
+	char* context = NULL;
+	unsigned int uiBoucleLignes;
+	unsigned int uiBoucleColonnes;
+	unsigned int uiboucleTab;
+	double** ptabVal=new double*[uiLECnbLignes];
+	for (uiboucleTab = 0; uiboucleTab < uiLECnbLignes; uiboucleTab++) {
+		ptabVal[uiboucleTab] = new double[uiLECnbColonnes];
+	}
+	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		fmyFile.getline(cLigne, 50);
+		for (uiBoucleLignes = 0; uiBoucleLignes < uiLECnbLignes; uiBoucleLignes++) {
+			cParse = strtok_s(cLigne, "\t", &context);
+			cParse = strtok_s(cParse, " ", &context);
+			for (uiBoucleColonnes = 0; uiBoucleColonnes < uiLECnbColonnes; uiBoucleColonnes++) {
+				
+				ptabVal[uiBoucleLignes][uiBoucleColonnes] = atof(cParse);
+				cParse = strtok_s(NULL, " ", &context);
+				cout << ptabVal[uiBoucleLignes][uiBoucleColonnes];
+			}
+			fmyFile.getline(cLigne, 50);
+		}
+		
+		fmyFile.close();
+	}
 }

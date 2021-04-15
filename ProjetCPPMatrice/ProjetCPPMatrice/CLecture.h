@@ -32,7 +32,7 @@ public:
 
 	int LECGetNbLignes();
 
-	int LECGetnbColonne();
+	int LECGetNbColonnes();
 
 	char* LECGetnomType();
 
