@@ -34,7 +34,7 @@ CLecture::CLecture(CLecture &LEClecture)
 
 CLecture::~CLecture()
 {
-	delete pLECnomType;
+	//delete pLECnomType;
 	//delete pLECnomFichier;
 	delete pLECtabValeurs;
 }
@@ -65,15 +65,13 @@ void CLecture::LECSetNbLigne()
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	int inbLignes;
 	fmyFile.open(pLECnomFichier);
 	if (fmyFile) {
 		fmyFile.getline(cLigne,50);
 		fmyFile.getline(cLigne, 50);
 		cParse = strtok_s(cLigne, "=",&context);
 		cParse = strtok_s(NULL, "=",&context);
-		inbLignes = atoi(cParse);
-		cout << inbLignes;
+		uiLECnbLignes = atoi(cParse);
 
 		fmyFile.close();
 	}
@@ -87,7 +85,6 @@ void CLecture::LECSetNbColonne()
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	int inbLignes;
 	fmyFile.open(pLECnomFichier);
 	if (fmyFile) {
 		fmyFile.getline(cLigne, 50);
@@ -95,8 +92,7 @@ void CLecture::LECSetNbColonne()
 		fmyFile.getline(cLigne, 50);
 		cParse = strtok_s(cLigne, "=", &context);
 		cParse = strtok_s(NULL, "=", &context);
-		inbLignes = atoi(cParse);
-		cout << inbLignes;
+		uiLECnbColonnes = atoi(cParse);
 
 		fmyFile.close();
 	}
@@ -105,6 +101,19 @@ void CLecture::LECSetNbColonne()
 
 void CLecture::LECSetNomType()
 {
+	ifstream fmyFile;
+	char cLigne[50];
+	char* cParse;
+	char* context = NULL;
+	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+		fmyFile.getline(cLigne, 50);
+		cParse = strtok_s(cLigne, "=", &context);
+		cParse = strtok_s(NULL, "=", &context);
+		pLECnomType = cParse;
+		cout << pLECnomType;
+		fmyFile.close();
+	}
 }
 
 void CLecture::LECSetTabValeurs()
