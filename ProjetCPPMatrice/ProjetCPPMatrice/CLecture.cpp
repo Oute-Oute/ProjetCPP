@@ -157,6 +157,12 @@ void CLecture::LECSetNomType()
 			pLECnomType = cParse;
 			cout << pLECnomType;
 			fmyFile.close();
+
+			if (pLECnomType != "double") {
+				EXCexception.EXCSetMessage((char*)"La matrice ne doit contenir que des doubles");
+				throw(EXCexception);
+			}
+
 		}
 
 		else {

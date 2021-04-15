@@ -6,11 +6,10 @@ using namespace std;
 
 int main(int argv, char** argc)
 {
-	CMatrice<int>  MatriceRes;
-	MatriceRes.MATSetNbLigne(2);
-	MatriceRes.MATSetNbColonne(2);
-	MatriceRes.MATSetTabValeur();
-	MatriceRes.MATAfficherMatrice();
+	
+	CMatrice<int>  MATMatriceTemp;
+
+	CMatrice<int>  MATMatriceRes;
 
 	double C;
 	//point 1
@@ -21,7 +20,9 @@ int main(int argv, char** argc)
 
 	//point 3
 	for (int i = 0; i < argv-1; i++) {
-
+		//lire la matrice du fichier n°i et stocker dans MatriceTemp
+		
+		//
 	}
 
 	//point 4
