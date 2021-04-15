@@ -2,14 +2,36 @@
 //
 
 #include "COperationsMatrice.h"
+using namespace std;
 
-int main()
+int main(int argv, char** argc)
 {
-	CMatrice<int>  MatriceTest;
-	MatriceTest.MATSetNbLigne(2);
-	MatriceTest.MATSetNbColonne(2);
-	MatriceTest.MATSetTabValeur();
-	MatriceTest.MATAfficherMatrice();
+	CMatrice<int>  MatriceRes;
+	MatriceRes.MATSetNbLigne(2);
+	MatriceRes.MATSetNbColonne(2);
+	MatriceRes.MATSetTabValeur();
+	MatriceRes.MATAfficherMatrice();
+
+	double C;
+	//point 1
+
+	//point 2
+	cout << "entrez la valeur de C" << endl;
+	cin >> C;
+
+	//point 3
+	for (int i = 0; i < argv-1; i++) {
+
+	}
+
+	//point 4
+
+	//point 5
+
+	//point 6
+
+	//point 7
+
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

@@ -4,7 +4,8 @@
 using namespace std;
 
 CException::CException() {
-
+	sEXCMessage = (char*) "Exception innatendue";
+	cEXCOperation = '0';
 }
 
 CException::CException(char cOpreation, char * sMessage)
