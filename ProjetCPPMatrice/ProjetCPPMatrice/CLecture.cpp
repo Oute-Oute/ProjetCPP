@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "CLecture.h"
+#include "CException.h"
 #include <fstream>
 
 using namespace std;
