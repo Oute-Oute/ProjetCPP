@@ -1,9 +1,22 @@
-﻿  CLecture.cpp
-  ProjetCPPMatrice.cpp
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(213): warning C4018: '<' : incompatibilité signed/unsigned
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(212): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(24): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<double>::MATAfficherMatrice(void)' en cours de compilation
-  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(23): note: voir la référence à l'instanciation de classe modèle 'CMatrice<double>' en cours de compilation
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(215): warning C4018: '<' : incompatibilité signed/unsigned
-  Génération de code en cours...
+﻿  ProjetCPPMatrice.cpp
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(375): warning C4018: '<' : incompatibilité signed/unsigned
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(362): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(30): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double> CMatrice<double>::operator *(double &)' en cours de compilation
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(27): note: voir la référence à l'instanciation de classe modèle 'CMatrice<double>' en cours de compilation
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(376): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(170): warning C4101: 'uiboucleTab' : variable locale non référencée
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(169): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(138): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<double>::MATGetTabValeurs(nomType **)' en cours de compilation
+          with
+          [
+              nomType=double
+          ]
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(134): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(384): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(CMatrice<double> &)' en cours de compilation
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(112): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(27): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(int,int,char *,nomType **)' en cours de compilation
+          with
+          [
+              nomType=double
+          ]
   ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe

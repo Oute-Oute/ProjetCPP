@@ -32,9 +32,6 @@
     <ClInclude Include="CMatrice.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="COperationsMatrice.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="CLecture.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>

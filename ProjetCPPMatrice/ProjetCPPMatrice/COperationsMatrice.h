@@ -21,7 +21,7 @@ public:
 	COperationsMatrice(COperationsMatrice<nomType> &OMAM1);
 
 	//constructeur a partir d une CMatrice*
-	COperationsMatrice(CMatrice<nomType>* pmOMAMat);
+	COperationsMatrice(CMatrice<nomType> pmOMAMat);
 
 	//destructeur
 	~COperationsMatrice();
@@ -34,8 +34,6 @@ public:
 	CMatrice<nomType> operator*(COperationsMatrice<nomType> &OMAM1);
 
 	CMatrice<nomType> operator*(double &iElem);
-
-	CMatrice<nomType> operator/(int &iElem);
 
 	CMatrice<nomType> operator/(double & iElem);
 
@@ -56,14 +54,28 @@ COperationsMatrice<nomType>::COperationsMatrice()
 template<class nomType>
 COperationsMatrice<nomType>::COperationsMatrice(COperationsMatrice<nomType> &OMAM1)
 {
-	pmOMAMatrice = OMAM1.pmOMAMatrice;
+	pmOMAMatrice.MATSetNbLigne(OMAM1.MATGetNbLigne());
+	pmOMAMatrice.MATSetNbColonne(OMAM1.MATGetNbColonne());
+	pmOMAMatrice.MATSetNomType(OMAM1.MATGetNomType());
+	pmOMAMatrice.MATSetTabValeur(OMAM1.MATGetTabValeurs());
 }
 
 //constructeur de COperationsMatrice a partir d une Cmatrice*
 template<class nomType>
-COperationsMatrice<nomType>::COperationsMatrice(CMatrice<nomType>* pmOMAMat)
+COperationsMatrice<nomType>::COperationsMatrice(CMatrice<nomType> pmOMAMat)
 {
-	pmOMAMatrice = pmOMAMat;
+	pmOMAMatrice.MATSetNbLigne(pmOMAMat.MATGetNbLigne());
+	pmOMAMatrice.MATSetNbColonne(pmOMAMat.MATGetNbColonne());
+	pmOMAMatrice.MATSetNomType(pmOMAMat.MATGetNomType());
+	int uiboucle;
+
+	nomType** pnttV = new nomType*[pmOMAMat.MATGetNbLigne()];
+
+	for (uiboucle = 0; uiboucle < pmOMAMat.MATGetNbLigne(); uiboucle++) {
+		pnttV[uiboucle] = new nomType[pmOMAMat.MATGetNbColonne()];
+	}
+	pmOMAMat.MATGetTabValeurs(pnttV);
+	pmOMAMatrice.MATSetTabValeur(pnttV);
 }
 
 //destructeur de COperationsMatrice

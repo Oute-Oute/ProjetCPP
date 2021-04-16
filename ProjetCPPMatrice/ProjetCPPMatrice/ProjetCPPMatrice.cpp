@@ -1,7 +1,7 @@
 // ProjetCPPMatrice.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
 
-#include "COperationsMatrice.h"
+#include "CMatrice.h"
 #include "CLecture.h"
 using namespace std;
 
@@ -12,7 +12,7 @@ int main(int argv, char** argc)
 
 	unsigned int uinbLignes = CLEC.LECGetNbLignes();
 
-	unsigned int uinbColonnes = CLEC.LECGetNbLignes();
+	unsigned int uinbColonnes = CLEC.LECGetNbColonnes();
 
 	unsigned int uiboucle;
 
@@ -25,6 +25,10 @@ int main(int argv, char** argc)
 	char* test2 = new char[100];
 	CLEC.LECGetnomType(test2);
 	CMatrice <double> CMAT1(uinbLignes, uinbColonnes, test2, test);
+	CMatrice <double> CMAT2;
+	double multi = 3.0;
+	CMAT2 = CMAT1*multi;
+	CMAT2.MATAfficherMatrice();
 	CMAT1.MATAfficherMatrice();
 
 
