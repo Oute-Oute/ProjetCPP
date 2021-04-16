@@ -97,7 +97,7 @@ void CLecture::LECSetNbColonne()
 
 		fmyFile.close();
 	}
-	//exception
+
 }
 
 void CLecture::LECSetNomType()
