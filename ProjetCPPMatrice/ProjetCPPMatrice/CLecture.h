@@ -23,7 +23,6 @@ public:
 
 	ifstream fmyFile;
 
-
 public:
 	CLecture();
 

@@ -42,4 +42,8 @@ void CException::EXCSetOperation(char cEXCope) {
 	cEXCoperation = cEXCope;
 }
 
+void CException::EXCAfficherException() {
+	cout << "Opération" << cEXCoperation << ", exception: " << pEXCmessage << endl;
+}
+
 

@@ -121,7 +121,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator+(COperationsMatrice<nomT
 
 	//LEVER LES EXCEPTIONS
 	catch (CException EXCexception) {
-		cout<< "Opération" <<EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
+		EXCexception.EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
@@ -163,7 +163,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator-(COperationsMatrice<nomT
 
 	//LEVER LES EXCEPTIONS
 	catch (CException EXCexception) {
-		cout << "Opération" << EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
+		EXCexception.EXCAfficherException(); 
 	}
 
 	return MATMatriceResultat;
@@ -219,7 +219,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 	}
 	
 	catch (CException EXCexception) {
-		cout << "Opération" << EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
+		EXCexception.EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
@@ -285,7 +285,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator/(double &iElem)
 	}
 
 	catch(CException EXCexception) {
-		cout << "Opération" << EXCexception.EXCGetOperation << ", exception: " << EXCexception.EXCGetMessage() << endl;
+		EXCexception.EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
