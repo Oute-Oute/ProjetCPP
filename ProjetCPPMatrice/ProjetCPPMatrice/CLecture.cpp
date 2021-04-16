@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "CLecture.h"
+#include "CException.h"
 #include <fstream>
 
 using namespace std;
@@ -16,16 +17,32 @@ CLecture::CLecture()
 
 CLecture::CLecture(char* pnF)
 {
-	pLECnomFichier = pnF;
-	fmyFile.open(pLECnomFichier);
-	if (fmyFile) {
+	CException EXCExceptionLecture = *new CException();
+	EXCExceptionLecture.EXCSetOperation('L');
+	
+	try {
+		pLECnomFichier = pnF;
+		fmyFile.open(pLECnomFichier);
 
-		LECSetNomType();
-		LECSetNbLigne();
-		LECSetNbColonne();
-		LECSetTabValeurs();
-		fmyFile.close();
+		if (fmyFile) {
+			LECSetNomType();
+			LECSetNbLigne();
+			LECSetNbColonne();
+			LECSetTabValeurs();
+			fmyFile.close();
+		}
+
+		else {
+			EXCExceptionLecture.EXCSetMessage("Erreur lors de l'ouverture du fichier")
+			throw(EXCExceptionLecture);
+		}
+
 	}
+
+	catch (CException EXCExceptionLecture) {
+		EXCExceptionLecture.EXCAfficherException();
+	}
+
 }
 
 CLecture::CLecture(CLecture &LEClecture)
@@ -72,7 +89,9 @@ void CLecture::LECGetTabValeurs(double** pLECtV)
 
 			pLECtV[uiboucleLignes][uiboucleColonnes] = pLECtabValeurs[uiboucleLignes][uiboucleColonnes];
 		}
+
 	}
+
 }
 
 void CLecture::LECSetNbLigne()
@@ -85,11 +104,16 @@ void CLecture::LECSetNbLigne()
 	fmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
-	uiLECnbLignes = atoi(cParse);
 
+	if (cParse == 0) {
+		EXCExceptionLecture.EXCSetMessage("Erreur lors de l'ouverture du fichier");
+		throw(EXCExceptionLecture);
+	}
 
-
-	//exception
+	else {
+		uiLECnbLignes = atoi(cParse);
+	}
+	
 }
 
 void CLecture::LECSetNbColonne()

@@ -50,5 +50,7 @@ public:
 	/// @return 
 	void EXCSetOperation(char cEXCope);
 
+	void EXCAfficherException();
+
 };
 #endif
