@@ -1,3 +1,9 @@
-﻿  ProjetCPPMatrice.cpp
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(145): error C2039: 'MATgetTabValeur' : n'est pas membre de 'CMatrice<nomType>'
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(145): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+﻿  CLecture.cpp
+  ProjetCPPMatrice.cpp
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(213): warning C4018: '<' : incompatibilité signed/unsigned
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(212): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(24): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<double>::MATAfficherMatrice(void)' en cours de compilation
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(23): note: voir la référence à l'instanciation de classe modèle 'CMatrice<double>' en cours de compilation
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(215): warning C4018: '<' : incompatibilité signed/unsigned
+  Génération de code en cours...
+  ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+using namespace std;
 
 
 class CLecture
@@ -20,6 +21,8 @@ public:
 
 	char* pLECnomType;
 
+	ifstream fmyFile;
+
 
 public:
 	CLecture();
@@ -34,9 +37,9 @@ public:
 
 	int LECGetNbColonnes();
 
-	char* LECGetnomType();
+	void LECGetnomType(char* pLECnT);
 
-	double** LECGetTabValeurs();
+	void LECGetTabValeurs(double** pLECtV);
 
 	void LECSetNbLigne();
 
@@ -45,6 +48,8 @@ public:
 	void LECSetNomType();
 
 	void LECSetTabValeurs();
+
+	void LECSetNomFichier(char* LECnF);
 
 };
 #endif

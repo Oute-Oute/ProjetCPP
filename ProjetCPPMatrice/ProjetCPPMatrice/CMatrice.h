@@ -29,7 +29,7 @@ public:
 	CMatrice();
 
 	//constructeur avec indication des donnees
-	CMatrice(int MATnbL, int MATnbC,char* MATnT, nomType ** MATtV);
+	CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType ** MATtV);
 
 	//constructeur de CMatrice de recopie
 	CMatrice(CMatrice &MATM1);
@@ -53,6 +53,11 @@ public:
 	/// @return cMATnomTypele le type des elements de la matrice
 	char* MATGetNomType();
 
+	/// @brief renvoie le tableau d'elements de la matrice
+	/// @param RIEN
+	/// @return pMATtabValuerse le tableau des elements de la matrices
+	nomType** MATGetTabValeurs();
+
 	/// @brief definit le nombre de lignes d'une CMatrice
 	/// @param MATnb nombre de lignes qu'on impose
 	/// @return RIEN
@@ -62,27 +67,22 @@ public:
 	/// @param MATnbC nombre de colonnes qu'on impose
 	/// @return RIEN
 	void MATSetNbColonne(int MATnbC);
-	
+
 	/// @brief definit le nom du type des elements de la matrice
-	/// @param MATnT nombre de lignes qu'on impose
+	/// @param MATnT nom du type imposé
 	/// @return RIEN
 	void MATSetNomType(char* MATnT);
 
 	/// @brief definit le tableau des elements de la CMatrice
-	/// @param MATtV nombre de lignes qu'on impose
+	/// @param MATtV tableau des valeurs a entrer
 	/// @return RIEN
 	void MATSetTabValeur(nomType **MATtV);
-
-	/// @brief definit le tableau des elements de la CMatrice 
-	/// @param RIEN
-	/// @return RIEN
-	void MATSetTabValeur();
 
 	/// @brief affiche le contenu de la CMatrice: repmlit le tableau avec des entiers croissants en partant de 0
 	/// @param RIEN
 	/// @return RIEN
 	void MATAfficherMatrice();
-	
+
 	ostream& operator<<(ostream& os);
 
 };
@@ -97,12 +97,24 @@ CMatrice<nomType>::CMatrice()
 }
 
 template<class nomType>
-CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType ** MATtV)
+CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType** MATtV)
 {
 	uiMATnbLignes = MATnbL;
 	uiMATnbColonnes = MATnbC;
 	cMATnomType = MATnT;
-	pMATtabValeurs = MATtV;
+	unsigned int uiboucleTab;
+	unsigned int uiBoucleLignes;
+	unsigned int uiBoucleColonnes;
+	double** pMATtabValeurs = new double*[uiMATnbLignes];
+	for (uiboucleTab = 0; uiboucleTab < uiMATnbLignes; uiboucleTab++) {
+		pMATtabValeurs[uiboucleTab] = new double[uiMATnbColonnes];
+	}
+	for (uiBoucleLignes = 0; uiBoucleLignes < uiMATnbLignes; uiBoucleLignes++) {
+		for (uiBoucleColonnes = 0; uiBoucleColonnes < uiMATnbColonnes; uiBoucleColonnes++) {
+
+			pMATtabValeurs[uiBoucleLignes][uiBoucleColonnes] = MATtV[uiBoucleLignes][uiBoucleColonnes];
+		}
+	}
 }
 
 template<class nomType>
@@ -141,7 +153,7 @@ char * CMatrice<nomType>::MATGetNomType()
 }
 
 template<class nomType>
-inline nomType CMatrice<nomType>::MATgetTabValeur()
+inline nomType** CMatrice<nomType>::MATGetTabValeurs()
 {
 	return pMATtabValeurs;
 }
@@ -176,19 +188,6 @@ void CMatrice<nomType>::MATSetTabValeur(nomType ** MATtV)
 	}
 }
 
-template<class nomType>
-inline void CMatrice<nomType>::MATSetTabValeur()
-{
-	int k = 0;
-	for (int iboucleLignes = 0; iboucleLignes < uiMATnbLignes; iboucleLignes++)
-	{
-		for (int iboucleColonnes = 0; iboucleColonnes < uiMATnbColonnes; iboucleColonnes++)
-		{
-			pMATtabValeurs[iboucleLignes][iboucleColonnes] = k;
-			k++;
-		}
-	}
-}
 
 template<class nomType>
 inline void CMatrice<nomType>::MATAfficherMatrice()
@@ -205,7 +204,7 @@ inline void CMatrice<nomType>::MATAfficherMatrice()
 
 template<class nomType>
 inline ostream & CMatrice<nomType>::operator<<(ostream & os)
-{	
+{
 	for (int iboucleLignes = 0; iboucleLignes < uiMATnbLignes; iboucleLignes++)
 	{
 		for (int iboucleColonnes = 0; iboucleColonnes < uiMATnbColonnes; iboucleColonnes++)
