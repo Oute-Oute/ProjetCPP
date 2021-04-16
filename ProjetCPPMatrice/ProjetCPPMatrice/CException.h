@@ -17,15 +17,15 @@
 class CException
 {
 private:
-	char cEXCOperation;
-	char* sEXCMessage;
+	char cEXCoperation;
+	char* pEXCmessage;
 
 public:
 	//constructeur de CException par defaut
 	CException();
 
 	//constructeur a partir d une operation et un message d exception
-	CException(char cOpreation, char* sMessage);
+	CException(char cEXCope, char* pEXCmess);
 
 	//destructeur de CException
 	~CException();
@@ -33,12 +33,12 @@ public:
 	/// @brief retourne le message d exception de la CException
 	/// @param RIEN
 	/// @return sEXCMessage le message d exception
-	char* EXCGetMessage();
+	void EXCGetMessage(char* pEXCmess);
 
 	/// @brief definit le message d exception dans la CException
 	/// @param smessage le nouveau message d exception
 	/// @return RIEN
-	void EXCSetMessage(char* smessage);
+	void EXCSetMessage(char* pEXCmess);
 
 	/// @brief retourne l operation concernee par la CException
 	/// @param RIEN
@@ -48,7 +48,7 @@ public:
 	/// @brief definit l operation concernee par la CException
 	/// @param cOperation l operateur sous forme de char
 	/// @return 
-	void EXCSetOperation(char cOperation);
+	void EXCSetOperation(char cEXCope);
 
 };
 #endif

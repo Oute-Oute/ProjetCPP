@@ -2,16 +2,32 @@
 //
 
 #include "COperationsMatrice.h"
+#include "CLecture.h"
 using namespace std;
 
 int main(int argv, char** argc)
 {
-	
-	CMatrice<int>  MATMatriceTemp;
 
-	CMatrice<int>  MATMatriceRes;
+	CLecture CLEC((char*)"test.txt");
 
-	double C;
+	unsigned int uinbLignes = CLEC.LECGetNbLignes();
+
+	unsigned int uinbColonnes = CLEC.LECGetNbLignes();
+
+	unsigned int uiboucle;
+
+	double** test = new double*[uinbLignes];
+
+	for (uiboucle = 0; uiboucle < uinbLignes; uiboucle++) {
+		test[uiboucle] = new double[uinbColonnes];
+	}
+	CLEC.LECGetTabValeurs(test);
+	char* test2 = new char[100];
+	CLEC.LECGetnomType(test2);
+	CMatrice <double> CMAT1(uinbLignes, uinbColonnes, test2, test);
+	CMAT1.MATAfficherMatrice();
+
+
 	//point 1
 
 	//point 2

@@ -17,18 +17,23 @@ CLecture::CLecture()
 CLecture::CLecture(char* pnF)
 {
 	pLECnomFichier = pnF;
-	LECSetNbLigne();
-	LECSetNbColonne();
-	LECSetNomType();
-	LECSetTabValeurs();
+	fmyFile.open(pLECnomFichier);
+	if (fmyFile) {
+
+		LECSetNomType();
+		LECSetNbLigne();
+		LECSetNbColonne();
+		LECSetTabValeurs();
+		fmyFile.close();
+	}
 }
 
 CLecture::CLecture(CLecture &LEClecture)
 {
 	uiLECnbColonnes = LEClecture.LECGetNbColonnes();
 	uiLECnbLignes = LEClecture.LECGetNbLignes();
-	pLECnomType = LEClecture.LECGetnomType();
-	pLECtabValeurs = LEClecture.LECGetTabValeurs();
+	LEClecture.LECGetnomType(pLECnomType);
+	LEClecture.LECGetTabValeurs(pLECtabValeurs);
 	pLECnomFichier = LEClecture.pLECnomFichier;
 }
 
@@ -49,104 +54,100 @@ int CLecture::LECGetNbColonnes()
 	return uiLECnbColonnes;
 }
 
-char* CLecture::LECGetnomType()
+void CLecture::LECGetnomType(char* pLECnT)
 {
-	return pLECnomType;
+	strcpy_s(pLECnT,sizeof pLECnT,pLECnomType);
 }
 
-double** CLecture::LECGetTabValeurs()
+void CLecture::LECGetTabValeurs(double** pLECtV)
 {
-	return pLECtabValeurs;
+	unsigned int uiboucleTab;
+	unsigned int uiboucleLignes;
+	unsigned int uiboucleColonnes;
+	for (uiboucleTab = 0; uiboucleTab < uiLECnbLignes; uiboucleTab++) {
+		pLECtV[uiboucleTab] = new double[uiLECnbColonnes];
+	}
+	for (uiboucleLignes = 0; uiboucleLignes < uiLECnbLignes; uiboucleLignes++) {
+		for (uiboucleColonnes = 0; uiboucleColonnes < uiLECnbColonnes; uiboucleColonnes++) {
+
+			pLECtV[uiboucleLignes][uiboucleColonnes] = pLECtabValeurs[uiboucleLignes][uiboucleColonnes];
+		}
+	}
 }
 
 void CLecture::LECSetNbLigne()
 {
-	ifstream fmyFile;
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	fmyFile.open(pLECnomFichier);
-	if (fmyFile) {
-		fmyFile.getline(cLigne,50);
-		fmyFile.getline(cLigne, 50);
-		cParse = strtok_s(cLigne, "=",&context);
-		cParse = strtok_s(NULL, "=",&context);
-		uiLECnbLignes = atoi(cParse);
 
-		fmyFile.close();
-	}
+
+	fmyFile.getline(cLigne, 50);
+	cParse = strtok_s(cLigne, "=", &context);
+	cParse = strtok_s(NULL, "=", &context);
+	uiLECnbLignes = atoi(cParse);
+
+
 
 	//exception
 }
 
 void CLecture::LECSetNbColonne()
 {
-	ifstream fmyFile;
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	fmyFile.open(pLECnomFichier);
-	if (fmyFile) {
-		fmyFile.getline(cLigne, 50);
-		fmyFile.getline(cLigne, 50);
-		fmyFile.getline(cLigne, 50);
-		cParse = strtok_s(cLigne, "=", &context);
-		cParse = strtok_s(NULL, "=", &context);
-		uiLECnbColonnes = atoi(cParse);
+	fmyFile.getline(cLigne, 50);
+	cParse = strtok_s(cLigne, "=", &context);
+	cParse = strtok_s(NULL, "=", &context);
+	uiLECnbColonnes = atoi(cParse);
 
-		fmyFile.close();
-	}
 	//exception
 }
 
 void CLecture::LECSetNomType()
 {
-	ifstream fmyFile;
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	fmyFile.open(pLECnomFichier);
-	if (fmyFile) {
-		fmyFile.getline(cLigne, 50);
-		cParse = strtok_s(cLigne, "=", &context);
-		cParse = strtok_s(NULL, "=", &context);
-		pLECnomType = cParse;
-		fmyFile.close();
-	}
+	pLECnomType = new char[10];
+	fmyFile.getline(cLigne, 50);
+	cParse = strtok_s(cLigne, "=", &context);
+	cParse = strtok_s(NULL, "=", &context);
+	strcpy_s(pLECnomType, sizeof(pLECnomType), cParse);
+
 }
 
 void CLecture::LECSetTabValeurs()
 {
-	ifstream fmyFile;
+
 	char cLigne[50];
-	char* cParse=new char[50];
+	char* cParse = new char[50];
 	char* context = NULL;
 	unsigned int uiBoucleLignes;
 	unsigned int uiBoucleColonnes;
 	unsigned int uiboucleTab;
-	double** ptabVal=new double*[uiLECnbLignes];
+	pLECtabValeurs = new double*[uiLECnbLignes];
 	for (uiboucleTab = 0; uiboucleTab < uiLECnbLignes; uiboucleTab++) {
-		ptabVal[uiboucleTab] = new double[uiLECnbColonnes];
+		pLECtabValeurs[uiboucleTab] = new double[uiLECnbColonnes];
 	}
-	fmyFile.open(pLECnomFichier);
-	if (fmyFile) {
-		fmyFile.getline(cLigne, 50);
-		fmyFile.getline(cLigne, 50);
-		fmyFile.getline(cLigne, 50);
-		fmyFile.getline(cLigne, 50);
-		fmyFile.getline(cLigne, 50);
-		for (uiBoucleLignes = 0; uiBoucleLignes < uiLECnbLignes; uiBoucleLignes++) {
-			cParse = strtok_s(cLigne, "\t", &context);
-			cParse = strtok_s(cParse, " ", &context);
-			for (uiBoucleColonnes = 0; uiBoucleColonnes < uiLECnbColonnes; uiBoucleColonnes++) {
-				
-				ptabVal[uiBoucleLignes][uiBoucleColonnes] = atof(cParse);
-				cParse = strtok_s(NULL, " ", &context);
-				cout << ptabVal[uiBoucleLignes][uiBoucleColonnes];
-			}
-			fmyFile.getline(cLigne, 50);
+
+	fmyFile.getline(cLigne, 50);
+	fmyFile.getline(cLigne, 50);
+	for (uiBoucleLignes = 0; uiBoucleLignes < uiLECnbLignes; uiBoucleLignes++) {
+		cParse = strtok_s(cLigne, "\t", &context);
+		cParse = strtok_s(cParse, " ", &context);
+		for (uiBoucleColonnes = 0; uiBoucleColonnes < uiLECnbColonnes; uiBoucleColonnes++) {
+
+			pLECtabValeurs[uiBoucleLignes][uiBoucleColonnes] = atof(cParse);
+			cParse = strtok_s(NULL, " ", &context);
 		}
-		
-		fmyFile.close();
+		fmyFile.getline(cLigne, 50);
 	}
+
+}
+
+void CLecture::LECSetNomFichier(char * LECnF)
+{
+	pLECnomFichier = LECnF;
 }

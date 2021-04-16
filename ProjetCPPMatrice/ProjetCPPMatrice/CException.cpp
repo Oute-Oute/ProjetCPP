@@ -12,34 +12,34 @@
 using namespace std;
 
 CException::CException() {
-	sEXCMessage = (char*) "Exception innatendue";
-	cEXCOperation = '0';
+	pEXCmessage = (char*) "Exception innatendue";
+	cEXCoperation = '0';
 }
 
-CException::CException(char cOpreation, char * sMessage)
+CException::CException(char cEXCope, char * pEXCmess)
 {
-	sEXCMessage = sMessage;
-	cEXCOperation = cOpreation;
+	pEXCmessage = pEXCmess;
+	cEXCoperation = cEXCope;
 }
 
 CException::~CException() {
 
 }
 
-char* CException::EXCGetMessage() {
-	return sEXCMessage;
+void CException::EXCGetMessage(char* pEXCmess) {
+	strcpy_s(pEXCmess, sizeof pEXCmess, pEXCmessage);
 }
 
-void CException::EXCSetMessage(char* sMessage) {
-	sEXCMessage = sMessage;
+void CException::EXCSetMessage(char* pEXCmess) {
+	pEXCmessage = pEXCmess;
 }
 
 char CException::EXCGetOperation() {
-	return cEXCOperation;
+	return cEXCoperation;
 }
 
-void CException::EXCSetOperation(char cOperation) {
-	cEXCOperation = cOperation;
+void CException::EXCSetOperation(char cEXCope) {
+	cEXCoperation = cEXCope;
 }
 
 
