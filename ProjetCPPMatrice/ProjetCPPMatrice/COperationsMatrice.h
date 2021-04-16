@@ -33,9 +33,11 @@ public:
 
 	CMatrice<nomType> operator*(COperationsMatrice<nomType> &OMAM1);
 
-	CMatrice<nomType> operator*(int &iElem);
+	CMatrice<nomType> operator*(double &iElem);
 
 	CMatrice<nomType> operator/(int &iElem);
+
+	CMatrice<nomType> operator/(double & iElem);
 
 	/// @brief MATCalculTransposee renvoie la transposee d une CMatrice
 	/// @param OMAM1 la COperationsMatrice contenant la matrice e transposer
@@ -215,7 +217,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(COperationsMatrice<nomT
 /// @param iElem le multiplicateur
 /// @return la CMatrice multipliee
 template<class nomType>
-CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
+CMatrice<nomType> COperationsMatrice<nomType>::operator*(double &iElem)
 {
 	unsigned int uiNbColonnes = pmOMAMatrice.MATGetnbColonne();
 	unsigned int uiNbLignes = pmOMAMatrice.MATGetnbLigne();
@@ -238,7 +240,7 @@ CMatrice<nomType> COperationsMatrice<nomType>::operator*(int &iElem)
 /// @param iElem le diviseur
 /// @return la CMatrice divisee
 template<class nomType>
-CMatrice<nomType> COperationsMatrice<nomType>::operator/(int &iElem)
+CMatrice<nomType> COperationsMatrice<nomType>::operator/(double &iElem)
 {
 	unsigned int uiNbColonnes = pmOMAMatrice.MATGetnbColonne();
 	unsigned int uiNbLignes = pmOMAMatrice.MATGetnbLigne();

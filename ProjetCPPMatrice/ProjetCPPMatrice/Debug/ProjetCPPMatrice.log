@@ -1,6 +1,3 @@
-﻿  CException.cpp
-  CLecture.cpp
-  ProjetCPPMatrice.cpp
-  Génération de code en cours...
-  LINK : D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
-  ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
+﻿  ProjetCPPMatrice.cpp
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(145): error C2039: 'MATgetTabValeur' : n'est pas membre de 'CMatrice<nomType>'
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(145): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)

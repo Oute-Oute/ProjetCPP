@@ -53,11 +53,6 @@ public:
 	/// @return cMATnomTypele le type des elements de la matrice
 	char* MATGetNomType();
 
-	/// @brief renvoie le tableau d'elements de la matrice
-	/// @param RIEN
-	/// @return pMATtabValuerse le tableau des elements de la matrices
-	nomType MATgetTabValeur();
-
 	/// @brief definit le nombre de lignes d'une CMatrice
 	/// @param MATnb nombre de lignes qu'on impose
 	/// @return RIEN
