@@ -1,25 +1,27 @@
-﻿  ProjetCPPMatrice.cpp
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(386): warning C4018: '<' : incompatibilité signed/unsigned
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(379): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+﻿  CLecture.cpp
+  ProjetCPPMatrice.cpp
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(431): warning C4018: '<' : incompatibilité signed/unsigned
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(424): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
   d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(30): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double> CMatrice<double>::operator *(double &)' en cours de compilation
   d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(27): note: voir la référence à l'instanciation de classe modèle 'CMatrice<double>' en cours de compilation
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(387): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(144): warning C4018: '<' : incompatibilité signed/unsigned
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(137): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(384): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(int,int,char *)' en cours de compilation
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(115): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(432): warning C4018: '<' : incompatibilité signed/unsigned
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(147): warning C4018: '<' : incompatibilité signed/unsigned
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(140): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(429): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(int,int,char *)' en cours de compilation
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(117): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
   d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(27): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(int,int,char *,nomType **)' en cours de compilation
           with
           [
               nomType=double
           ]
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(191): warning C4101: 'uiboucleTab' : variable locale non référencée
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(190): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(159): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<double>::MATGetTabValeurs(nomType **)' en cours de compilation
+d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(208): warning C4101: 'uiboucleTab' : variable locale non référencée
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(207): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(163): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<double>::MATGetTabValeurs(nomType **)' en cours de compilation
           with
           [
               nomType=double
           ]
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(155): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
-  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(384): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(CMatrice<double> &)' en cours de compilation
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(159): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(429): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(CMatrice<double> &)' en cours de compilation
+  Génération de code en cours...
   ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe

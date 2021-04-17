@@ -1,3 +1,9 @@
+///
+/// @file CException.h
+/// @author BLUMSTEIN Thomas
+/// @coauthor NASSIRI Adam
+/// @date 2021-04-17
+///
 #include <string>
 #include <iostream>
 #include "CLecture.h"
@@ -6,6 +12,7 @@
 
 using namespace std;
 
+//constructeur de CLecture par defaut 
 CLecture::CLecture()
 {
 	uiLECnbColonnes = 0;
@@ -15,6 +22,7 @@ CLecture::CLecture()
 	pLECnomFichier = nullptr;
 }
 
+//constructeur de CLecture de confort avec indication du nom du fichier
 CLecture::CLecture(char* pnF)
 {
 	CException EXCExceptionLecture = *new CException();
@@ -45,6 +53,7 @@ CLecture::CLecture(char* pnF)
 
 }
 
+//constructeur de CLecture de recopie
 CLecture::CLecture(CLecture &LEClecture)
 {
 	uiLECnbColonnes = LEClecture.LECGetNbColonnes();
@@ -54,6 +63,7 @@ CLecture::CLecture(CLecture &LEClecture)
 	pLECnomFichier = LEClecture.pLECnomFichier;
 }
 
+//destructeur de CLecture
 CLecture::~CLecture()
 {
 	//delete pLECnomType;
@@ -61,21 +71,33 @@ CLecture::~CLecture()
 	delete pLECtabValeurs;
 }
 
+///@brief renvoie le nombre de lignes qui sera attribue a la matrice
+///@param RIEN
+///@return uiLECnbLignes le nombre de lignes a attribuer a la matrice
 int CLecture::LECGetNbLignes()
 {
 	return uiLECnbLignes;
 }
 
+///@brief renvoie le nombre de colonnes qui sera attribue a la matrice
+///@param RIEN
+///@return uiLECnbLignes le nombre de colonnes a attribuer a la matrice
 int CLecture::LECGetNbColonnes()
 {
 	return uiLECnbColonnes;
 }
 
+///@brief copie le nom du type des elements de la matrice dans le char* en parametre
+///@param pLECnT chaine dans laquelle on copie le nom du type
+///@return RIEN
 void CLecture::LECGetnomType(char* pLECnT)
 {
 	strcpy_s(pLECnT,sizeof pLECnT,pLECnomType);
 }
 
+///@brief copie le tableau des elements de la matrice dans le tableau en parametre
+///@param pLECtV tableau dans lequel on copie le tableau des valeurs
+///@return RIEN
 void CLecture::LECGetTabValeurs(double** pLECtV)
 {
 	unsigned int uiboucleTab;
@@ -94,6 +116,10 @@ void CLecture::LECGetTabValeurs(double** pLECtV)
 
 }
 
+///@brief definit le nombre de lignes attribuees a la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetNbLigne()
 {
 	char cLigne[50];
@@ -118,6 +144,10 @@ void CLecture::LECSetNbLigne()
 	
 }
 
+///@brief definit le nombre de colonnes attribuees a la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetNbColonne()
 {
 	char cLigne[50];
@@ -131,6 +161,10 @@ void CLecture::LECSetNbColonne()
 	//exception
 }
 
+///@brief definit le nom du type des elements de la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetNomType()
 {
 	char cLigne[50];
@@ -144,6 +178,10 @@ void CLecture::LECSetNomType()
 
 }
 
+///@brief definit le tableau de valeurs de la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetTabValeurs()
 {
 
@@ -173,6 +211,9 @@ void CLecture::LECSetTabValeurs()
 
 }
 
+///@brief definit le nom du fichier lu
+///@param LECnF nom du fichier
+///@return RIEN
 void CLecture::LECSetNomFichier(char * LECnF)
 {
 	pLECnomFichier = LECnF;

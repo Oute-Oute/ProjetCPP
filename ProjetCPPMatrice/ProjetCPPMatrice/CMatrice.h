@@ -2,7 +2,7 @@
 /// @file CMatrice.h
 /// @author BLUMSTEIN Thomas
 /// @coauthor NASSIRI Adam
-/// @date 2021-04-15
+/// @date 2021-04-17
 ///
 
 #ifndef C_MATRICE_H
@@ -101,6 +101,7 @@ public:
 
 };
 
+//constructeur de CMatrice par defaut
 template<class nomType>
 CMatrice<nomType>::CMatrice()
 {
@@ -110,6 +111,7 @@ CMatrice<nomType>::CMatrice()
 	pMATtabValeurs = nullptr;
 }
 
+//constructeur de CMatrice de confort (l'utilisateur renseigne tout les attributs)
 template<class nomType>
 CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType** MATtV)
 {
@@ -132,6 +134,7 @@ CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType** MATtV
 	}
 }
 
+//constructeur de CMatrice avec dimensions et nom du type
 template<class nomType>
 CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT )
 {
@@ -150,6 +153,7 @@ CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT )
 
 }
 
+//constructeur de CMatrice de recopie
 template<class nomType>
 CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 {
@@ -159,6 +163,7 @@ CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 	MATM1.MATGetTabValeurs(this->pMATtabValeurs);
 }
 
+//destructeur de CMatrice
 template<class nomType>
 CMatrice<nomType>::~CMatrice()
 {
@@ -167,24 +172,36 @@ CMatrice<nomType>::~CMatrice()
 	delete cMATnomType;
 }
 
+///@brief retourne le nombre de lignes que contient la matrice
+///@param RIEN
+///@return uiMATnbLignes le nombre de colonnes de la matrice
 template<class nomType>
 int CMatrice<nomType>::MATGetNbLigne()
 {
 	return uiMATnbLignes;
 }
 
+///@brief retourne le nombre de colonnes que contient la matrice
+///@param RIEN
+///@return uiMATnbColonnes le nombre de colonnes de la matrice
 template<class nomType>
 int CMatrice<nomType>::MATGetNbColonne()
 {
 	return uiMATnbColonnes;
 }
 
+///@brief retourne le nom du type des elements de la matrice
+///@param RIEN
+///@return cMATnomType le nom du type des elements de la matrice
 template<class nomType>
 char * CMatrice<nomType>::MATGetNomType()
 {
 	return cMATnomType;
 }
 
+///@brief copie le tableau des valeurs de la matrice dans le tableau en parametre
+///@param MATtV tabluea a remplir avec les elements de la matrice
+///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATGetTabValeurs(nomType** MATtV)
 {
@@ -196,27 +213,41 @@ void CMatrice<nomType>::MATGetTabValeurs(nomType** MATtV)
 
 			MATtV[uiboucleLignes][uiboucleColonnes] = pMATtabValeurs[uiboucleLignes][uiboucleColonnes];
 		}
+
 	}
+
 }
 
+///@brief definit le nombre de lignes contenues dans la matrice
+///@param MATnbL le nombre de lignes 
+///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetNbLigne(int MATnbL)
 {
 	uiMATnbLignes = MATnbL;
 }
 
+///@brief definit le nombre de colonnes contenues dans la matrice
+///@param MATnbC le nombre de volonnes
+///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetNbColonne(int MATnbC)
 {
 	uiMATnbColonnes = MATnbC;
 }
 
+///@brief definit le nom du type des elements de la matrice
+///@param MATnT char* le nom du type affecte a la matrice
+///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetNomType(char * MATnT)
 {
 	cMATnomType = MATnT;
 }
 
+///@brief definit le tableau de valeurs de la matrice
+///@param MATtV le tableau contenant les valeurs a mettre dans la matrice
+///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetTabValeur(nomType ** MATtV)
 {
@@ -232,7 +263,9 @@ void CMatrice<nomType>::MATSetTabValeur(nomType ** MATtV)
 	}
 }
 
-
+///@brief affiche le contenu du tableau de valeurs de la matrice
+///@param RIEN
+///@return RIEN
 template<class nomType>
 inline void CMatrice<nomType>::MATAfficherMatrice()
 {
@@ -248,6 +281,9 @@ inline void CMatrice<nomType>::MATAfficherMatrice()
 	}
 }
 
+///@brief renvoie le resultat de l'addition de deux matrices
+///@param MATm1 CMatrice membre droit de l'addition
+///@return MATMatriceResultat matrice resultat de l'addition
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 {
@@ -289,6 +325,9 @@ inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 	return MATMatriceResultat;
 }
 
+///@brief renvoie le resultat de la soustraction  de deux matrices
+///@param MATm1 CMatrice membre droit de la soustraction
+///@return MATMatriceResultat matrice resultat de la soustraction 
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 {
@@ -328,6 +367,9 @@ inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 	return MATMatriceResultat;
 }
 
+///@brief renvoie le resultat de la multiplication actuelle par une autre passée en parametre
+///@param MATm1 CMatrice membre droit de la multiplication
+///@return  MATMatriceResultat la matrice resultat
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 {
@@ -374,6 +416,9 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 	return MATMatriceResultat;
 }
 
+///@brief renvoie le resultat de la multiplication terme a terme de la matrice actuelle par un double
+///@param iElem le multiplicateur 
+///@return  MATMatriceResultat la matrice multipliée
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator*(double & iElem)
 {
@@ -395,6 +440,9 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(double & iElem)
 	return MATMatriceResultat;
 }
 
+///@brief renvoie le resultat de la division terme a terme de la matrice actuelle par un double
+///@param iElem le diviseur 
+///@return  MATMatriceResultat la matrice divisée
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator/(double & iElem)
 {
@@ -435,7 +483,9 @@ inline CMatrice<nomType> CMatrice<nomType>::operator/(double & iElem)
 	return MATMatriceResultat;
 }
 
-
+///@brief renvoie la transposee de la matrice parametre
+///@param MATm1 la matrice 
+///@return MATMatriceResultat la matrice transposee
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::MATCalculTransposee(CMatrice<nomType> MATm1)
 {

@@ -2,7 +2,7 @@
 /// @file CException.h
 /// @author NASSIRI Adam
 /// @coauthor BLUMSTEIN Thomas
-/// @date 2021-04-15
+/// @date 2021-04-17
 ///
 
 #ifndef C_EXCEPTION_H
@@ -47,9 +47,12 @@ public:
 
 	/// @brief definit l operation concernee par la CException
 	/// @param cOperation l operateur sous forme de char
-	/// @return 
+	/// @return RIEN
 	void EXCSetOperation(char cEXCope);
 
+	/// @brief affiche le message d'exception de la CException courante
+	/// @param RIEN
+	/// @return RIEN
 	void EXCAfficherException();
 
 };
