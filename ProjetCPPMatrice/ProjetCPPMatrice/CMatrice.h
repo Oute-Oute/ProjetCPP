@@ -32,6 +32,9 @@ public:
 	//constructeur avec indication des donnees
 	CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType ** MATtV);
 
+	//constructeur avec indication des dimensions
+	CMatrice(int MATnbL, int MATnbC, char*MATnT);
+
 	//constructeur de CMatrice de recopie
 	CMatrice(CMatrice &MATM1);
 
@@ -127,6 +130,24 @@ CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType** MATtV
 			//cout << this->pMATtabValeurs[uiBoucleLignes][uiBoucleColonnes];
 		}
 	}
+}
+
+template<class nomType>
+CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT )
+{
+	uiMATnbLignes = MATnbL;
+	uiMATnbColonnes = MATnbC;
+
+	double** pitabVal = new double*[MATnbL];
+	unsigned int uiboucle;
+
+	for (uiboucle = 0; uiboucle < MATnbL; uiboucle++) {
+		pitabVal[uiboucle] = new double[MATnbC];
+	}
+
+	cMATnomType = MATnT;
+	this->MATSetTabValeur(pitabVal);
+
 }
 
 template<class nomType>
@@ -317,15 +338,14 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 	EXCexception.EXCSetOperation('*');
 
 	//INITIALISATION DE LA MATRICE RESULTAT EN MATRICE NULLE
-	int** piTabValeurs;
-	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
-		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
-			piTabValeurs[iLigne][iColonne] = 0;
-		}
+	double** pitabVal = new double*[uiNbLignes];
+	unsigned int uiboucle;
 
+	for (uiboucle = 0; uiboucle < uiNbLignes; uiboucle++) {
+		pitabVal[uiboucle] = new double[uiNbColonnes];
 	}
 
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType, piTabValeurs);
+	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, sNomType, pitabVal);
 
 	try {
 		//EXCEPTIONS
