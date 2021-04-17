@@ -1,0 +1,131 @@
+\hypertarget{class_c_exception}{}\doxysection{CException Class Reference}
+\label{class_c_exception}\index{CException@{CException}}
+
+
+Un objet de la classe \mbox{\hyperlink{class_c_exception}{CException}} est lance en cas d\textquotesingle{}exception.  
+
+
+
+
+{\ttfamily \#include $<$CException.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_exception_adbe67e06fbfbfc33f02d1d34c7f2b39e}\label{class_c_exception_adbe67e06fbfbfc33f02d1d34c7f2b39e}} 
+{\bfseries CException} (char c\+EXCope, char $\ast$p\+EXCmess)
+\item 
+void \mbox{\hyperlink{class_c_exception_a148ad6dcfafea9daa2a96cbb48af8272}{EXCGet\+Message}} (char $\ast$p\+EXCmess)
+\begin{DoxyCompactList}\small\item\em retourne le message d exception de la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_a9123d9cff750453cbbe63a570cd51585}{EXCSet\+Message}} (char $\ast$p\+EXCmess)
+\begin{DoxyCompactList}\small\item\em definit le message d exception dans la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_c_exception_a170d7a6835dfb6609f941a4c670bfcbb}{EXCGet\+Operation}} ()
+\begin{DoxyCompactList}\small\item\em retourne l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_aa0bdedcb832a62f41c386a83a7064a56}{EXCSet\+Operation}} (char c\+EXCope)
+\begin{DoxyCompactList}\small\item\em definit l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_aa2c6923fc20aa59600c7a6bea03e10fa}{EXCAfficher\+Exception}} ()
+\begin{DoxyCompactList}\small\item\em affiche le message d\textquotesingle{}exception de la \mbox{\hyperlink{class_c_exception}{CException}} courante \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Un objet de la classe \mbox{\hyperlink{class_c_exception}{CException}} est lance en cas d\textquotesingle{}exception. 
+
+c\+EXOperation represente l\textquotesingle{}operation avec un caractère (ex\+: \textquotesingle{}+\textquotesingle{} pour l\textquotesingle{}addition), s\+EXCMessage contient un message d\textquotesingle{}exception. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_exception_aa2c6923fc20aa59600c7a6bea03e10fa}\label{class_c_exception_aa2c6923fc20aa59600c7a6bea03e10fa}} 
+\index{CException@{CException}!EXCAfficherException@{EXCAfficherException}}
+\index{EXCAfficherException@{EXCAfficherException}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCAfficherException()}{EXCAfficherException()}}
+{\footnotesize\ttfamily void CException\+::\+EXCAfficher\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+affiche le message d\textquotesingle{}exception de la \mbox{\hyperlink{class_c_exception}{CException}} courante 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a148ad6dcfafea9daa2a96cbb48af8272}\label{class_c_exception_a148ad6dcfafea9daa2a96cbb48af8272}} 
+\index{CException@{CException}!EXCGetMessage@{EXCGetMessage}}
+\index{EXCGetMessage@{EXCGetMessage}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCGetMessage()}{EXCGetMessage()}}
+{\footnotesize\ttfamily void CException\+::\+EXCGet\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+EXCmess }\end{DoxyParamCaption})}
+
+
+
+retourne le message d exception de la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s\+EXCMessage le message d exception 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a170d7a6835dfb6609f941a4c670bfcbb}\label{class_c_exception_a170d7a6835dfb6609f941a4c670bfcbb}} 
+\index{CException@{CException}!EXCGetOperation@{EXCGetOperation}}
+\index{EXCGetOperation@{EXCGetOperation}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCGetOperation()}{EXCGetOperation()}}
+{\footnotesize\ttfamily char CException\+::\+EXCGet\+Operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retourne l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+c\+EXCOperation l operateur sous forme de char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a9123d9cff750453cbbe63a570cd51585}\label{class_c_exception_a9123d9cff750453cbbe63a570cd51585}} 
+\index{CException@{CException}!EXCSetMessage@{EXCSetMessage}}
+\index{EXCSetMessage@{EXCSetMessage}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCSetMessage()}{EXCSetMessage()}}
+{\footnotesize\ttfamily void CException\+::\+EXCSet\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+EXCmess }\end{DoxyParamCaption})}
+
+
+
+definit le message d exception dans la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smessage} & le nouveau message d exception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_aa0bdedcb832a62f41c386a83a7064a56}\label{class_c_exception_aa0bdedcb832a62f41c386a83a7064a56}} 
+\index{CException@{CException}!EXCSetOperation@{EXCSetOperation}}
+\index{EXCSetOperation@{EXCSetOperation}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCSetOperation()}{EXCSetOperation()}}
+{\footnotesize\ttfamily void CException\+::\+EXCSet\+Operation (\begin{DoxyParamCaption}\item[{char}]{c\+EXCope }\end{DoxyParamCaption})}
+
+
+
+definit l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Operation} & l operateur sous forme de char \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPMatrice/\mbox{\hyperlink{_c_exception_8h}{CException.\+h}}\item 
+Projet\+CPPMatrice/CException.\+cpp\end{DoxyCompactItemize}

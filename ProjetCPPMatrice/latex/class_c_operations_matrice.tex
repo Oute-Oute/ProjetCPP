@@ -1,0 +1,145 @@
+\hypertarget{class_c_operations_matrice}{}\doxysection{COperations\+Matrice$<$ nom\+Type $>$ Class Template Reference}
+\label{class_c_operations_matrice}\index{COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_operations_matrice_a0f9cdf9fb1665c4c2d5350165b3dfe3c}\label{class_c_operations_matrice_a0f9cdf9fb1665c4c2d5350165b3dfe3c}} 
+{\bfseries COperations\+Matrice} (\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ \&OMAM1)
+\item 
+\mbox{\Hypertarget{class_c_operations_matrice_a2248728f24597c4a2b6def1fca4d176b}\label{class_c_operations_matrice_a2248728f24597c4a2b6def1fca4d176b}} 
+{\bfseries COperations\+Matrice} (\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ pm\+OMAMat)
+\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice_a1d402b13a52bbd11ca6e3979a88e8359}{operator+}} (\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ \&OMAM1)
+\begin{DoxyCompactList}\small\item\em additionne deux matrices \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice_a17d0ea3894fe0e962b7065cbe996314e}{operator-\/}} (\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ \&OMAM1)
+\begin{DoxyCompactList}\small\item\em effectue la soustraction de deux matrices \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice_a0d4a236c866e7bf0f6ca8bee6439f4eb}{operator$\ast$}} (\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ \&OMAM1)
+\begin{DoxyCompactList}\small\item\em multiplie la matrice contenue dans la \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}} actuelle par OMAM1 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice_a293b0839c41cd592849efbeffd5b0bcd}{operator$\ast$}} (double \&i\+Elem)
+\begin{DoxyCompactList}\small\item\em Multiplie chaque element de la matrice par i\+Elem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice_ae3175450ad8a1c0a64d2cb4690c9df79}{operator/}} (double \&i\+Elem)
+\begin{DoxyCompactList}\small\item\em Divise chaque element de la matrice par i\+Elem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice_a3ec4eccc2e67e8ed37e738010f3e6344}{MATCalcul\+Transposee}} (\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ OMAM1)
+\begin{DoxyCompactList}\small\item\em MATCalcul\+Transposee renvoie la transposee d une \mbox{\hyperlink{class_c_matrice}{CMatrice}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_operations_matrice_a3ec4eccc2e67e8ed37e738010f3e6344}\label{class_c_operations_matrice_a3ec4eccc2e67e8ed37e738010f3e6344}} 
+\index{COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}!MATCalculTransposee@{MATCalculTransposee}}
+\index{MATCalculTransposee@{MATCalculTransposee}!COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATCalculTransposee()}{MATCalculTransposee()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$\+::MATCalcul\+Transposee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$}]{OMAM1 }\end{DoxyParamCaption})}
+
+
+
+MATCalcul\+Transposee renvoie la transposee d une \mbox{\hyperlink{class_c_matrice}{CMatrice}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em OMAM1} & la \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}} contenant la matrice e transposer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la \mbox{\hyperlink{class_c_matrice}{CMatrice}} transposee 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_operations_matrice_a0d4a236c866e7bf0f6ca8bee6439f4eb}\label{class_c_operations_matrice_a0d4a236c866e7bf0f6ca8bee6439f4eb}} 
+\index{COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ \&}]{OMAM1 }\end{DoxyParamCaption})}
+
+
+
+multiplie la matrice contenue dans la \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}} actuelle par OMAM1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em OMAM1} & la \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}} contenant la \mbox{\hyperlink{class_c_matrice}{CMatrice}} (membre droit de la multiplication) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la \mbox{\hyperlink{class_c_matrice}{CMatrice}} resultat de la multiplication 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_operations_matrice_a293b0839c41cd592849efbeffd5b0bcd}\label{class_c_operations_matrice_a293b0839c41cd592849efbeffd5b0bcd}} 
+\index{COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double \&}]{i\+Elem }\end{DoxyParamCaption})}
+
+
+
+Multiplie chaque element de la matrice par i\+Elem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Elem} & le multiplicateur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la \mbox{\hyperlink{class_c_matrice}{CMatrice}} multipliee 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_operations_matrice_a1d402b13a52bbd11ca6e3979a88e8359}\label{class_c_operations_matrice_a1d402b13a52bbd11ca6e3979a88e8359}} 
+\index{COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ \&}]{OMAM1 }\end{DoxyParamCaption})}
+
+
+
+additionne deux matrices 
+
+
+\begin{DoxyParams}{Parameters}
+{\em OMAM1} & la \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}} contenant la \mbox{\hyperlink{class_c_matrice}{CMatrice}} (membre droit de l addition) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat la \mbox{\hyperlink{class_c_matrice}{CMatrice}} resultat de l addition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_operations_matrice_a17d0ea3894fe0e962b7065cbe996314e}\label{class_c_operations_matrice_a17d0ea3894fe0e962b7065cbe996314e}} 
+\index{COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$ \&}]{OMAM1 }\end{DoxyParamCaption})}
+
+
+
+effectue la soustraction de deux matrices 
+
+
+\begin{DoxyParams}{Parameters}
+{\em OMAM1} & la \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}} contenant la \mbox{\hyperlink{class_c_matrice}{CMatrice}} (membre droit de la sousstraction) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat la \mbox{\hyperlink{class_c_matrice}{CMatrice}} resultat de la soustraction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_operations_matrice_ae3175450ad8a1c0a64d2cb4690c9df79}\label{class_c_operations_matrice_ae3175450ad8a1c0a64d2cb4690c9df79}} 
+\index{COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!COperationsMatrice$<$ nomType $>$@{COperationsMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_operations_matrice}{COperations\+Matrice}}$<$ nom\+Type $>$\+::operator/ (\begin{DoxyParamCaption}\item[{double \&}]{i\+Elem }\end{DoxyParamCaption})}
+
+
+
+Divise chaque element de la matrice par i\+Elem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Elem} & le diviseur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la \mbox{\hyperlink{class_c_matrice}{CMatrice}} divisee 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPMatrice/COperations\+Matrice.\+h\end{DoxyCompactItemize}

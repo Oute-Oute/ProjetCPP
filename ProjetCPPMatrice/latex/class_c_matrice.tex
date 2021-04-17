@@ -1,0 +1,411 @@
+\hypertarget{class_c_matrice}{}\doxysection{CMatrice$<$ nom\+Type $>$ Class Template Reference}
+\label{class_c_matrice}\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_matrice_a2b69bb20c5e546c6e9b2d6a1a37f5d60}\label{class_c_matrice_a2b69bb20c5e546c6e9b2d6a1a37f5d60}} 
+{\bfseries CMatrice} (int MATnbL, int MATnbC, char $\ast$MATnT, nom\+Type $\ast$$\ast$MATtV)
+\item 
+\mbox{\Hypertarget{class_c_matrice_adaa0346f164c39482932770aa57926bc}\label{class_c_matrice_adaa0346f164c39482932770aa57926bc}} 
+{\bfseries CMatrice} (int MATnbL, int MATnbC, char $\ast$MATnT)
+\item 
+\mbox{\Hypertarget{class_c_matrice_abb33f06920d7d862e86bf478381fbf9b}\label{class_c_matrice_abb33f06920d7d862e86bf478381fbf9b}} 
+{\bfseries CMatrice} (\mbox{\hyperlink{class_c_matrice}{CMatrice}} \&MATM1)
+\item 
+int \mbox{\hyperlink{class_c_matrice_a914c784f2ab53a46abec3d980c7a2aba}{MATGet\+Nb\+Ligne}} ()
+\begin{DoxyCompactList}\small\item\em renvoie le nombre de lignes de la matrice \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_matrice_a6cae3f9c22797b18099bdf3a6a96bb59}{MATGet\+Nb\+Colonne}} ()
+\begin{DoxyCompactList}\small\item\em renvoie le nombre de colonnes de la matrice \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_c_matrice_a3abc9037900d82c765c04a0aa7fadbf7}{MATGet\+Nom\+Type}} ()
+\begin{DoxyCompactList}\small\item\em renvoie le type des elements dde la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_matrice_a0cff29a6eeb89457108592851a94d930}{MATGet\+Tab\+Valeurs}} (nom\+Type $\ast$$\ast$MATtV)
+\begin{DoxyCompactList}\small\item\em renvoie le tableau d\textquotesingle{}elements de la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_matrice_a3147a19dcc12c0c498bbafae20f0d3c2}{MATSet\+Nb\+Ligne}} (int MATnbL)
+\begin{DoxyCompactList}\small\item\em definit le nombre de lignes d\textquotesingle{}une \mbox{\hyperlink{class_c_matrice}{CMatrice}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_matrice_a6bb7066ab33d6fe35e2038c73ec0ebbd}{MATSet\+Nb\+Colonne}} (int MATnbC)
+\begin{DoxyCompactList}\small\item\em definit le nombre de colonnes d\textquotesingle{}une \mbox{\hyperlink{class_c_matrice}{CMatrice}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_matrice_aaf2787a336a713bbdca90ffc5da5b37e}{MATSet\+Nom\+Type}} (char $\ast$MATnT)
+\begin{DoxyCompactList}\small\item\em definit le nom du type des elements de la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_matrice_a504621e9a465fd3f66a423ce1f582239}{MATSet\+Tab\+Valeur}} (nom\+Type $\ast$$\ast$MATtV)
+\begin{DoxyCompactList}\small\item\em definit le tableau des elements de la \mbox{\hyperlink{class_c_matrice}{CMatrice}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_matrice_abd4b15ae4003bddc1448769332caac71}{MATAfficher\+Matrice}} ()
+\begin{DoxyCompactList}\small\item\em affiche le contenu de la \mbox{\hyperlink{class_c_matrice}{CMatrice}}\+: repmlit le tableau avec des entiers croissants en partant de 0 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice_aa7d51435f5e14bbd81e3d3f074facd77}{operator+}} (\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \&MATm1)
+\begin{DoxyCompactList}\small\item\em renvoie le resultat de l\textquotesingle{}addition de deux matrices \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice_a302b5ef77093db0fbeec1ff5a5d21d44}{operator-\/}} (\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \&MATm1)
+\begin{DoxyCompactList}\small\item\em renvoie le resultat de la soustraction de deux matrices \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice_a57cd185ed9fc46829be9b1b3052e23c1}{operator$\ast$}} (\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \&MATm1)
+\begin{DoxyCompactList}\small\item\em renvoie le resultat de la multiplication actuelle par une autre passée en parametre \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice_aaaa09cebd8c29cfc9fb210874d3ce912}{operator$\ast$}} (double \&i\+Elem)
+\begin{DoxyCompactList}\small\item\em renvoie le resultat de la multiplication terme a terme de la matrice actuelle par un double \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice_af32f776f5b1ebe5343258db40341fb6d}{operator/}} (double \&i\+Elem)
+\begin{DoxyCompactList}\small\item\em renvoie le resultat de la division terme a terme de la matrice actuelle par un double \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice_addb1ccd63616f83a01c6e88717389ba4}{MATCalcul\+Transposee}} (\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ MATm1)
+\begin{DoxyCompactList}\small\item\em renvoie la transposee de la matrice parametre \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_matrice_abd4b15ae4003bddc1448769332caac71}\label{class_c_matrice_abd4b15ae4003bddc1448769332caac71}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATAfficherMatrice@{MATAfficherMatrice}}
+\index{MATAfficherMatrice@{MATAfficherMatrice}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATAfficherMatrice()}{MATAfficherMatrice()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+void \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATAfficher\+Matrice\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+affiche le contenu de la \mbox{\hyperlink{class_c_matrice}{CMatrice}}\+: repmlit le tableau avec des entiers croissants en partant de 0 
+
+affiche le contenu du tableau de valeurs de la matrice
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_addb1ccd63616f83a01c6e88717389ba4}\label{class_c_matrice_addb1ccd63616f83a01c6e88717389ba4}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATCalculTransposee@{MATCalculTransposee}}
+\index{MATCalculTransposee@{MATCalculTransposee}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATCalculTransposee()}{MATCalculTransposee()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATCalcul\+Transposee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$}]{MATm1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+renvoie la transposee de la matrice parametre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATm1} & la matrice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat la matrice transposee 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a6cae3f9c22797b18099bdf3a6a96bb59}\label{class_c_matrice_a6cae3f9c22797b18099bdf3a6a96bb59}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATGetNbColonne@{MATGetNbColonne}}
+\index{MATGetNbColonne@{MATGetNbColonne}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATGetNbColonne()}{MATGetNbColonne()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+int \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATGet\+Nb\+Colonne}
+
+
+
+renvoie le nombre de colonnes de la matrice 
+
+retourne le nombre de colonnes que contient la matrice
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui\+MATnb\+Colonnes le nombre de colonnes de la matrice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a914c784f2ab53a46abec3d980c7a2aba}\label{class_c_matrice_a914c784f2ab53a46abec3d980c7a2aba}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATGetNbLigne@{MATGetNbLigne}}
+\index{MATGetNbLigne@{MATGetNbLigne}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATGetNbLigne()}{MATGetNbLigne()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+int \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATGet\+Nb\+Ligne}
+
+
+
+renvoie le nombre de lignes de la matrice 
+
+retourne le nombre de lignes que contient la matrice
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui\+MATnb\+Lignes le nombre de lignes de la matrice
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui\+MATnb\+Lignes le nombre de colonnes de la matrice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a3abc9037900d82c765c04a0aa7fadbf7}\label{class_c_matrice_a3abc9037900d82c765c04a0aa7fadbf7}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATGetNomType@{MATGetNomType}}
+\index{MATGetNomType@{MATGetNomType}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATGetNomType()}{MATGetNomType()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+char $\ast$ \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATGet\+Nom\+Type}
+
+
+
+renvoie le type des elements dde la matrice 
+
+retourne le nom du type des elements de la matrice
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+c\+MATnom\+Typele le type des elements de la matrice
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+c\+MATnom\+Type le nom du type des elements de la matrice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a0cff29a6eeb89457108592851a94d930}\label{class_c_matrice_a0cff29a6eeb89457108592851a94d930}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATGetTabValeurs@{MATGetTabValeurs}}
+\index{MATGetTabValeurs@{MATGetTabValeurs}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATGetTabValeurs()}{MATGetTabValeurs()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+void \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATGet\+Tab\+Valeurs (\begin{DoxyParamCaption}\item[{nom\+Type $\ast$$\ast$}]{MATtV }\end{DoxyParamCaption})}
+
+
+
+renvoie le tableau d\textquotesingle{}elements de la matrice 
+
+copie le tableau des valeurs de la matrice dans le tableau en parametre
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p\+MATtab\+Valuerse le tableau des elements de la matrices
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em MATtV} & tabluea a remplir avec les elements de la matrice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a6bb7066ab33d6fe35e2038c73ec0ebbd}\label{class_c_matrice_a6bb7066ab33d6fe35e2038c73ec0ebbd}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATSetNbColonne@{MATSetNbColonne}}
+\index{MATSetNbColonne@{MATSetNbColonne}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATSetNbColonne()}{MATSetNbColonne()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+void \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATSet\+Nb\+Colonne (\begin{DoxyParamCaption}\item[{int}]{MATnbC }\end{DoxyParamCaption})}
+
+
+
+definit le nombre de colonnes d\textquotesingle{}une \mbox{\hyperlink{class_c_matrice}{CMatrice}} 
+
+definit le nombre de colonnes contenues dans la matrice
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATnbC} & nombre de colonnes qu\textquotesingle{}on impose \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em MATnbC} & le nombre de volonnes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a3147a19dcc12c0c498bbafae20f0d3c2}\label{class_c_matrice_a3147a19dcc12c0c498bbafae20f0d3c2}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATSetNbLigne@{MATSetNbLigne}}
+\index{MATSetNbLigne@{MATSetNbLigne}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATSetNbLigne()}{MATSetNbLigne()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+void \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATSet\+Nb\+Ligne (\begin{DoxyParamCaption}\item[{int}]{MATnbL }\end{DoxyParamCaption})}
+
+
+
+definit le nombre de lignes d\textquotesingle{}une \mbox{\hyperlink{class_c_matrice}{CMatrice}} 
+
+definit le nombre de lignes contenues dans la matrice
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATnb} & nombre de lignes qu\textquotesingle{}on impose \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em MATnbL} & le nombre de lignes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_aaf2787a336a713bbdca90ffc5da5b37e}\label{class_c_matrice_aaf2787a336a713bbdca90ffc5da5b37e}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATSetNomType@{MATSetNomType}}
+\index{MATSetNomType@{MATSetNomType}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATSetNomType()}{MATSetNomType()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+void \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATSet\+Nom\+Type (\begin{DoxyParamCaption}\item[{char $\ast$}]{MATnT }\end{DoxyParamCaption})}
+
+
+
+definit le nom du type des elements de la matrice 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATnT} & nom du type imposé \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em MATnT} & char$\ast$ le nom du type affecte a la matrice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a504621e9a465fd3f66a423ce1f582239}\label{class_c_matrice_a504621e9a465fd3f66a423ce1f582239}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!MATSetTabValeur@{MATSetTabValeur}}
+\index{MATSetTabValeur@{MATSetTabValeur}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{MATSetTabValeur()}{MATSetTabValeur()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+void \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::MATSet\+Tab\+Valeur (\begin{DoxyParamCaption}\item[{nom\+Type $\ast$$\ast$}]{MATtV }\end{DoxyParamCaption})}
+
+
+
+definit le tableau des elements de la \mbox{\hyperlink{class_c_matrice}{CMatrice}} 
+
+definit le tableau de valeurs de la matrice
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATtV} & tableau des valeurs a entrer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em MATtV} & le tableau contenant les valeurs a mettre dans la matrice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a57cd185ed9fc46829be9b1b3052e23c1}\label{class_c_matrice_a57cd185ed9fc46829be9b1b3052e23c1}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \&}]{MATm1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+renvoie le resultat de la multiplication actuelle par une autre passée en parametre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATm1} & \mbox{\hyperlink{class_c_matrice}{CMatrice}} membre droit de la multiplication \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat la matrice resultat 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_aaaa09cebd8c29cfc9fb210874d3ce912}\label{class_c_matrice_aaaa09cebd8c29cfc9fb210874d3ce912}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double \&}]{i\+Elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+renvoie le resultat de la multiplication terme a terme de la matrice actuelle par un double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Elem} & le multiplicateur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat la matrice multipliée 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_aa7d51435f5e14bbd81e3d3f074facd77}\label{class_c_matrice_aa7d51435f5e14bbd81e3d3f074facd77}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \&}]{MATm1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+renvoie le resultat de l\textquotesingle{}addition de deux matrices 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATm1} & \mbox{\hyperlink{class_c_matrice}{CMatrice}} membre droit de l\textquotesingle{}addition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat matrice resultat de l\textquotesingle{}addition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_a302b5ef77093db0fbeec1ff5a5d21d44}\label{class_c_matrice_a302b5ef77093db0fbeec1ff5a5d21d44}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \&}]{MATm1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+renvoie le resultat de la soustraction de deux matrices 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MATm1} & \mbox{\hyperlink{class_c_matrice}{CMatrice}} membre droit de la soustraction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat matrice resultat de la soustraction ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrice_af32f776f5b1ebe5343258db40341fb6d}\label{class_c_matrice_af32f776f5b1ebe5343258db40341fb6d}} 
+\index{CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!CMatrice$<$ nomType $>$@{CMatrice$<$ nomType $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$class nom\+Type $>$ \\
+\mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$ \mbox{\hyperlink{class_c_matrice}{CMatrice}}$<$ nom\+Type $>$\+::operator/ (\begin{DoxyParamCaption}\item[{double \&}]{i\+Elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+renvoie le resultat de la division terme a terme de la matrice actuelle par un double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Elem} & le diviseur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATMatrice\+Resultat la matrice divisée 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPMatrice/\mbox{\hyperlink{_c_matrice_8h}{CMatrice.\+h}}\item 
+Projet\+CPPMatrice/CMatrice.\+cpp\end{DoxyCompactItemize}

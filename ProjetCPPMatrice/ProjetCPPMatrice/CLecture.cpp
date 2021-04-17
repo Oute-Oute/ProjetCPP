@@ -156,9 +156,15 @@ void CLecture::LECSetNbColonne()
 	fmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
-	uiLECnbColonnes = atoi(cParse);
 
-	//exception
+	if (cParse == 0) {
+		EXCExceptionLecture.EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
+		throw(EXCExceptionLecture);
+	}
+
+	else {
+		uiLECnbLignes = atoi(cParse);
+	}
 }
 
 ///@brief definit le nom du type des elements de la matrice 

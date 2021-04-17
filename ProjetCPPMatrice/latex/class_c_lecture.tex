@@ -1,0 +1,221 @@
+\hypertarget{class_c_lecture}{}\doxysection{CLecture Class Reference}
+\label{class_c_lecture}\index{CLecture@{CLecture}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_lecture_ae255cf9cbae777730c0402dad588fccb}\label{class_c_lecture_ae255cf9cbae777730c0402dad588fccb}} 
+{\bfseries CLecture} (char $\ast$pnF)
+\item 
+\mbox{\Hypertarget{class_c_lecture_aa8fec32f0cc0312257f36811d4b8d75d}\label{class_c_lecture_aa8fec32f0cc0312257f36811d4b8d75d}} 
+{\bfseries CLecture} (\mbox{\hyperlink{class_c_lecture}{CLecture}} \&LEClecture)
+\item 
+int \mbox{\hyperlink{class_c_lecture_a6e6097cd337057e72c4407c2d18e2df6}{LECGet\+Nb\+Lignes}} ()
+\begin{DoxyCompactList}\small\item\em renvoie le nombre de lignes qui sera attribue a la matrice \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_lecture_a8ba1d627776a24ab156fd839f0460066}{LECGet\+Nb\+Colonnes}} ()
+\begin{DoxyCompactList}\small\item\em renvoie le nombre de colonnes qui sera attribue a la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_ad97123abc2abac7a9d5c16cfafc5656c}{LECGetnom\+Type}} (char $\ast$p\+LECnT)
+\begin{DoxyCompactList}\small\item\em copie le nom du type des elements de la matrice dans le char$\ast$ en parametre \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_a20896ddf7e6ba96a12e9e9be8067bfcf}{LECGet\+Tab\+Valeurs}} (double $\ast$$\ast$p\+LECtV)
+\begin{DoxyCompactList}\small\item\em copie le tableau des elements de la matrice dans le tableau en parametre \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_acbe1aefb2b14b4ace92ae27172d61c1d}{LECSet\+Nb\+Ligne}} ()
+\begin{DoxyCompactList}\small\item\em definit le nombre de lignes attribuees a la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_ab20fb1617f7d0e5750e226bd6035cdc0}{LECSet\+Nb\+Colonne}} ()
+\begin{DoxyCompactList}\small\item\em definit le nombre de colonnes attribuees a la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_aa0838a681b21b762447ffef0306b2314}{LECSet\+Nom\+Type}} ()
+\begin{DoxyCompactList}\small\item\em definit le nom du type des elements de la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_a3b30e8da1bdc80f29023ffaaea0ae0d2}{LECSet\+Tab\+Valeurs}} ()
+\begin{DoxyCompactList}\small\item\em definit le tableau de valeurs de la matrice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_a45bc71740468351fdd4102b7b71772de}{LECSet\+Nom\+Fichier}} (char $\ast$LECnF)
+\begin{DoxyCompactList}\small\item\em definit le nom du fichier lu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_lecture_a4f36efd35e8a121b45fec815f175d289}\label{class_c_lecture_a4f36efd35e8a121b45fec815f175d289}} 
+const char $\ast$ {\bfseries p\+LECnom\+Fichier}
+\item 
+\mbox{\Hypertarget{class_c_lecture_a2df53e0a45984b5722ad2def16639493}\label{class_c_lecture_a2df53e0a45984b5722ad2def16639493}} 
+unsigned int {\bfseries ui\+LECnb\+Lignes}
+\item 
+\mbox{\Hypertarget{class_c_lecture_a6eda2048b544e756dba59f1230fc8725}\label{class_c_lecture_a6eda2048b544e756dba59f1230fc8725}} 
+unsigned int {\bfseries ui\+LECnb\+Colonnes}
+\item 
+\mbox{\Hypertarget{class_c_lecture_af5f54b972b32256811aed2c7253758e0}\label{class_c_lecture_af5f54b972b32256811aed2c7253758e0}} 
+double $\ast$$\ast$ {\bfseries p\+LECtab\+Valeurs}
+\item 
+\mbox{\Hypertarget{class_c_lecture_a990ea8605cc1186f6606bddfb2dea3fb}\label{class_c_lecture_a990ea8605cc1186f6606bddfb2dea3fb}} 
+char $\ast$ {\bfseries p\+LECnom\+Type}
+\item 
+\mbox{\Hypertarget{class_c_lecture_abd05b2235ff7c6a08d0890f7cb1f1d1e}\label{class_c_lecture_abd05b2235ff7c6a08d0890f7cb1f1d1e}} 
+ifstream {\bfseries fmy\+File}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_lecture_a8ba1d627776a24ab156fd839f0460066}\label{class_c_lecture_a8ba1d627776a24ab156fd839f0460066}} 
+\index{CLecture@{CLecture}!LECGetNbColonnes@{LECGetNbColonnes}}
+\index{LECGetNbColonnes@{LECGetNbColonnes}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetNbColonnes()}{LECGetNbColonnes()}}
+{\footnotesize\ttfamily int CLecture\+::\+LECGet\+Nb\+Colonnes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renvoie le nombre de colonnes qui sera attribue a la matrice 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui\+LECnb\+Lignes le nombre de colonnes a attribuer a la matrice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a6e6097cd337057e72c4407c2d18e2df6}\label{class_c_lecture_a6e6097cd337057e72c4407c2d18e2df6}} 
+\index{CLecture@{CLecture}!LECGetNbLignes@{LECGetNbLignes}}
+\index{LECGetNbLignes@{LECGetNbLignes}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetNbLignes()}{LECGetNbLignes()}}
+{\footnotesize\ttfamily int CLecture\+::\+LECGet\+Nb\+Lignes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renvoie le nombre de lignes qui sera attribue a la matrice 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui\+LECnb\+Lignes le nombre de lignes a attribuer a la matrice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_ad97123abc2abac7a9d5c16cfafc5656c}\label{class_c_lecture_ad97123abc2abac7a9d5c16cfafc5656c}} 
+\index{CLecture@{CLecture}!LECGetnomType@{LECGetnomType}}
+\index{LECGetnomType@{LECGetnomType}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetnomType()}{LECGetnomType()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECGetnom\+Type (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+LECnT }\end{DoxyParamCaption})}
+
+
+
+copie le nom du type des elements de la matrice dans le char$\ast$ en parametre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+LECnT} & chaine dans laquelle on copie le nom du type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a20896ddf7e6ba96a12e9e9be8067bfcf}\label{class_c_lecture_a20896ddf7e6ba96a12e9e9be8067bfcf}} 
+\index{CLecture@{CLecture}!LECGetTabValeurs@{LECGetTabValeurs}}
+\index{LECGetTabValeurs@{LECGetTabValeurs}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetTabValeurs()}{LECGetTabValeurs()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECGet\+Tab\+Valeurs (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{p\+LECtV }\end{DoxyParamCaption})}
+
+
+
+copie le tableau des elements de la matrice dans le tableau en parametre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+LECtV} & tableau dans lequel on copie le tableau des valeurs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_ab20fb1617f7d0e5750e226bd6035cdc0}\label{class_c_lecture_ab20fb1617f7d0e5750e226bd6035cdc0}} 
+\index{CLecture@{CLecture}!LECSetNbColonne@{LECSetNbColonne}}
+\index{LECSetNbColonne@{LECSetNbColonne}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetNbColonne()}{LECSetNbColonne()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Nb\+Colonne (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+definit le nombre de colonnes attribuees a la matrice 
+
+aucun argument, ce setter fonctionne en lisant un fichier texte 
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_acbe1aefb2b14b4ace92ae27172d61c1d}\label{class_c_lecture_acbe1aefb2b14b4ace92ae27172d61c1d}} 
+\index{CLecture@{CLecture}!LECSetNbLigne@{LECSetNbLigne}}
+\index{LECSetNbLigne@{LECSetNbLigne}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetNbLigne()}{LECSetNbLigne()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Nb\+Ligne (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+definit le nombre de lignes attribuees a la matrice 
+
+aucun argument, ce setter fonctionne en lisant un fichier texte 
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a45bc71740468351fdd4102b7b71772de}\label{class_c_lecture_a45bc71740468351fdd4102b7b71772de}} 
+\index{CLecture@{CLecture}!LECSetNomFichier@{LECSetNomFichier}}
+\index{LECSetNomFichier@{LECSetNomFichier}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetNomFichier()}{LECSetNomFichier()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Nom\+Fichier (\begin{DoxyParamCaption}\item[{char $\ast$}]{LECnF }\end{DoxyParamCaption})}
+
+
+
+definit le nom du fichier lu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LECnF} & nom du fichier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_aa0838a681b21b762447ffef0306b2314}\label{class_c_lecture_aa0838a681b21b762447ffef0306b2314}} 
+\index{CLecture@{CLecture}!LECSetNomType@{LECSetNomType}}
+\index{LECSetNomType@{LECSetNomType}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetNomType()}{LECSetNomType()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Nom\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+definit le nom du type des elements de la matrice 
+
+aucun argument, ce setter fonctionne en lisant un fichier texte 
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a3b30e8da1bdc80f29023ffaaea0ae0d2}\label{class_c_lecture_a3b30e8da1bdc80f29023ffaaea0ae0d2}} 
+\index{CLecture@{CLecture}!LECSetTabValeurs@{LECSetTabValeurs}}
+\index{LECSetTabValeurs@{LECSetTabValeurs}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetTabValeurs()}{LECSetTabValeurs()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Tab\+Valeurs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+definit le tableau de valeurs de la matrice 
+
+aucun argument, ce setter fonctionne en lisant un fichier texte 
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPMatrice/CLecture.\+h\item 
+Projet\+CPPMatrice/CLecture.\+cpp\end{DoxyCompactItemize}
