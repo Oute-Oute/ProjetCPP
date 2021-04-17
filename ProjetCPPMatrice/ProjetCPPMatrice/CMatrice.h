@@ -254,8 +254,9 @@ inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 
 	unsigned int uiNbColonnes = MATm1.MATGetNbColonne();
 	unsigned int uiNbLignes = MATm1.MATGetNbLigne();
+	char* snomType = MATGetNomType();
 
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, snomType);
 
 	//initialisation de l'objet exception
 	CException EXCexception = new CException();
@@ -293,8 +294,9 @@ inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 {
 	unsigned int uiNbColonnes = MATm1.MATGetNbColonne();
 	unsigned int uiNbLignes = MATm1.MATGetNbLigne();
+	char* snomType = MATGetNomType();
 
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes);
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, snomType);
 
 	//initialisation de l'objet exception
 	CException EXCexception = new CException();
@@ -329,23 +331,18 @@ inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 {
-	unsigned int uiNbColonnes = MATGetNbColonne();
+	unsigned int uiNbColonnes = MATm1.MATGetNbColonne();
 	unsigned int uiNbLignes = MATm1.MATGetNbLigne();
 	char* sNomType = MATGetNomType();
+
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
 
 	//initialisation de l'objet exception
 	CException EXCexception = new CException();
 	EXCexception.EXCSetOperation('*');
 
 	//INITIALISATION DE LA MATRICE RESULTAT EN MATRICE NULLE
-	double** pitabVal = new double*[uiNbLignes];
-	unsigned int uiboucle;
-
-	for (uiboucle = 0; uiboucle < uiNbLignes; uiboucle++) {
-		pitabVal[uiboucle] = new double[uiNbColonnes];
-	}
-
-	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, sNomType, pitabVal);
+	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
 
 	try {
 		//EXCEPTIONS
@@ -380,20 +377,14 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator*(double & iElem)
 {
-	unsigned int uinbColonnes = MATGetNbColonne();
-	unsigned int uinbLignes = MATGetNbLigne();
+	unsigned int uiNbColonnes = MATGetNbColonne();
+	unsigned int uiNbLignes = MATGetNbLigne();
+	char* sNomType = MATGetNomType();
 
-	double** ptabVal = new double*[uinbLignes];
-	unsigned int uiboucle;
+	CMatrice<nomType> MATMatriceResultat = *new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
 
-	for (uiboucle = 0; uiboucle < uinbLignes; uiboucle++) {
-		ptabVal[uiboucle] = new double[uinbColonnes];
-	}
-
-	CMatrice<nomType> MATMatriceResultat(uinbLignes, uinbColonnes, (char*)"double",ptabVal);
-
-	for (int iLigne = 0; iLigne < uinbLignes; iLigne++) {
-		for (int iColonne = 0; iColonne < uinbColonnes; iColonne++) {
+	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
+		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
 
 			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pMATtabValeurs[iLigne][iColonne] * iElem;
 

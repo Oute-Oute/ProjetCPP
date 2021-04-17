@@ -33,7 +33,7 @@ CLecture::CLecture(char* pnF)
 		}
 
 		else {
-			EXCExceptionLecture.EXCSetMessage("Erreur lors de l'ouverture du fichier")
+			EXCExceptionLecture.EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
 			throw(EXCExceptionLecture);
 		}
 
@@ -100,13 +100,15 @@ void CLecture::LECSetNbLigne()
 	char* cParse;
 	char* context = NULL;
 
+	CException EXCExceptionLecture = *new CException();
+	EXCExceptionLecture.EXCSetOperation('L');
 
 	fmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
 
 	if (cParse == 0) {
-		EXCExceptionLecture.EXCSetMessage("Erreur lors de l'ouverture du fichier");
+		EXCExceptionLecture.EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
 		throw(EXCExceptionLecture);
 	}
 
