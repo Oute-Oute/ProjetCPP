@@ -66,9 +66,12 @@ CLecture::CLecture(CLecture &LEClecture)
 //destructeur de CLecture
 CLecture::~CLecture()
 {
-	//delete pLECnomType;
-	//delete pLECnomFichier;
-	delete pLECtabValeurs;
+/*	if(pLECnomType)
+	delete[] pLECnomType;
+	if (pLECnomFichier)
+	delete[] pLECnomFichier;
+	if (pLECtabValeurs)
+	delete[] pLECtabValeurs;*/
 }
 
 ///@brief renvoie le nombre de lignes qui sera attribue a la matrice
@@ -92,7 +95,7 @@ int CLecture::LECGetNbColonnes()
 ///@return RIEN
 void CLecture::LECGetnomType(char* pLECnT)
 {
-	strcpy_s(pLECnT,sizeof pLECnT,pLECnomType);
+	strcpy_s(pLECnT,sizeof pLECnT,this->pLECnomType);
 }
 
 ///@brief copie le tableau des elements de la matrice dans le tableau en parametre
@@ -122,6 +125,7 @@ void CLecture::LECGetTabValeurs(double** pLECtV)
 ///@return RIEN
 void CLecture::LECSetNbLigne()
 {
+	CException EXCExceptionLecture = *new CException();
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
@@ -223,4 +227,32 @@ void CLecture::LECSetTabValeurs()
 void CLecture::LECSetNomFichier(char * LECnF)
 {
 	pLECnomFichier = LECnF;
+}
+
+void CLecture::LECLireFichier()
+{
+	CException EXCExceptionLecture = *new CException();
+	EXCExceptionLecture.EXCSetOperation('L');
+
+	try {
+		fmyFile.open(pLECnomFichier);
+
+		if (fmyFile) {
+			LECSetNomType();
+			LECSetNbLigne();
+			LECSetNbColonne();
+			LECSetTabValeurs();
+			fmyFile.close();
+		}
+
+		else {
+			EXCExceptionLecture.EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
+			throw(EXCExceptionLecture);
+		}
+
+	}
+
+	catch (CException EXCExceptionLecture) {
+		EXCExceptionLecture.EXCAfficherException();
+	}
 }

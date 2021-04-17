@@ -5,31 +5,40 @@
 #include "CLecture.h"
 using namespace std;
 
-int main(int argv, char** argc)
+int main(int argc, char *argv[])
 {
-
-	CLecture CLEC((char*)"test.txt");
-
-	unsigned int uinbLignes = CLEC.LECGetNbLignes();
-
-	unsigned int uinbColonnes = CLEC.LECGetNbColonnes();
-
 	unsigned int uiboucle;
+	unsigned int uiboucle2;
+	CLecture *pLECtab=new CLecture[argc];
+	CMatrice<double> *pMATtab=new CMatrice<double>[argc];
+	for (uiboucle = 0; uiboucle < argc; uiboucle++)
+	{
+		pLECtab[uiboucle].LECSetNomFichier(argv[uiboucle]);
+		pLECtab[uiboucle].LECLireFichier();
+		unsigned int uinbLignes = pLECtab[uiboucle].LECGetNbLignes();
 
-	double** test = new double*[uinbLignes];
+		unsigned int uinbColonnes = pLECtab[uiboucle].LECGetNbColonnes();
 
-	for (uiboucle = 0; uiboucle < uinbLignes; uiboucle++) {
-		test[uiboucle] = new double[uinbColonnes];
+		double** test = new double*[uinbLignes];
+
+		for (uiboucle2 = 0; uiboucle2 < uinbLignes; uiboucle2++) {
+			test[uiboucle2] = new double[uinbColonnes];
+		}
+		pLECtab[uiboucle].LECGetTabValeurs(test);
+		char* test2 = new char[100];
+		pLECtab[uiboucle].LECGetnomType(test2);
+		pMATtab[uiboucle].MATSetNbLigne(uinbLignes);
+		pMATtab[uiboucle].MATSetNbColonne(uinbColonnes);
+		pMATtab[uiboucle].MATSetNomType(test2);
+		pMATtab[uiboucle].MATSetTabValeur(test);
 	}
-	CLEC.LECGetTabValeurs(test);
-	char* test2 = new char[100];
-	CLEC.LECGetnomType(test2);
-	CMatrice <double> CMAT1(uinbLignes, uinbColonnes, test2, test);
-	CMatrice <double> CMAT2;
-	double multi = 3.0;
-	CMAT2 = CMAT1*multi;
-	CMAT2.MATAfficherMatrice();
-	CMAT1.MATAfficherMatrice();
+
+	CMatrice <double> CMAT3;
+	double multi = 23.0;
+	CMAT3.MATCalculTransposee(pMATtab[0]);
+	pMATtab[0].MATAfficherMatrice();
+	pMATtab[1].MATAfficherMatrice();
+	CMAT3.MATAfficherMatrice();
 
 
 	//point 1
@@ -49,7 +58,7 @@ int main(int argv, char** argc)
 	//point 6
 
 	//point 7
-
+	return 0;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

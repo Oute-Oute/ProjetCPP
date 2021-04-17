@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿  CLecture.cpp
   ProjetCPPMatrice.cpp
 d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(431): warning C4018: '<' : incompatibilité signed/unsigned
@@ -25,3 +26,8 @@ d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cm
   d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.h(429): note: voir la référence à l'instanciation de la fonction modèle 'CMatrice<double>::CMatrice(CMatrice<double> &)' en cours de compilation
   Génération de code en cours...
   ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
+=======
+﻿  ProjetCPPMatrice.cpp
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(14): warning C4018: '<' : incompatibilité signed/unsigned
+  ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
+>>>>>>> Stashed changes

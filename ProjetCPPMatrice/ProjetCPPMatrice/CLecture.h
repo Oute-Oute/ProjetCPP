@@ -92,5 +92,7 @@ public:
 	///@return RIEN
 	void LECSetNomFichier(char* LECnF);
 
+	void LECLireFichier();
+
 };
 #endif
