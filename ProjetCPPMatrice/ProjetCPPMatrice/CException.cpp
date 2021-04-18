@@ -58,7 +58,7 @@ void CException::EXCSetOperation(char cEXCope) {
 /// @param RIEN
 /// @return RIEN
 void CException::EXCAfficherException() {
-	cout << "Opération" << cEXCoperation << ", exception: " << pEXCmessage << endl;
+	cout << "Operation " << cEXCoperation << ", exception: " << pEXCmessage << endl;
 }
 
 

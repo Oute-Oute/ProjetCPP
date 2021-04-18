@@ -2,7 +2,7 @@
 /// @file CMatrice.h
 /// @author BLUMSTEIN Thomas
 /// @coauthor NASSIRI Adam
-/// @date 2021-04-17
+/// @date 2021-04-15
 ///
 
 #ifndef C_MATRICE_H
@@ -119,7 +119,6 @@ public:
 
 };
 
-//constructeur de CMatrice par defaut
 template<class nomType>
 CMatrice<nomType>::CMatrice()
 {
@@ -129,7 +128,6 @@ CMatrice<nomType>::CMatrice()
 	pMATtabValeurs = nullptr;
 }
 
-//constructeur de CMatrice de confort (l'utilisateur renseigne tout les attributs)
 template<class nomType>
 CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType** MATtV)
 {
@@ -152,7 +150,6 @@ CMatrice<nomType>::CMatrice(int MATnbL, int MATnbC, char* MATnT, nomType** MATtV
 	}
 }
 
-//constructeur de CMatrice avec dimensions et nom du type
 template<class nomType>
 CMatrice<nomType>::CMatrice(unsigned int MATnbL, unsigned int MATnbC, char* MATnT)
 {
@@ -169,7 +166,6 @@ CMatrice<nomType>::CMatrice(unsigned int MATnbL, unsigned int MATnbC, char* MATn
 
 }
 
-//constructeur de CMatrice de recopie
 template<class nomType>
 CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 {
@@ -185,7 +181,6 @@ CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 	memcpy(pMATtabValeurs, MATM1.pMATtabValeurs, uiMATnbLignes * uiMATnbColonnes * sizeof(double));
 }
 
-//destructeur de CMatrice
 template<class nomType>
 CMatrice<nomType>::~CMatrice()
 {
@@ -194,36 +189,24 @@ CMatrice<nomType>::~CMatrice()
 	//delete cMATnomType;
 }
 
-///@brief retourne le nombre de lignes que contient la matrice
-///@param RIEN
-///@return uiMATnbLignes le nombre de colonnes de la matrice
 template<class nomType>
 int CMatrice<nomType>::MATGetNbLigne()
 {
 	return uiMATnbLignes;
 }
 
-///@brief retourne le nombre de colonnes que contient la matrice
-///@param RIEN
-///@return uiMATnbColonnes le nombre de colonnes de la matrice
 template<class nomType>
 int CMatrice<nomType>::MATGetNbColonne()
 {
 	return uiMATnbColonnes;
 }
 
-///@brief retourne le nom du type des elements de la matrice
-///@param RIEN
-///@return cMATnomType le nom du type des elements de la matrice
 template<class nomType>
 char * CMatrice<nomType>::MATGetNomType()
 {
 	return cMATnomType;
 }
 
-///@brief copie le tableau des valeurs de la matrice dans le tableau en parametre
-///@param MATtV tabluea a remplir avec les elements de la matrice
-///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATGetTabValeurs(nomType** MATtV)
 {
@@ -234,41 +217,27 @@ void CMatrice<nomType>::MATGetTabValeurs(nomType** MATtV)
 
 			MATtV[uiboucleLignes][uiboucleColonnes] = pMATtabValeurs[uiboucleLignes][uiboucleColonnes];
 		}
-
 	}
-
 }
 
-///@brief definit le nombre de lignes contenues dans la matrice
-///@param MATnbL le nombre de lignes 
-///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetNbLigne(int MATnbL)
 {
 	uiMATnbLignes = MATnbL;
 }
 
-///@brief definit le nombre de colonnes contenues dans la matrice
-///@param MATnbC le nombre de volonnes
-///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetNbColonne(int MATnbC)
 {
 	uiMATnbColonnes = MATnbC;
 }
 
-///@brief definit le nom du type des elements de la matrice
-///@param MATnT char* le nom du type affecte a la matrice
-///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetNomType(char * MATnT)
 {
 	cMATnomType = MATnT;
 }
 
-///@brief definit le tableau de valeurs de la matrice
-///@param MATtV le tableau contenant les valeurs a mettre dans la matrice
-///@return RIEN
 template<class nomType>
 void CMatrice<nomType>::MATSetTabValeur(nomType ** MATtV)
 {
@@ -281,9 +250,7 @@ void CMatrice<nomType>::MATSetTabValeur(nomType ** MATtV)
 	memcpy(pMATtabValeurs, MATtV, uiMATnbLignes * uiMATnbColonnes * sizeof(double));
 }
 
-///@brief affiche le contenu du tableau de valeurs de la matrice
-///@param RIEN
-///@return RIEN
+
 template<class nomType>
 inline void CMatrice<nomType>::MATAfficherMatrice()
 {
@@ -295,35 +262,29 @@ inline void CMatrice<nomType>::MATAfficherMatrice()
 		{
 			cout << pMATtabValeurs[uiboucleLignes][uiboucleColonnes] << "  ";
 		}
+
 		cout << endl;
 	}
+
 }
 
-///@brief renvoie le resultat de l'addition de deux matrices
-///@param MATm1 CMatrice membre droit de l'addition
-///@return MATMatriceResultat matrice resultat de l'addition
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 {
 
 	unsigned int uiNbColonnes = MATm1.MATGetNbColonne();
 	unsigned int uiNbLignes = MATm1.MATGetNbLigne();
-	char* snomType = MATGetNomType();
 
-<<<<<<< Updated upstream
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, snomType);
-=======
 	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, (char*)"double");
->>>>>>> Stashed changes
 
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('+');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('+');
 
 	try {
 		//EXCEPTIONS
 		if (uiNbColonnes != MATGetNbColonne() || uiNbLignes != MATGetNbLigne()) {
-			EXCexception.EXCSetMessage((char*)"Dimensions incompatibles!");
+			EXCexception->EXCSetMessage((char*)"Dimensions incompatibles!");
 			throw (EXCexception);
 		}
 
@@ -342,37 +303,29 @@ inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 	}
 
 	//LEVER LES EXCEPTIONS
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
 }
 
-///@brief renvoie le resultat de la soustraction  de deux matrices
-///@param MATm1 CMatrice membre droit de la soustraction
-///@return MATMatriceResultat matrice resultat de la soustraction 
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 {
 	unsigned int uiNbColonnes = MATm1.MATGetNbColonne();
 	unsigned int uiNbLignes = MATm1.MATGetNbLigne();
-	char* snomType = MATGetNomType();
 
-<<<<<<< Updated upstream
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, snomType);
-=======
 	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, (char*)"double");
->>>>>>> Stashed changes
 
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('-');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('-');
 
 	try {
 		//EXCEPTIONS
 		if (uiNbColonnes != MATGetNbColonne() || uiNbLignes != MATGetNbLigne()) {
-			EXCexception.EXCSetMessage((char*)"Dimensions incompatibles!");
+			EXCexception->EXCSetMessage((char*)"Dimensions incompatibles!");
 			throw (EXCexception);
 		}
 
@@ -390,33 +343,25 @@ inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 
 
 	//LEVER LES EXCEPTIONS
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
 }
 
-///@brief renvoie le resultat de la multiplication actuelle par une autre passée en parametre
-///@param MATm1 CMatrice membre droit de la multiplication
-///@return  MATMatriceResultat la matrice resultat
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 {
-	unsigned int uiNbColonnes = MATm1.MATGetNbColonne();
+	unsigned int uiNbColonnes = MATGetNbColonne();
 	unsigned int uiNbLignes = MATm1.MATGetNbLigne();
 	char* sNomType = MATGetNomType();
 
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
-
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('*');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('*');
 
 	//INITIALISATION DE LA MATRICE RESULTAT EN MATRICE NULLE
-<<<<<<< Updated upstream
-	CMatrice<nomType> MATMatriceResultat = new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
-=======
 	double** pitabVal = new double*[uiNbLignes];
 	unsigned int uiboucle;
 
@@ -427,14 +372,13 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, sNomType);
 
 
->>>>>>> Stashed changes
 
 	try {
 		//EXCEPTIONS
 
 			//dimensions incorrectes
 		if (MATGetNbColonne() != MATm1.MATGetNbLigne()) {
-			EXCexception.EXCSetMessage((char*)"Dimensions incompatibles!");
+			EXCexception->EXCSetMessage((char*)"Dimensions incompatibles!");
 			throw (EXCexception);
 		}
 
@@ -464,31 +408,16 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 
 	}
 
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
 }
 
-///@brief renvoie le resultat de la multiplication terme a terme de la matrice actuelle par un double
-///@param iElem le multiplicateur 
-///@return  MATMatriceResultat la matrice multipliée
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator*(double & dElem)
 {
-<<<<<<< Updated upstream
-	unsigned int uiNbColonnes = MATGetNbColonne();
-	unsigned int uiNbLignes = MATGetNbLigne();
-	char* sNomType = MATGetNomType();
-
-	CMatrice<nomType> MATMatriceResultat = *new CMatrice(uiNbLignes, uiNbColonnes, sNomType);
-
-	for (int iLigne = 0; iLigne < uiNbLignes; iLigne++) {
-		for (int iColonne = 0; iColonne < uiNbColonnes; iColonne++) {
-
-			MATMatriceResultat.pMATtabValeurs[iLigne][iColonne] = pMATtabValeurs[iLigne][iColonne] * iElem;
-=======
 	unsigned int uinbColonnes = MATGetNbColonne();
 	unsigned int uinbLignes = MATGetNbLigne();
 	unsigned int uiLigne;
@@ -499,7 +428,6 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(double & dElem)
 		for (uiColonne = 0; uiColonne < uinbColonnes; uiColonne++) {
 
 			MATMatriceResultat.pMATtabValeurs[uiLigne][uiColonne] = pMATtabValeurs[uiLigne][uiColonne] * dElem;
->>>>>>> Stashed changes
 
 		}
 
@@ -508,9 +436,6 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(double & dElem)
 	return MATMatriceResultat;
 }
 
-///@brief renvoie le resultat de la division terme a terme de la matrice actuelle par un double
-///@param iElem le diviseur 
-///@return  MATMatriceResultat la matrice divisée
 template<class nomType>
 inline CMatrice<nomType> CMatrice<nomType>::operator/(double & dElem)
 {
@@ -521,14 +446,14 @@ inline CMatrice<nomType> CMatrice<nomType>::operator/(double & dElem)
 
 
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('/');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('/');
 
 	try {
 		//EXCEPTIONS
 			//division par 0
 		if (dElem == 0) {
-			EXCexception.EXCSetMessage((char*)"Division par 0!");
+			EXCexception->EXCSetMessage((char*)"Division par 0!");
 			throw (EXCexception);
 		}
 
@@ -546,25 +471,19 @@ inline CMatrice<nomType> CMatrice<nomType>::operator/(double & dElem)
 
 	}
 
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
 }
 
-<<<<<<< Updated upstream
-///@brief renvoie la transposee de la matrice parametre
-///@param MATm1 la matrice 
-///@return MATMatriceResultat la matrice transposee
-=======
 
 
->>>>>>> Stashed changes
 template<class nomType>
 void CMatrice<nomType>::MATCalculTransposee(CMatrice<nomType> MATm1)
 {
-	unsigned int uiMATnbColonnes= MATm1.MATGetNbLigne();
+	unsigned int uiMATnbColonnes = MATm1.MATGetNbLigne();
 	unsigned int uiMATnblignes = MATm1.MATGetNbColonne();
 
 	pMATtabValeurs = new double*[uiMATnblignes];

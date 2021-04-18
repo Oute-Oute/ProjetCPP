@@ -9,11 +9,11 @@ int main(int argc, char *argv[])
 {
 	unsigned int uiboucle;
 	unsigned int uiboucle2;
-	CLecture *pLECtab=new CLecture[argc];
-	CMatrice<double> *pMATtab=new CMatrice<double>[argc];
-	for (uiboucle = 0; uiboucle < argc; uiboucle++)
+	CLecture *pLECtab = new CLecture[argc-1];
+	CMatrice<double> *pMATtab = new CMatrice<double>[argc-1];
+	for (uiboucle = 0; uiboucle < argc-1; uiboucle++)
 	{
-		pLECtab[uiboucle].LECSetNomFichier(argv[uiboucle]);
+		pLECtab[uiboucle].LECSetNomFichier(argv[uiboucle+1]);
 		pLECtab[uiboucle].LECLireFichier();
 		unsigned int uinbLignes = pLECtab[uiboucle].LECGetNbLignes();
 
@@ -25,7 +25,9 @@ int main(int argc, char *argv[])
 			test[uiboucle2] = new double[uinbColonnes];
 		}
 		pLECtab[uiboucle].LECGetTabValeurs(test);
+
 		char* test2 = new char[100];
+
 		pLECtab[uiboucle].LECGetnomType(test2);
 		pMATtab[uiboucle].MATSetNbLigne(uinbLignes);
 		pMATtab[uiboucle].MATSetNbColonne(uinbColonnes);
