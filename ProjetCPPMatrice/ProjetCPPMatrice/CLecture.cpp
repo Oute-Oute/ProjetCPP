@@ -186,11 +186,18 @@ void CLecture::LECSetNomType()
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
 
-	//ADAM REPARE FAUT UNE EXCEPTION
+
+	//initialisation de l'objet exception
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('L');
 
 	if (cParse) {
-		//strcpy_s(pLECnomType, sizeof cParse +1, cParse);
 		strcpy_s(pLECnomType, strlen(cParse)+1, cParse);
+	}
+
+	else {
+		EXCexception->EXCSetMessage((char*)"Erreur de lecture du nom du type ");
+		throw (EXCexception);
 	}
 
 }

@@ -178,6 +178,7 @@ CMatrice<nomType>::CMatrice(CMatrice &MATM1)
 	for (uiboucle = 0; uiboucle < uiMATnbLignes; uiboucle++) {
 		pMATtabValeurs[uiboucle] = new double[uiMATnbColonnes];
 	}
+
 	memcpy(pMATtabValeurs, MATM1.pMATtabValeurs, uiMATnbLignes * uiMATnbColonnes * sizeof(double));
 }
 
@@ -260,7 +261,7 @@ inline void CMatrice<nomType>::MATAfficherMatrice()
 	{
 		for (uiboucleColonnes = 0; uiboucleColonnes < uiMATnbColonnes; uiboucleColonnes++)
 		{
-			cout << pMATtabValeurs[uiboucleLignes][uiboucleColonnes] << "  ";
+			cout << pMATtabValeurs[uiboucleLignes][uiboucleColonnes] << "   ";
 		}
 
 		cout << endl;
@@ -305,6 +306,7 @@ inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 	//LEVER LES EXCEPTIONS
 	catch (CException *EXCexception) {
 		EXCexception->EXCAfficherException();
+		delete EXCexception;
 	}
 
 	return MATMatriceResultat;
@@ -345,6 +347,7 @@ inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 	//LEVER LES EXCEPTIONS
 	catch (CException *EXCexception) {
 		EXCexception->EXCAfficherException();
+		delete EXCexception;
 	}
 
 	return MATMatriceResultat;
@@ -410,6 +413,7 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 
 	catch (CException *EXCexception) {
 		EXCexception->EXCAfficherException();
+		delete EXCexception;
 	}
 
 	return MATMatriceResultat;
@@ -473,6 +477,7 @@ inline CMatrice<nomType> CMatrice<nomType>::operator/(double & dElem)
 
 	catch (CException *EXCexception) {
 		EXCexception->EXCAfficherException();
+		delete EXCexception;
 	}
 
 	return MATMatriceResultat;
