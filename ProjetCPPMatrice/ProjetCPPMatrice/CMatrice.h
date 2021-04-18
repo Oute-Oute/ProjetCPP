@@ -262,8 +262,10 @@ inline void CMatrice<nomType>::MATAfficherMatrice()
 		{
 			cout << pMATtabValeurs[uiboucleLignes][uiboucleColonnes] << "  ";
 		}
+
 		cout << endl;
 	}
+
 }
 
 template<class nomType>
@@ -276,13 +278,13 @@ inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, (char*)"double");
 
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('+');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('+');
 
 	try {
 		//EXCEPTIONS
 		if (uiNbColonnes != MATGetNbColonne() || uiNbLignes != MATGetNbLigne()) {
-			EXCexception.EXCSetMessage((char*)"Dimensions incompatibles!");
+			EXCexception->EXCSetMessage((char*)"Dimensions incompatibles!");
 			throw (EXCexception);
 		}
 
@@ -301,8 +303,8 @@ inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 	}
 
 	//LEVER LES EXCEPTIONS
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
@@ -317,13 +319,13 @@ inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, (char*)"double");
 
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('-');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('-');
 
 	try {
 		//EXCEPTIONS
 		if (uiNbColonnes != MATGetNbColonne() || uiNbLignes != MATGetNbLigne()) {
-			EXCexception.EXCSetMessage((char*)"Dimensions incompatibles!");
+			EXCexception->EXCSetMessage((char*)"Dimensions incompatibles!");
 			throw (EXCexception);
 		}
 
@@ -341,8 +343,8 @@ inline CMatrice<nomType> CMatrice<nomType>::operator-(CMatrice<nomType>& MATm1)
 
 
 	//LEVER LES EXCEPTIONS
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
@@ -356,8 +358,8 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 	char* sNomType = MATGetNomType();
 
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('*');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('*');
 
 	//INITIALISATION DE LA MATRICE RESULTAT EN MATRICE NULLE
 	double** pitabVal = new double*[uiNbLignes];
@@ -376,7 +378,7 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 
 			//dimensions incorrectes
 		if (MATGetNbColonne() != MATm1.MATGetNbLigne()) {
-			EXCexception.EXCSetMessage((char*)"Dimensions incompatibles!");
+			EXCexception->EXCSetMessage((char*)"Dimensions incompatibles!");
 			throw (EXCexception);
 		}
 
@@ -406,8 +408,8 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 
 	}
 
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
@@ -444,14 +446,14 @@ inline CMatrice<nomType> CMatrice<nomType>::operator/(double & dElem)
 
 
 	//initialisation de l'objet exception
-	CException EXCexception = *new CException();
-	EXCexception.EXCSetOperation('/');
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('/');
 
 	try {
 		//EXCEPTIONS
 			//division par 0
 		if (dElem == 0) {
-			EXCexception.EXCSetMessage((char*)"Division par 0!");
+			EXCexception->EXCSetMessage((char*)"Division par 0!");
 			throw (EXCexception);
 		}
 
@@ -469,8 +471,8 @@ inline CMatrice<nomType> CMatrice<nomType>::operator/(double & dElem)
 
 	}
 
-	catch (CException EXCexception) {
-		EXCexception.EXCAfficherException();
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
 	}
 
 	return MATMatriceResultat;
@@ -481,7 +483,7 @@ inline CMatrice<nomType> CMatrice<nomType>::operator/(double & dElem)
 template<class nomType>
 void CMatrice<nomType>::MATCalculTransposee(CMatrice<nomType> MATm1)
 {
-	unsigned int uiMATnbColonnes= MATm1.MATGetNbLigne();
+	unsigned int uiMATnbColonnes = MATm1.MATGetNbLigne();
 	unsigned int uiMATnblignes = MATm1.MATGetNbColonne();
 
 	pMATtabValeurs = new double*[uiMATnblignes];

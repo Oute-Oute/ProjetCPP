@@ -1,4 +1,10 @@
-#include <string>
+///
+/// @file CException.h
+/// @author BLUMSTEIN Thomas
+/// @coauthor NASSIRI Adam
+/// @date 2021-04-17
+///
+#include <cstring>
 #include <iostream>
 #include "CLecture.h"
 #include "CException.h"
@@ -6,6 +12,7 @@
 
 using namespace std;
 
+//constructeur de CLecture par defaut 
 CLecture::CLecture()
 {
 	uiLECnbColonnes = 0;
@@ -15,10 +22,11 @@ CLecture::CLecture()
 	pLECnomFichier = nullptr;
 }
 
+//constructeur de CLecture de confort avec indication du nom du fichier
 CLecture::CLecture(char* pnF)
 {
-	CException EXCExceptionLecture = *new CException();
-	EXCExceptionLecture.EXCSetOperation('L');
+	CException *EXCExceptionLecture = new CException();
+	EXCExceptionLecture->EXCSetOperation('L');
 	
 	try {
 		pLECnomFichier = pnF;
@@ -33,18 +41,19 @@ CLecture::CLecture(char* pnF)
 		}
 
 		else {
-			EXCExceptionLecture.EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
+			EXCExceptionLecture->EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
 			throw(EXCExceptionLecture);
 		}
 
 	}
 
-	catch (CException EXCExceptionLecture) {
-		EXCExceptionLecture.EXCAfficherException();
+	catch (CException *EXCExceptionLecture) {
+		EXCExceptionLecture->EXCAfficherException();
 	}
 
 }
 
+//constructeur de CLecture de recopie
 CLecture::CLecture(CLecture &LEClecture)
 {
 	uiLECnbColonnes = LEClecture.LECGetNbColonnes();
@@ -54,6 +63,7 @@ CLecture::CLecture(CLecture &LEClecture)
 	pLECnomFichier = LEClecture.pLECnomFichier;
 }
 
+//destructeur de CLecture
 CLecture::~CLecture()
 {
 /*	if(pLECnomType)
@@ -64,21 +74,33 @@ CLecture::~CLecture()
 	delete[] pLECtabValeurs;*/
 }
 
+///@brief renvoie le nombre de lignes qui sera attribue a la matrice
+///@param RIEN
+///@return uiLECnbLignes le nombre de lignes a attribuer a la matrice
 int CLecture::LECGetNbLignes()
 {
 	return uiLECnbLignes;
 }
 
+///@brief renvoie le nombre de colonnes qui sera attribue a la matrice
+///@param RIEN
+///@return uiLECnbLignes le nombre de colonnes a attribuer a la matrice
 int CLecture::LECGetNbColonnes()
 {
 	return uiLECnbColonnes;
 }
 
+///@brief copie le nom du type des elements de la matrice dans le char* en parametre
+///@param pLECnT chaine dans laquelle on copie le nom du type
+///@return RIEN
 void CLecture::LECGetnomType(char* pLECnT)
 {
-	strcpy_s(pLECnT,sizeof pLECnT,this->pLECnomType);
+	strcpy_s(pLECnT,strlen(pLECnT)+1,this->pLECnomType);
 }
 
+///@brief copie le tableau des elements de la matrice dans le tableau en parametre
+///@param pLECtV tableau dans lequel on copie le tableau des valeurs
+///@return RIEN
 void CLecture::LECGetTabValeurs(double** pLECtV)
 {
 	unsigned int uiboucleTab;
@@ -97,20 +119,25 @@ void CLecture::LECGetTabValeurs(double** pLECtV)
 
 }
 
+///@brief definit le nombre de lignes attribuees a la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetNbLigne()
 {
-	CException EXCExceptionLecture = *new CException();
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
 
+	CException *EXCExceptionLecture = new CException();
+	EXCExceptionLecture->EXCSetOperation('L');
 
 	fmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
 
 	if (cParse == 0) {
-		EXCExceptionLecture.EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
+		EXCExceptionLecture->EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
 		throw(EXCExceptionLecture);
 	}
 
@@ -120,6 +147,10 @@ void CLecture::LECSetNbLigne()
 	
 }
 
+///@brief definit le nombre de colonnes attribuees a la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetNbColonne()
 {
 	char cLigne[50];
@@ -128,24 +159,46 @@ void CLecture::LECSetNbColonne()
 	fmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
-	uiLECnbColonnes = atoi(cParse);
 
-	//exception
+	CException *EXCExceptionLecture = new CException();
+
+	if (cParse == 0) {
+		EXCExceptionLecture->EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
+		throw(EXCExceptionLecture);
+	}
+
+	else {
+		uiLECnbColonnes = atoi(cParse);
+	}
 }
 
+///@brief definit le nom du type des elements de la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetNomType()
 {
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	pLECnomType = new char[100];
+	pLECnomType = new char[10];
 	fmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
-	strcpy_s(pLECnomType, sizeof(pLECnomType), cParse);
+
+	//ADAM REPARE FAUT UNE EXCEPTION
+
+	if (cParse) {
+		//strcpy_s(pLECnomType, sizeof cParse +1, cParse);
+		strcpy_s(pLECnomType, strlen(cParse)+1, cParse);
+	}
 
 }
 
+///@brief definit  le tableau de valeurs de la matrice 
+///@details aucun argument, ce setter fonctionne en lisant un fichier texte
+///@param RIEN
+///@return RIEN
 void CLecture::LECSetTabValeurs()
 {
 
@@ -175,6 +228,9 @@ void CLecture::LECSetTabValeurs()
 
 }
 
+///@brief definit le nom du fichier lu
+///@param LECnF nom du fichier
+///@return RIEN
 void CLecture::LECSetNomFichier(char * LECnF)
 {
 	pLECnomFichier = LECnF;
@@ -182,13 +238,13 @@ void CLecture::LECSetNomFichier(char * LECnF)
 
 void CLecture::LECLireFichier()
 {
-	CException EXCExceptionLecture = *new CException();
-	EXCExceptionLecture.EXCSetOperation('L');
+	CException *EXCExceptionLecture = new CException();
+	EXCExceptionLecture->EXCSetOperation('L');
 
 	try {
 		fmyFile.open(pLECnomFichier);
 
-		if (fmyFile) {
+		if (fmyFile.is_open()) {
 			LECSetNomType();
 			LECSetNbLigne();
 			LECSetNbColonne();
@@ -197,13 +253,15 @@ void CLecture::LECLireFichier()
 		}
 
 		else {
-			EXCExceptionLecture.EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
+			EXCExceptionLecture->EXCSetMessage((char*)"Erreur lors de l'ouverture du fichier");
 			throw(EXCExceptionLecture);
 		}
 
 	}
 
-	catch (CException EXCExceptionLecture) {
-		EXCExceptionLecture.EXCAfficherException();
+	catch (CException *EXCExceptionLecture) {
+		EXCExceptionLecture->EXCAfficherException();
+		delete EXCExceptionLecture;
 	}
+
 }
