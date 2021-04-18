@@ -7,12 +7,18 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+	if (argc < 2) {
+		std::cout << "Erreur :  aucune matrice fournie en parametre, arret du programme" << std::endl;
+		return -1;
+	}
+
 	unsigned int uiboucle;
 	unsigned int uiboucle2;
 	CLecture *pLECtab=new CLecture[argc];
 	CMatrice<double> *pMATtab=new CMatrice<double>[argc];
 	for (uiboucle = 0; uiboucle < argc; uiboucle++)
 	{
+		argv[uiboucle] = (char*)"test.txt";
 		pLECtab[uiboucle].LECSetNomFichier(argv[uiboucle]);
 		pLECtab[uiboucle].LECLireFichier();
 		unsigned int uinbLignes = pLECtab[uiboucle].LECGetNbLignes();
@@ -37,9 +43,9 @@ int main(int argc, char *argv[])
 	double multi = 23.0;
 	CMAT3.MATCalculTransposee(pMATtab[0]);
 	pMATtab[0].MATAfficherMatrice();
-	pMATtab[1].MATAfficherMatrice();
-	CMAT3.MATAfficherMatrice();
-
+	//pMATtab[1].MATAfficherMatrice();
+	//CMAT3.MATAfficherMatrice();
+	delete []pMATtab;
 
 	//point 1
 
