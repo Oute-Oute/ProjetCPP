@@ -1,3 +1,13 @@
 ﻿  ProjetCPPMatrice.cpp
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(19): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(16): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(47): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(53): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(62): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(71): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(85): warning C4018: '<' : incompatibilité signed/unsigned
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(12): warning C4101: 'uiboucleColonnes' : variable locale non référencée
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(143): warning C4101: 'test' : variable locale non référencée
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(140): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(51): note: voir la référence à l'instanciation de la fonction modèle 'void CMatrice<double>::MATAfficherMatrice(void)' en cours de compilation
+  d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(15): note: voir la référence à l'instanciation de classe modèle 'CMatrice<double>' en cours de compilation
   ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe

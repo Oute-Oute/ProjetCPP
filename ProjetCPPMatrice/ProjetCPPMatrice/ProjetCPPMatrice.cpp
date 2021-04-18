@@ -9,39 +9,86 @@ int main(int argc, char *argv[])
 {
 	unsigned int uiboucle;
 	unsigned int uiboucle2;
-	CLecture *pLECtab = new CLecture[argc-1];
+	unsigned int uiboucleColonnes;
+
+	//Etape 1 : creations matrices
 	CMatrice<double> *pMATtab = new CMatrice<double>[argc-1];
 	for (uiboucle = 0; uiboucle < argc-1; uiboucle++)
 	{
-		pLECtab[uiboucle].LECSetNomFichier(argv[uiboucle+1]);
-		pLECtab[uiboucle].LECLireFichier();
-		unsigned int uinbLignes = pLECtab[uiboucle].LECGetNbLignes();
+		CLecture LEClecture;
+		LEClecture.LECSetNomFichier(argv[uiboucle+1]);
+		LEClecture.LECLireFichier();
+		unsigned int uinbLignes = LEClecture.LECGetNbLignes();
 
-		unsigned int uinbColonnes = pLECtab[uiboucle].LECGetNbColonnes();
+		unsigned int uinbColonnes = LEClecture.LECGetNbColonnes();
 
-		double** test = new double*[uinbLignes];
+		double** pdtableau = new double*[3];
 
-		for (uiboucle2 = 0; uiboucle2 < uinbLignes; uiboucle2++) {
-			test[uiboucle2] = new double[uinbColonnes];
+		for (uiboucle2 = 0; uiboucle2 < 3; uiboucle2++) {
+			pdtableau[uiboucle2] = new double[3];
 		}
-		pLECtab[uiboucle].LECGetTabValeurs(test);
+		LEClecture.LECGetTabValeurs(pdtableau);
 
-		char* test2 = new char[100];
+		char cnomType[100];
 
-		pLECtab[uiboucle].LECGetnomType(test2);
+		LEClecture.LECGetnomType(cnomType);
 		pMATtab[uiboucle].MATSetNbLigne(uinbLignes);
 		pMATtab[uiboucle].MATSetNbColonne(uinbColonnes);
-		pMATtab[uiboucle].MATSetNomType(test2);
-		pMATtab[uiboucle].MATSetTabValeur(test);
+		pMATtab[uiboucle].MATSetNomType(cnomType);
+		pMATtab[uiboucle].MATSetTabValeur(pdtableau);
 	}
 
-	CMatrice <double> CMAT3;
-	double multi = 23.0;
-	CMAT3.MATCalculTransposee(pMATtab[0]);
-	pMATtab[0].MATAfficherMatrice();
-	pMATtab[1].MATAfficherMatrice();
-	CMAT3.MATAfficherMatrice();
+	//Etape 2 : entrée de l'opérateur
+	double coperateur;
+	cout << "Entrez une valeur pour c \nc= ";
+	cin >> coperateur;
+	
+	CMatrice <double> CMATmatriceResultats; //matrices des résultats
+	for (uiboucle = 0; uiboucle < argc - 1; uiboucle++) {
+		//Etape 3 : multiplication des matrices par c
+		cout << "Multiplication des matrices par c : \n";
+		CMATmatriceResultats = pMATtab[uiboucle] * coperateur;
+		CMATmatriceResultats.MATAfficherMatrice();
+	}
+	for (uiboucle = 0; uiboucle < argc - 1; uiboucle++) {
+		//Etape 4 : Division des matrices par c
+		cout << "Division des matrices par c : \n";
+		CMATmatriceResultats = pMATtab[uiboucle] / coperateur;
+		CMATmatriceResultats.MATAfficherMatrice();
 
+	}
+
+	CMATmatriceResultats = pMATtab[0];
+	for (uiboucle = 0; uiboucle < argc - 2; uiboucle++) {
+		//Etape 5 : addition des matrices entre elles
+		cout << " addition des matrices entre elles : \n";
+		CMATmatriceResultats = CMATmatriceResultats + pMATtab[uiboucle + 1];
+		
+	}
+	CMATmatriceResultats.MATAfficherMatrice();
+
+	CMATmatriceResultats = pMATtab[0];
+	for (uiboucle = 0; uiboucle < argc - 2; uiboucle++) {
+		//Etape 6 : résultat de M1-M2+M3-M4+M5-M6+...
+		cout << " resultat de M1-M2+M3-M4+M5-M6+... : \n";
+		if (uiboucle % 2 == 1) {
+			CMATmatriceResultats = CMATmatriceResultats - pMATtab[uiboucle + 1];
+		}
+		else {
+			CMATmatriceResultats = CMATmatriceResultats + pMATtab[uiboucle + 1];
+		}
+		
+	}
+	CMATmatriceResultats.MATAfficherMatrice();
+
+	CMATmatriceResultats = pMATtab[0];
+	for (uiboucle = 0; uiboucle < argc - 2; uiboucle++) {
+		//Etape 7 : multiplication des matrices entres elles
+		cout << " multiplication des matrices entres elles : \n";
+		CMATmatriceResultats = CMATmatriceResultats * pMATtab[uiboucle + 1];
+
+	}
+	CMATmatriceResultats.MATAfficherMatrice();
 
 	//point 1
 

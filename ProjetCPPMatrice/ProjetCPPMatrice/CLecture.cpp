@@ -95,7 +95,7 @@ int CLecture::LECGetNbColonnes()
 ///@return RIEN
 void CLecture::LECGetnomType(char* pLECnT)
 {
-	strcpy_s(pLECnT,strlen(pLECnT)+1,this->pLECnomType);
+	strcpy_s(pLECnT,strlen(this->pLECnomType)+1,this->pLECnomType);
 }
 
 ///@brief copie le tableau des elements de la matrice dans le tableau en parametre
@@ -106,9 +106,9 @@ void CLecture::LECGetTabValeurs(double** pLECtV)
 	unsigned int uiboucleTab;
 	unsigned int uiboucleLignes;
 	unsigned int uiboucleColonnes;
-	for (uiboucleTab = 0; uiboucleTab < uiLECnbLignes; uiboucleTab++) {
+	/*for (uiboucleTab = 0; uiboucleTab < uiLECnbLignes; uiboucleTab++) {
 		pLECtV[uiboucleTab] = new double[uiLECnbColonnes];
-	}
+	}*/
 	for (uiboucleLignes = 0; uiboucleLignes < uiLECnbLignes; uiboucleLignes++) {
 		for (uiboucleColonnes = 0; uiboucleColonnes < uiLECnbColonnes; uiboucleColonnes++) {
 
@@ -186,11 +186,16 @@ void CLecture::LECSetNomType()
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
 
-	//ADAM REPARE FAUT UNE EXCEPTION
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('L');
 
 	if (cParse) {
-		//strcpy_s(pLECnomType, sizeof cParse +1, cParse);
-		strcpy_s(pLECnomType, strlen(cParse)+1, cParse);
+		strcpy_s(pLECnomType, strlen(cParse) + 1, cParse);
+	}
+
+	else {
+		EXCexception->EXCSetMessage((char*)"Erreur de lecture du nom du type ");
+		throw (EXCexception);
 	}
 
 }

@@ -155,6 +155,9 @@
   <ItemGroup>
     <ClCompile Include="CException.cpp" />
     <ClCompile Include="CLecture.cpp" />
+    <ClCompile Include="CMatrice.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ProjetCPPMatrice.cpp" />
   </ItemGroup>
   <ItemGroup>
