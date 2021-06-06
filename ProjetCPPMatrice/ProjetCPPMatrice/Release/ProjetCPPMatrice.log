@@ -1,7 +1,26 @@
 ﻿  CException.cpp
   CLecture.cpp
-  ProjetCPPMatrice.cpp
-  Génération de code en cours
-  All 179 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Fin de la génération du code
-  ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Release\ProjetCPPMatrice.exe
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\clecture.cpp(106): warning C4101: 'uiboucleTab' : variable locale non référencée
+  CMatrice.cpp
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(2): error C2988: impossible de reconnaître la définition/déclaration de modèle
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(2): error C2143: erreur de syntaxe : absence de ';' avant '<'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(2): error C2059: erreur de syntaxe : '<'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(2): error C2039: 'CMatrice' : n'est pas membre de '`global namespace''
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(3): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(3): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(11): error C2988: impossible de reconnaître la définition/déclaration de modèle
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(11): error C2143: erreur de syntaxe : absence de ';' avant '<'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(11): error C2059: erreur de syntaxe : '<'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(11): error C2039: 'CMatrice' : n'est pas membre de '`global namespace''
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(12): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(12): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(33): error C2988: impossible de reconnaître la définition/déclaration de modèle
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(33): error C2143: erreur de syntaxe : absence de ';' avant '<'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(33): error C2059: erreur de syntaxe : '<'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(33): error C2039: 'CMatrice' : n'est pas membre de '`global namespace''
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(34): error C2143: erreur de syntaxe : absence de ';' avant '{'
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(34): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(49): fatal error C1903: impossible de récupérer à partir des erreurs précédentes ; arrêt de la compilation
+  ERREUR INTERNE DU COMPILATEUR dans 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe'
+      Choisissez la commande Support technique du menu ? (Aide) de Visual C++
+    ou ouvrez le fichier d'aide du Support technique pour plus d'informations
