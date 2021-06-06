@@ -90,23 +90,6 @@ int main(int argc, char *argv[])
 	}
 	CMATmatriceResultats.MATAfficherMatrice();
 
-	//point 1
-
-	//point 2
-	/*
-	cout << "entrez la valeur de C" << endl;
-	cin >> C;
-	*/
-
-	//point 3
-
-	//point 4
-
-	//point 5
-
-	//point 6
-
-	//point 7
 	return 0;
 }
 
