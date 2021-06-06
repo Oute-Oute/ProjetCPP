@@ -5,6 +5,9 @@
 /// @date 2021-02-06
 ///
 
+#include <iostream>
+using namespace std;
+
 class CComplexe {
 
 private:
@@ -35,9 +38,9 @@ public:
 	//operations complexe-complexe
 	CComplexe operator + (CComplexe &COMc1);
 	CComplexe operator - (CComplexe &COMc1);
-	CComplexe operator * (CComplexe &COMc1);
+	CComplexe operator * (const CComplexe &COMc1);
 	CComplexe operator / (CComplexe &COMc1);
-	CComplexe operator = (CComplexe &COMc1);
+	CComplexe operator = (const CComplexe &COMc1);
 	bool operator == (CComplexe &COMc1);
 
 	//operations complexe-reel
@@ -47,5 +50,6 @@ public:
 	CComplexe operator / (double dValeur);
 	CComplexe operator = (double dValeur);
 	bool operator == (double dValeur);
+	void afficher(ostream &flux) const;
 
 };

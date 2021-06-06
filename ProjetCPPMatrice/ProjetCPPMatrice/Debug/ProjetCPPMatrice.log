@@ -1,8 +1,2 @@
-﻿  ProjetCPPMatrice.cpp
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(15): warning C4018: '<' : incompatibilité signed/unsigned
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(46): warning C4018: '<' : incompatibilité signed/unsigned
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(52): warning C4018: '<' : incompatibilité signed/unsigned
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(61): warning C4018: '<' : incompatibilité signed/unsigned
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(70): warning C4018: '<' : incompatibilité signed/unsigned
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(84): warning C4018: '<' : incompatibilité signed/unsigned
+﻿  CComplexe.cpp
   ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
