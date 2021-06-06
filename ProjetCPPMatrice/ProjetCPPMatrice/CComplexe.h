@@ -4,51 +4,48 @@
 /// @coauthor BLUMSTEIN Thomas
 /// @date 2021-02-06
 ///
-#include "CImaginaire.h"
 
 class CComplexe {
 
 private:
-	float fCOMpartieReelle;
+	double dCOMpartieReelle;
 
-	CImaginaire fCOMpartieImaginaire;
+	double dCOMpartieImaginaire;
 
 public:
 
 	CComplexe();
 
-	CComplexe(float fValeurReelle, CImaginaire IMAvaleurImaginaire);
+	CComplexe(double dValeurReelle, double dValeurImaginaire);
 
-	CComplexe(float fValeurReelle);
+	CComplexe(double dValeurReelle);
 
-	CComplexe(CImaginaire IMAvaleurImaginaire);
+	CComplexe(CComplexe &COMComplexe);
 
-	CComplexe(CComplexe COMComplexe);
+	double COMgetPartieReelle();
 
-	float COMgetPartieReelle();
+	void COMsetPartieReelle(double dPartieReelle);
 
-	void COMsetPartieReelle(float);
+	double COMgetPartieImaginaire();
 
-	CImaginaire COMgetPartieImaginaire();
+	void COMsetPartieImaginaire(double dPartieImaginaire);
 
-	void COMsetPartieImaginaire(CImaginaire IMAimaginaire);
-
+	CComplexe COMconjugue();
 
 	//operations complexe-complexe
-	CComplexe operator+(CComplexe &COMc1);
-	CComplexe operator-(CComplexe &COMc1);
-	CComplexe operator*(CComplexe &COMc1);
-	CComplexe operator/(CComplexe &COMc1);
+	CComplexe operator + (CComplexe &COMc1);
+	CComplexe operator - (CComplexe &COMc1);
+	CComplexe operator * (CComplexe &COMc1);
+	CComplexe operator / (CComplexe &COMc1);
+	CComplexe operator = (CComplexe &COMc1);
+	bool operator == (CComplexe &COMc1);
 
 	//operations complexe-reel
-	CComplexe operator+(float fValeur);
-	CComplexe operator-(float fValeur);
-	CComplexe operator*(float fValeur);
-	CComplexe operator/(float fValeur);
+	CComplexe operator + (double dValeur);
+	CComplexe operator - (double dValeur);
+	CComplexe operator * (double dValeur);
+	CComplexe operator / (double dValeur);
+	CComplexe operator = (double dValeur);
+	bool operator == (double dValeur);
 
-	//operations complexe-imaginaire
-	CComplexe operator+(CImaginaire &IMAr1);
-	CComplexe operator-(CImaginaire &IMAr1);
-	CComplexe operator*(CImaginaire &IMAr1);
-	CComplexe operator/(CImaginaire &IMAr1);
 };
