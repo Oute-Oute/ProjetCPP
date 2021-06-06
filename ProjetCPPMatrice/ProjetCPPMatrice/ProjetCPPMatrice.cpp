@@ -3,11 +3,21 @@
 
 #include "CMatrice.h"
 #include "CLecture.h"
+#include "CComplexe.h"
 using namespace std;
+
+ostream& operator<<(ostream &flux, CComplexe const& COMcomplexe)
+{
+	COMcomplexe.afficher(flux);
+	return flux;
+}
 
 int main(int argc, char *argv[])
 {
-	unsigned int uiboucle;
+
+	CComplexe z(1, 1);
+	cout << z;
+	/*unsigned int uiboucle;
 	unsigned int uiboucle2;
 
 	//Etape 1 : creations matrices
@@ -89,7 +99,7 @@ int main(int argc, char *argv[])
 	}
 	CMATmatriceResultats.MATAfficherMatrice();
 
-	return 0;
+	return 0;*/
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

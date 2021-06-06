@@ -172,9 +172,3 @@ void CComplexe::afficher(std::ostream & flux) const
 {
 	flux << dCOMpartieReelle<<" + i"<<dCOMpartieImaginaire;
 }
-
-ostream& operator<<(ostream &flux, CComplexe const& COMcomplexe)
-{
-	COMcomplexe.afficher(flux);
-	return flux;
-}
