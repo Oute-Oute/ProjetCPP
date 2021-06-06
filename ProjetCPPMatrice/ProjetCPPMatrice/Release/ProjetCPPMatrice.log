@@ -1,4 +1,5 @@
-﻿  CException.cpp
+﻿  CComplexe.cpp
+  CException.cpp
   CLecture.cpp
 d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\clecture.cpp(106): warning C4101: 'uiboucleTab' : variable locale non référencée
   CMatrice.cpp

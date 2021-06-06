@@ -36,7 +36,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CComplexe.cpp" />
     <ClCompile Include="CException.cpp" />
     <ClCompile Include="CLecture.cpp" />
     <ClCompile Include="CMatrice.cpp">
@@ -161,6 +162,7 @@
     <ClCompile Include="ProjetCPPMatrice.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CComplexe.h" />
     <ClInclude Include="CException.h" />
     <ClInclude Include="CLecture.h" />
     <ClInclude Include="CMatrice.h" />
