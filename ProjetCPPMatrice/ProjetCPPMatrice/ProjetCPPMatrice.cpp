@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
 {
 	unsigned int uiboucle;
 	unsigned int uiboucle2;
-	unsigned int uiboucleColonnes;
 
 	//Etape 1 : creations matrices
 	CMatrice<double> *pMATtab = new CMatrice<double>[argc-1];

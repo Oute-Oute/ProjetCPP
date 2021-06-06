@@ -67,7 +67,6 @@ CMatrice<nomType>::~CMatrice()
 {
 	uiMATnbColonnes = 0;
 	uiMATnbLignes = 0;
-	//delete cMATnomType;
 }
 
 template<class nomType>
@@ -140,12 +139,10 @@ inline void CMatrice<nomType>::MATAfficherMatrice()
 {
 	unsigned int uiboucleLignes;
 	unsigned int uiboucleColonnes;
-	double test;
 	for (uiboucleLignes = 0; uiboucleLignes < uiMATnbLignes; uiboucleLignes++)
 	{
 		for (uiboucleColonnes = 0; uiboucleColonnes < uiMATnbColonnes; uiboucleColonnes++)
 		{
-			//test = pMATtabValeurs[uiboucleLignes][uiboucleColonnes];
 			cout << pMATtabValeurs[uiboucleLignes][uiboucleColonnes] << "  ";
 		}
 
@@ -164,7 +161,7 @@ inline CMatrice<nomType> CMatrice<nomType>::operator+(CMatrice<nomType>& MATm1)
 
 	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, (char*)"double");
 
-	//initialisation de l'objet exception
+	
 	CException *EXCexception = new CException();
 	EXCexception->EXCSetOperation('+');
 
