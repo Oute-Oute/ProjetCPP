@@ -11,6 +11,7 @@
 #include <fstream>
 #include <iostream>
 #include "CException.h"
+#include "CComplexe.h"
 using namespace std;
 
 template <class nomType>

@@ -239,21 +239,21 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 {
 	unsigned int uiNbColonnes = MATGetNbColonne();
 	unsigned int uiNbLignes = MATm1.MATGetNbLigne();
-	char* sNomType = MATGetNomType();
+	char* sNomType = MATm1.MATGetNomType();
 
 	//initialisation de l'objet exception
 	CException *EXCexception = new CException();
 	EXCexception->EXCSetOperation('*');
 
 	//INITIALISATION DE LA MATRICE RESULTAT EN MATRICE NULLE
-	nomType** pitabVal = new nomType*[uiNbLignes];
+	CComplexe** pitabVal = new CComplexe*[uiNbLignes];
 	unsigned int uiboucle;
 
 	for (uiboucle = 0; uiboucle < uiNbLignes; uiboucle++) {
-		pitabVal[uiboucle] = new nomType[uiNbColonnes];
+		pitabVal[uiboucle] = new CComplexe[uiNbColonnes];
 	}
 
-	CMatrice<nomType> MATMatriceResultat(uiNbLignes, uiNbColonnes, sNomType);
+	CMatrice<CComplexe> MATMatriceResultat(uiNbLignes, uiNbColonnes, sNomType);
 
 
 
@@ -283,7 +283,10 @@ inline CMatrice<nomType> CMatrice<nomType>::operator*(CMatrice<nomType>& MATm1)
 		for (uiboucleLignes = 0; uiboucleLignes < uiNbLignes; uiboucleLignes++) {
 			for (uiboucleColonnes = 0; uiboucleColonnes < uiNbColonnes; uiboucleColonnes++) {
 				for (uiboucleElement = 0; uiboucleElement < uiNbColonnes; uiboucleElement++) {
-					MATMatriceResultat.pMATtabValeurs[uiboucleLignes][uiboucleColonnes] += pMATtabValeurs[uiboucleLignes][uiboucleElement] * MATm1.pMATtabValeurs[uiboucleElement][uiboucleColonnes];
+					MATMatriceResultat.pMATtabValeurs[uiboucleLignes][uiboucleColonnes] = 
+						MATMatriceResultat.pMATtabValeurs[uiboucleLignes][uiboucleColonnes] 
+						+ pMATtabValeurs[uiboucleLignes][uiboucleElement] 
+						* MATm1.pMATtabValeurs[uiboucleElement][uiboucleColonnes];
 				}
 
 			}

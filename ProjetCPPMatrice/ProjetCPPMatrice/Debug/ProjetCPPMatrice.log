@@ -1,8 +1,2 @@
 ﻿  ProjetCPPMatrice.cpp
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(43): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(74): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(80): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(89): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(98): warning C4018: '<' : incompatibilité signed/unsigned
-d:\taf\bdd\projet_maison_éco\git\projetcpp\projetcppmatrice\projetcppmatrice\projetcppmatrice.cpp(112): warning C4018: '<' : incompatibilité signed/unsigned
-  ProjetCPPMatrice.vcxproj -> D:\taf\BDD\projet_maison_éco\git\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe
+  ProjetCPPMatrice.vcxproj -> D:\OneDrive - Université de Tours\Polytech\DI\3A\S6\ProjetCPP\ProjetCPPMatrice\Debug\ProjetCPPMatrice.exe

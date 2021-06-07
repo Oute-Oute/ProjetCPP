@@ -36,8 +36,8 @@ public:
 	CComplexe COMconjugue();
 
 	//operations complexe-complexe
-	CComplexe operator + (CComplexe &COMc1);
-	CComplexe operator - (CComplexe &COMc1);
+	CComplexe operator + (const CComplexe &COMc1);
+	CComplexe operator - (const CComplexe &COMc1);
 	CComplexe operator * (const CComplexe &COMc1);
 	CComplexe operator / (CComplexe &COMc1);
 	void operator = (const CComplexe &COMc1);

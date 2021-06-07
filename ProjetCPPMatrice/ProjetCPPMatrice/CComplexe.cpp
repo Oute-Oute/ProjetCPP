@@ -62,7 +62,7 @@ CComplexe  CComplexe::COMconjugue() {
 }
 
 //opérations complexe-complexe
-CComplexe CComplexe::operator + (CComplexe & COMc1)
+CComplexe CComplexe::operator + (const CComplexe & COMc1)
 {
 	CComplexe COMresultat;
 
@@ -72,12 +72,12 @@ CComplexe CComplexe::operator + (CComplexe & COMc1)
 	return COMresultat;
 }
 
-CComplexe CComplexe::operator - (CComplexe & COMc1)
+CComplexe CComplexe::operator - (const CComplexe & COMc1)
 {
 	CComplexe COMresultat;
 
-	COMresultat.COMsetPartieImaginaire(this->COMgetPartieImaginaire() - COMc1.COMgetPartieImaginaire());
-	COMresultat.COMsetPartieReelle(this->COMgetPartieReelle() - COMc1.COMgetPartieReelle());
+	COMresultat.COMsetPartieImaginaire(this->COMgetPartieImaginaire() - COMc1.dCOMpartieImaginaire);
+	COMresultat.COMsetPartieReelle(this->COMgetPartieReelle() - COMc1.dCOMpartieReelle);
 
 	return COMresultat;
 }
@@ -87,7 +87,7 @@ CComplexe CComplexe::operator * (const CComplexe & COMc1)
 	CComplexe COMresultat;
 
 	COMresultat.COMsetPartieReelle(this->COMgetPartieReelle()*COMc1.dCOMpartieReelle - this->COMgetPartieImaginaire()*COMc1.dCOMpartieImaginaire);
-	COMresultat.COMsetPartieImaginaire(this->COMgetPartieReelle()*COMc1.dCOMpartieReelle + this->COMgetPartieImaginaire()*COMc1.dCOMpartieImaginaire);
+	COMresultat.COMsetPartieImaginaire(this->COMgetPartieReelle()*COMc1.dCOMpartieImaginaire + this->COMgetPartieImaginaire()*COMc1.dCOMpartieReelle);
 
 	return COMresultat;
 }
