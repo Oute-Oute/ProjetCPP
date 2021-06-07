@@ -1,11 +1,22 @@
 // ProjetCPPMatrice.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
 
+///
+/// @file CComplexe.cpp
+/// @author BLUMSTEIN Thomas
+/// @coauthor NASSIRI Adam
+/// @date 2021-05-06
+///
+
 #include "CMatrice.h"
 #include "CLecture.h"
 #include "CComplexe.h"
 using namespace std;
 
+///@brief surcharge de l'operateur <<, affiche un CComplexe dans la console
+///@param ostream &flux : flux de sortie correspondant a cout
+///@param CComplexe const& COMcomplexe : le CComplexe a afficher
+///@return ostream & flux : flux de sortie correspondant a cout
 ostream& operator<<(ostream &flux, CComplexe const& COMcomplexe)
 {
 	COMcomplexe.afficher(flux);
@@ -30,6 +41,7 @@ int main(int argc, char *argv[])
 	cout << "z1==1 donne: " << (z1 == 1)  << endl;
 
 	cout <<endl<< "//////tests sur deux complexes: z1 et z2//////" << endl <<endl;
+	z1.COMsetPartieImaginaire(1);
 	CComplexe z2(2, 2);
 	cout << "z1=" << z1 <<endl;
 	cout << "z2=" << z2 << endl;
