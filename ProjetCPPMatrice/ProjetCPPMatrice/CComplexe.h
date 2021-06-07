@@ -48,7 +48,7 @@ public:
 	CComplexe operator - (double dValeur);
 	CComplexe operator * (double dValeur);
 	CComplexe operator / (double dValeur);
-	CComplexe operator = (double dValeur);
+	void operator = (double dValeur);
 	bool operator == (double dValeur);
 	void afficher(ostream &flux) const;
 

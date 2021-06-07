@@ -134,10 +134,10 @@ CComplexe CComplexe::operator+(double dValeur)
 
 CComplexe CComplexe::operator - (double dValeur)
 {
-	CComplexe COMresultat(dValeur, 0);
+	CComplexe COMresultat(0,0);
 
 	COMresultat.dCOMpartieImaginaire = this->COMgetPartieImaginaire();
-	COMresultat.dCOMpartieReelle = COMresultat.dCOMpartieReelle - this->dCOMpartieReelle;
+	COMresultat.dCOMpartieReelle = this->dCOMpartieReelle - dValeur;
 
 	return COMresultat;
 }
@@ -156,10 +156,10 @@ CComplexe CComplexe::operator / (double dValeur)
 	return COMresultat;
 }
 
-CComplexe CComplexe::operator = (double dValeur)
+void CComplexe::operator = (double dValeur)
 {
-	CComplexe COMresultat(dValeur,0);
-	return COMresultat;
+	this->dCOMpartieImaginaire = 0;
+	this->dCOMpartieReelle = dValeur;
 }
 
 bool CComplexe::operator == (double dValeur)
