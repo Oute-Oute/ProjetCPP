@@ -14,27 +14,28 @@ ostream& operator<<(ostream &flux, CComplexe const& COMcomplexe)
 
 int main(int argc, char *argv[])
 {
-
+	cout << "tests sur les complexes z1 et z2" << endl;
 	CComplexe z1(1, 1);
 	CComplexe z2(2, 2);
-
 	cout << "z1=" << z1 <<endl;
 	cout << "z2=" << z2 << endl;
+	cout << "addition de z1 et z2" << endl;
 	cout << "z1+z2=" << z2+z1 << endl;
-	cout << "z1+2=" << z1+2 << endl;
-	cout << "z1-Z2=" << z1 - z2 << endl;
+	cout << "soustraction entre z1 et z2" << endl;
+	cout << "z1-z2=" << z1 - z2 << endl;
 	cout << "z1-1=" << z1 - 1 << endl;
 	cout << "z1*z2=" << z1 *z2 << endl;
 	cout << "z1/z2=" << z1 / z2 << endl;
 	CComplexe z3(z1);
 	cout << "z1==z1 " << (z1 == z1)<<endl;
 	cout << "z1==z2 " << (z1 == z2) << endl;
-	//marche pas...
 	z2 = z1;
 	cout << "z1==z2 " << (z1 == z2) << endl;
 	cout << "z1=" << z1 << endl;
 	cout << "z2=" << z2 << endl;
-	/*unsigned int uiboucle;
+
+
+	unsigned int uiboucle;
 	unsigned int uiboucle2;
 
 	//Etape 1 : creations matrices
@@ -116,7 +117,7 @@ int main(int argc, char *argv[])
 	}
 	CMATmatriceResultats.MATAfficherMatrice();
 
-	return 0;*/
+	return 0;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

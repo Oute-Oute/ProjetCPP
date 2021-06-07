@@ -97,8 +97,6 @@ CComplexe CComplexe::operator / (CComplexe & COMc1)
 	CComplexe COMresultat;
 	CComplexe COMnum(*this);
 	CComplexe COMdeno(COMc1);
-	CComplexe COMconj;
-	COMconj = COMdeno.COMconjugue();
 	double Ddeno;
 	COMnum = COMnum * COMdeno.COMconjugue();
 	COMdeno = COMdeno * COMdeno.COMconjugue();
@@ -111,14 +109,12 @@ CComplexe CComplexe::operator / (CComplexe & COMc1)
 }
 
 
-CComplexe CComplexe::operator = (const CComplexe &COMc1)
+void CComplexe::operator = (const CComplexe &COMc1)
 {
-	CComplexe COMresultat;
 	
-	COMresultat.dCOMpartieImaginaire = COMc1.dCOMpartieImaginaire;
-	COMresultat.dCOMpartieReelle = COMc1.dCOMpartieReelle;
+	this->dCOMpartieImaginaire = COMc1.dCOMpartieImaginaire;
+	this->dCOMpartieReelle = COMc1.dCOMpartieReelle;
 
-	return COMresultat;
 }
 
 bool CComplexe::operator == (CComplexe &COMc1)

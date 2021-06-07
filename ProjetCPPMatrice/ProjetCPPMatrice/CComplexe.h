@@ -40,7 +40,7 @@ public:
 	CComplexe operator - (CComplexe &COMc1);
 	CComplexe operator * (const CComplexe &COMc1);
 	CComplexe operator / (CComplexe &COMc1);
-	CComplexe operator = (const CComplexe &COMc1);
+	void operator = (const CComplexe &COMc1);
 	bool operator == (CComplexe &COMc1);
 
 	//operations complexe-reel
