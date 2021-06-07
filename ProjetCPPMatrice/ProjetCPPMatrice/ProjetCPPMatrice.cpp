@@ -15,8 +15,25 @@ ostream& operator<<(ostream &flux, CComplexe const& COMcomplexe)
 int main(int argc, char *argv[])
 {
 
-	CComplexe z(1, 1);
-	cout << z;
+	CComplexe z1(1, 1);
+	CComplexe z2(2, 2);
+
+	cout << "z1=" << z1 <<endl;
+	cout << "z2=" << z2 << endl;
+	cout << "z1+z2=" << z2+z1 << endl;
+	cout << "z1+2=" << z1+2 << endl;
+	cout << "z1-Z2=" << z1 - z2 << endl;
+	cout << "z1-1=" << z1 - 1 << endl;
+	cout << "z1*z2=" << z1 *z2 << endl;
+	cout << "z1/z2=" << z1 / z2 << endl;
+	CComplexe z3(z1);
+	cout << "z1==z1 " << (z1 == z1)<<endl;
+	cout << "z1==z2 " << (z1 == z2) << endl;
+	//marche pas...
+	z2 = z1;
+	cout << "z1==z2 " << (z1 == z2) << endl;
+	cout << "z1=" << z1 << endl;
+	cout << "z2=" << z2 << endl;
 	/*unsigned int uiboucle;
 	unsigned int uiboucle2;
 

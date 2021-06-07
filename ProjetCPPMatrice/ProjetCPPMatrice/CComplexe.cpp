@@ -66,8 +66,8 @@ CComplexe CComplexe::operator + (CComplexe & COMc1)
 {
 	CComplexe COMresultat;
 
-	COMresultat.COMsetPartieImaginaire(this->COMgetPartieImaginaire()+COMc1.COMgetPartieImaginaire());
-	COMresultat.COMsetPartieReelle(this->COMgetPartieReelle() + COMc1.COMgetPartieReelle());
+	COMresultat.dCOMpartieImaginaire = this->dCOMpartieImaginaire + COMc1.dCOMpartieImaginaire;
+	COMresultat.dCOMpartieReelle = this->dCOMpartieReelle + COMc1.dCOMpartieReelle;
 
 	return COMresultat;
 }
@@ -113,21 +113,24 @@ CComplexe CComplexe::operator / (CComplexe & COMc1)
 
 CComplexe CComplexe::operator = (const CComplexe &COMc1)
 {
-	CComplexe COMresultat(COMc1.dCOMpartieReelle, COMc1.dCOMpartieImaginaire);
+	CComplexe COMresultat;
 	
+	COMresultat.dCOMpartieImaginaire = COMc1.dCOMpartieImaginaire;
+	COMresultat.dCOMpartieReelle = COMc1.dCOMpartieReelle;
+
 	return COMresultat;
 }
 
 bool CComplexe::operator == (CComplexe &COMc1)
 {
-	return(this->COMgetPartieImaginaire()==COMc1.COMgetPartieImaginaire() &&this->COMgetPartieReelle()==COMc1.COMgetPartieReelle());
+	return(this->dCOMpartieImaginaire==COMc1.dCOMpartieImaginaire && this->dCOMpartieReelle==COMc1.dCOMpartieReelle);
 }
 
 CComplexe CComplexe::operator+(double dValeur)
 {
 	CComplexe COMresultat(dValeur,0);
 
-	COMresultat.dCOMpartieImaginaire=this->COMgetPartieImaginaire();
+	COMresultat.dCOMpartieImaginaire = this->COMgetPartieImaginaire();
 	COMresultat.dCOMpartieReelle = COMresultat.dCOMpartieReelle + this->dCOMpartieReelle;
 
 	return COMresultat;
@@ -170,5 +173,9 @@ bool CComplexe::operator == (double dValeur)
 
 void CComplexe::afficher(std::ostream & flux) const
 {
-	flux << dCOMpartieReelle<<" + i"<<dCOMpartieImaginaire;
+	flux << dCOMpartieReelle;
+	if (this->dCOMpartieImaginaire>=0) {
+		cout << "+";
+	}
+	cout<<dCOMpartieImaginaire<<"i";
 }
