@@ -67,10 +67,7 @@ public:
 	CComplexe COMconjugue();
 
 	//operations complexe-complexe
-<<<<<<< HEAD
-	CComplexe operator + (const CComplexe &COMc1);
-	CComplexe operator - (const CComplexe &COMc1);
-=======
+
 	///@brief surcharge de l'operateur +, renvoie le resultat de l'addition entre deux CComplexes
 	///@param const CComplexe & COMc1 : CComplexe a additionnerau CComplexe actuel
 	///@return CComplexe COMresultat : resultat de l'addition
@@ -84,7 +81,6 @@ public:
 	///@brief surcharge de l'operateur *, renvoie le resultat de la multiplication entre deux CComplexes
 	///@param const CComplexe & COMc1
 	///@return CComplexe COMresultat : resultat de la multiplication
->>>>>>> e6e09a12b05681b59c3f8dc5cd26f3a273fe4c86
 	CComplexe operator * (const CComplexe &COMc1);
 
 	///@brief surcharge de l'operateur /, renvoie le resultat de la divison de deux CComplexes

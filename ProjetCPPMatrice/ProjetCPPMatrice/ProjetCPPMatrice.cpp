@@ -34,7 +34,7 @@ int main()
 	cout << "z1/2=" << z1 / 2 << endl;
 	cout << "verification de l'operateur == (1 pour vrai 0 pour faux)" << endl;
 	cout << "z1==1 donne: " << (z1 == 1) << endl;
-	cout << "avant d'executer la suite ona fait z1=1" << endl;
+	cout << "avant d'executer la suite on a fait z1=1" << endl;
 	z1 = 1;
 	cout << "z1= " << z1 << endl;
 	cout << "z1==1 donne: " << (z1 == 1)  << endl;
@@ -48,32 +48,9 @@ int main()
 	cout << "z1+z2=" << z2+z1 << endl << endl;
 	cout << "soustraction :" << endl;
 	cout << "z1-z2=" << z1 - z2 << endl;
-<<<<<<< HEAD
-	cout << "z1-1=" << z1 - 1 << endl << endl;
-	cout << "multiplication :" << endl;
-	cout << "z1*z2=" << z1 *z2 << endl << endl;
-	cout << "division :" << endl;
-	cout << "z1/z2=" << z1 / z2 << endl << endl;
-	cout << "test d'egalite :" << endl;
-	CComplexe z3(z1);
-	cout << "z1==z1 " << (z1 == z1)<<endl;
-	cout << "z1==z2 " << (z1 == z2) << endl << endl;
-=======
-	cout << "multiplication de z1 par z2" << endl;
-	cout << "z1*z2=" << z1 *z2 << endl;
-	cout << "division de z1 par z2" << endl;
-	cout << "z1/z2=" << z1 / z2 << endl;
-	cout << "verification de l'operateur == (1 pour vrai 0 pour faux)" << endl;
-	cout << "z1==z1 donne: " << (z1 == z1) << endl;
-	cout << "z1==z2 donne: " << (z1 == z2) << endl;
-	cout << "avant d'executer ce qui suit, on a fait z2=z1"<<endl;
-	z2 = z1;
-	cout << "z1==z2 donne: " << (z1 == z2) << endl;
-	cout << "z1=" << z1 << endl;
-	cout << "z2=" << z2 << endl;
->>>>>>> e6e09a12b05681b59c3f8dc5cd26f3a273fe4c86
 
-	/*
+
+	
 	unsigned int uiboucle;
 	unsigned int uiboucle2;
 
@@ -143,7 +120,7 @@ int main()
 	cout << " multiplication des matrices entres elles : \n";
 	CMATmatriceResultats = CMATmatriceResultats * pMATtab[1];
 	CMATmatriceResultats.MATAfficherMatrice();
-	*/
+	
 	return 0;
 }
 
