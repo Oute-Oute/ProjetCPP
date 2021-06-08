@@ -10,7 +10,6 @@
 
 #include "CMatrice.h"
 #include "CLecture.h"
-#include "CComplexe.h"
 using namespace std;
 
 ///@brief surcharge de l'operateur <<, affiche un CComplexe dans la console
@@ -23,7 +22,7 @@ ostream& operator<<(ostream &flux, CComplexe const& COMcomplexe)
 	return flux;
 }
 
-int main(int argc, char *argv[])
+int main()
 {
 	cout << endl << "//////tests sur un complexe: z1//////" << endl << endl;
 	CComplexe z1(1, 1);
@@ -35,7 +34,7 @@ int main(int argc, char *argv[])
 	cout << "z1/2=" << z1 / 2 << endl;
 	cout << "verification de l'operateur == (1 pour vrai 0 pour faux)" << endl;
 	cout << "z1==1 donne: " << (z1 == 1) << endl;
-	cout << "avant d'executer la suite ona fait z1=1" << endl;
+	cout << "avant d'executer la suite on a fait z1=1" << endl;
 	z1 = 1;
 	cout << "z1= " << z1 << endl;
 	cout << "z1==1 donne: " << (z1 == 1)  << endl;
@@ -44,68 +43,65 @@ int main(int argc, char *argv[])
 	z1.COMsetPartieImaginaire(1);
 	CComplexe z2(2, 2);
 	cout << "z1=" << z1 <<endl;
-	cout << "z2=" << z2 << endl;
-	cout << "addition de z1 et z2" << endl;
-	cout << "z1+z2=" << z2+z1 << endl;
-	cout << "soustraction entre z1 et z2" << endl;
+	cout << "z2=" << z2 << endl << endl;
+	cout << "addition :" << endl;
+	cout << "z1+z2=" << z2+z1 << endl << endl;
+	cout << "soustraction :" << endl;
 	cout << "z1-z2=" << z1 - z2 << endl;
-	cout << "multiplication de z1 par z2" << endl;
-	cout << "z1*z2=" << z1 *z2 << endl;
-	cout << "division de z1 par z2" << endl;
-	cout << "z1/z2=" << z1 / z2 << endl;
-	cout << "verification de l'operateur == (1 pour vrai 0 pour faux)" << endl;
-	cout << "z1==z1 donne: " << (z1 == z1) << endl;
-	cout << "z1==z2 donne: " << (z1 == z2) << endl;
-	cout << "avant d'executer ce qui suit, on a fait z2=z1"<<endl;
-	z2 = z1;
-	cout << "z1==z2 donne: " << (z1 == z2) << endl;
-	cout << "z1=" << z1 << endl;
-	cout << "z2=" << z2 << endl;
 
-	/*
+
+	
 	unsigned int uiboucle;
 	unsigned int uiboucle2;
 
 	//Etape 1 : creations matrices
-	CMatrice<double> *pMATtab = new CMatrice<double>[argc-1];
-	for (uiboucle = 0; uiboucle < argc-1; uiboucle++)
+	CMatrice<CComplexe> *pMATtab = new CMatrice<CComplexe>[2];
+	for (uiboucle = 0; uiboucle < 2; uiboucle++)
 	{
-		CLecture LEClecture;
-		LEClecture.LECSetNomFichier(argv[uiboucle+1]);
-		LEClecture.LECLireFichier();
-		unsigned int uinbLignes = LEClecture.LECGetNbLignes();
+		unsigned int uinbLignes = 2;
 
-		unsigned int uinbColonnes = LEClecture.LECGetNbColonnes();
+		unsigned int uinbColonnes = 2;
 
-		double** pdtableau = new double*[3];
+		CComplexe** pctableau = new CComplexe*[3];
 
 		for (uiboucle2 = 0; uiboucle2 < 3; uiboucle2++) {
-			pdtableau[uiboucle2] = new double[3];
+			pctableau[uiboucle2] = new CComplexe[3];
 		}
-		LEClecture.LECGetTabValeurs(pdtableau);
 
-		char cnomType[100];
+		unsigned int uiboucleRemplissageLignes;
+		unsigned int uiboucleRemplissageColonnes;
 
-		LEClecture.LECGetnomType(cnomType);
+		for (uiboucleRemplissageLignes = 0; uiboucleRemplissageLignes < 2; uiboucleRemplissageLignes++) {
+			for (uiboucleRemplissageColonnes = 0; uiboucleRemplissageColonnes < 2; uiboucleRemplissageColonnes++) {
+				pctableau[uiboucleRemplissageLignes][uiboucleRemplissageColonnes].COMsetPartieReelle(uiboucleRemplissageLignes+ uiboucle);
+				pctableau[uiboucleRemplissageLignes][uiboucleRemplissageColonnes].COMsetPartieImaginaire(uiboucleRemplissageColonnes+ uiboucle);
+			}
+		}
+
+		char cnomType[100]="CComplexe";
 		pMATtab[uiboucle].MATSetNbLigne(uinbLignes);
 		pMATtab[uiboucle].MATSetNbColonne(uinbColonnes);
 		pMATtab[uiboucle].MATSetNomType(cnomType);
-		pMATtab[uiboucle].MATSetTabValeur(pdtableau);
+		pMATtab[uiboucle].MATSetTabValeur(pctableau);
 	}
+	cout << "Matrice numero 1 :" << endl;
+	pMATtab[0].MATAfficherMatrice();
+	cout << "Matrice numero 2 :" << endl;
+	pMATtab[1].MATAfficherMatrice();
 
 	//Etape 2 : entrée de l'opérateur
 	double coperateur;
 	cout << "Entrez une valeur pour c \nc= ";
 	cin >> coperateur;
 	
-	CMatrice <double> CMATmatriceResultats; //matrices des résultats
-	for (uiboucle = 0; uiboucle < argc - 1; uiboucle++) {
+	CMatrice <CComplexe> CMATmatriceResultats; //matrices des résultats
+	for (uiboucle = 0; uiboucle < 2; uiboucle++) {
 		//Etape 3 : multiplication des matrices par c
 		cout << "Multiplication des matrices par c : \n";
 		CMATmatriceResultats = pMATtab[uiboucle] * coperateur;
 		CMATmatriceResultats.MATAfficherMatrice();
 	}
-	for (uiboucle = 0; uiboucle < argc - 1; uiboucle++) {
+	for (uiboucle = 0; uiboucle < 2; uiboucle++) {
 		//Etape 4 : Division des matrices par c
 		cout << "Division des matrices par c : \n";
 		CMATmatriceResultats = pMATtab[uiboucle] / coperateur;
@@ -113,38 +109,18 @@ int main(int argc, char *argv[])
 
 	}
 
+	//addition entre elles
 	CMATmatriceResultats = pMATtab[0];
-	for (uiboucle = 0; uiboucle < argc - 2; uiboucle++) {
-		//Etape 5 : addition des matrices entre elles
-		cout << " addition des matrices entre elles : \n";
-		CMATmatriceResultats = CMATmatriceResultats + pMATtab[uiboucle + 1];
-		
-	}
+	cout << " addition des matrices entres elles : \n";
+	CMATmatriceResultats = CMATmatriceResultats + pMATtab[1];
 	CMATmatriceResultats.MATAfficherMatrice();
 
+	//multiplication entre elles
 	CMATmatriceResultats = pMATtab[0];
-	for (uiboucle = 0; uiboucle < argc - 2; uiboucle++) {
-		//Etape 6 : résultat de M1-M2+M3-M4+M5-M6+...
-		cout << " resultat de M1-M2+M3-M4+M5-M6+... : \n";
-		if (uiboucle % 2 == 1) {
-			CMATmatriceResultats = CMATmatriceResultats - pMATtab[uiboucle + 1];
-		}
-		else {
-			CMATmatriceResultats = CMATmatriceResultats + pMATtab[uiboucle + 1];
-		}
-		
-	}
+	cout << " multiplication des matrices entres elles : \n";
+	CMATmatriceResultats = CMATmatriceResultats * pMATtab[1];
 	CMATmatriceResultats.MATAfficherMatrice();
-
-	CMATmatriceResultats = pMATtab[0];
-	for (uiboucle = 0; uiboucle < argc - 2; uiboucle++) {
-		//Etape 7 : multiplication des matrices entres elles
-		cout << " multiplication des matrices entres elles : \n";
-		CMATmatriceResultats = CMATmatriceResultats * pMATtab[uiboucle + 1];
-
-	}
-	CMATmatriceResultats.MATAfficherMatrice();
-	*/
+	
 	return 0;
 }
 

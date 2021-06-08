@@ -103,7 +103,7 @@ CComplexe  CComplexe::COMconjugue() {
 ///@brief surcharge de l'operateur +, renvoie le resultat de l'addition entre deux CComplexes
 ///@param const CComplexe & COMc1 : CComplexe a additionnerau CComplexe actuel
 ///@return CComplexe COMresultat : resultat de l'addition
-CComplexe CComplexe::operator + (CComplexe & COMc1)
+CComplexe CComplexe::operator + (const CComplexe & COMc1)
 {
 	CComplexe COMresultat;
 
@@ -113,15 +113,16 @@ CComplexe CComplexe::operator + (CComplexe & COMc1)
 	return COMresultat;
 }
 
+
 ///@brief surcharge de l'operateur -, renvoie le resultat de la soustraction entre deux CComplexes
 ///@param const CComplexe & COMc1 : CComplexe a soustraire au CComplexe actuel
 ///@return CComplexe COMresultat : resultat de la soustraction
-CComplexe CComplexe::operator - (CComplexe & COMc1)
+CComplexe CComplexe::operator - (const CComplexe & COMc1)
 {
 	CComplexe COMresultat;
 
-	COMresultat.COMsetPartieImaginaire(this->COMgetPartieImaginaire() - COMc1.COMgetPartieImaginaire());
-	COMresultat.COMsetPartieReelle(this->COMgetPartieReelle() - COMc1.COMgetPartieReelle());
+	COMresultat.COMsetPartieImaginaire(this->COMgetPartieImaginaire() - COMc1.dCOMpartieImaginaire);
+	COMresultat.COMsetPartieReelle(this->COMgetPartieReelle() - COMc1.dCOMpartieReelle);
 
 	return COMresultat;
 }

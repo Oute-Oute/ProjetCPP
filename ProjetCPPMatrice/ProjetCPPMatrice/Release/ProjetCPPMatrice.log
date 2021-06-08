@@ -1,7 +1,4 @@
 ﻿  CComplexe.cpp
-  CException.cpp
-  CLecture.cpp
-d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\clecture.cpp(106): warning C4101: 'uiboucleTab' : variable locale non référencée
   CMatrice.cpp
 d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(2): error C2988: impossible de reconnaître la définition/déclaration de modèle
 d:\onedrive - université de tours\polytech\di\3a\s6\projetcpp\projetcppmatrice\projetcppmatrice\cmatrice.cpp(2): error C2143: erreur de syntaxe : absence de ';' avant '<'
