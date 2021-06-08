@@ -45,6 +45,16 @@ CComplexe::CComplexe(CComplexe & COMComplexe)
 	this->dCOMpartieReelle = COMComplexe.COMgetPartieReelle();
 }
 
+
+///@brief destructeur de CComplexe
+///@param RIEN
+///@return RIEN
+CComplexe::~CComplexe()
+{
+	dCOMpartieImaginaire = 0;
+	dCOMpartieReelle = 0;
+}
+
 ///@brief getter de l'attribut dCOMpartieReelle
 ///@param RIEN
 ///@return dCOMpartieReelle : partie reelle du CComplexe actuel

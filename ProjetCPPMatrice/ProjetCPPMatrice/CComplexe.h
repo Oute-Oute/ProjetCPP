@@ -41,6 +41,11 @@ public:
 	///@return RIEN
 	CComplexe(CComplexe &COMComplexe);
 
+	///@brief destructeur de CComplexe
+	///@param RIEN
+	///@return RIEN
+	~CComplexe();
+
 	///@brief getter de l'attribut dCOMpartieReelle
 	///@param RIEN
 	///@return dCOMpartieReelle : partie reelle du CComplexe actuel
