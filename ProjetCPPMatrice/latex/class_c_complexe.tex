@@ -1,0 +1,493 @@
+\hypertarget{class_c_complexe}{}\doxysection{CComplexe Class Reference}
+\label{class_c_complexe}\index{CComplexe@{CComplexe}}
+
+
+la classe \mbox{\hyperlink{class_c_complexe}{CComplexe}} sert a representer l\textquotesingle{}ensemble des nombres complexes en ecriture algebrique  
+
+
+
+
+{\ttfamily \#include $<$CComplexe.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_complexe_a49f6efb5107c1baae56f0875c141e6d0}{CComplexe}} ()
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} par defaut \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe_a2fee4c04b2b24b88abc3a86368173f76}{CComplexe}} (double d\+Valeur\+Reelle, double d\+Valeur\+Imaginaire)
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} avec indication des parties reelles et imaginaires \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe_a3286e1e178f4f95c77b846e3b52a05a5}{CComplexe}} (double d\+Valeur\+Reelle)
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} avec indication de la partie reelle (la partie imaginaire est mise a 0) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe_ac774226a523410985890c1b7a2caf6fa}{CComplexe}} (\mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMComplexe)
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} de recopie \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe_a6dfa179b48b5bb2ba5eb55fec7e971b8}{$\sim$\+CComplexe}} ()
+\begin{DoxyCompactList}\small\item\em destructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_complexe_aaaedc4f6319c7b29698bcc155c3c1065}{COMget\+Partie\+Reelle}} ()
+\begin{DoxyCompactList}\small\item\em getter de l\textquotesingle{}attribut d\+COMpartie\+Reelle \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_complexe_a829a0828830bfd8f44d2569d24b895c1}{COMset\+Partie\+Reelle}} (double d\+Partie\+Reelle)
+\begin{DoxyCompactList}\small\item\em setter de l\textquotesingle{}attribut d\+Partie\+Reelle \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_c_complexe_a68504245aa3f4999becf3b3a977ecb79}{COMget\+Partie\+Imaginaire}} ()
+\begin{DoxyCompactList}\small\item\em getter de l\textquotesingle{}attribut d\+COMpartie\+Imaginaire \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_complexe_a9ba9702a39d601e604ba6342348349db}{COMset\+Partie\+Imaginaire}} (double d\+Partie\+Imaginaire)
+\begin{DoxyCompactList}\small\item\em setter de l\textquotesingle{}attribut d\+COMpartie\+Imaginaire \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_a1f5dd664958bd7725ddf7f8aaf6ff9dc}{COMconjugue}} ()
+\begin{DoxyCompactList}\small\item\em cette methode renvoie le conjugue du \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_abcad4678f191a0f5e8edebbd5b8f5fba}{operator+}} (const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMc1)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur +, renvoie le resultat de l\textquotesingle{}addition entre deux CComplexes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_a71e71d1679175028b8ad62bd2b7c420f}{operator-\/}} (const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMc1)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur -\/, renvoie le resultat de la soustraction entre deux CComplexes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_a1c13928d164d5917b40d726916303453}{operator$\ast$}} (const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMc1)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur $\ast$, renvoie le resultat de la multiplication entre deux CComplexes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_ac014e1b9f216e75b9f73712f4c9d62af}{operator/}} (\mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMc1)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur /, renvoie le resultat de la divison de deux CComplexes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_complexe_aaf2e0c00d680714ce295dc4e4d615b64}{operator=}} (const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMc1)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur = \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_complexe_ac6c18b27ff686fe004ed8d38f355274c}{operator==}} (\mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMc1)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur == \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_a33e0edd4be18342f5e77a90480f971e1}{operator+}} (double d\+Valeur)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur +, renvoie le resultat de l\textquotesingle{}addition d\textquotesingle{}un \mbox{\hyperlink{class_c_complexe}{CComplexe}} et d\textquotesingle{}un double \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_ad342e24db87cb353afaec40b4b2116f3}{operator-\/}} (double d\+Valeur)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur -\/, renvoie le resultat de la soustraction entre un \mbox{\hyperlink{class_c_complexe}{CComplexe}} et un double \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_a6d4a7d6efb52a85ea17f3ce3661d400e}{operator$\ast$}} (double d\+Valeur)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur $\ast$, renvoie le resultat de la multiplication entre un \mbox{\hyperlink{class_c_complexe}{CComplexe}} et un double \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} \mbox{\hyperlink{class_c_complexe_af3c72e14940c2fded627c30079cfaad5}{operator/}} (double d\+Valeur)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur /, renvoie le resultat de la division d\textquotesingle{}un \mbox{\hyperlink{class_c_complexe}{CComplexe}} par un double \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_complexe_a682e81a5bcfd929b90b97b51c992a4c7}{operator=}} (double d\+Valeur)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur = \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_complexe_aee4d62185ddb6679973d1ef61d1c22e2}{operator==}} (double d\+Valeur)
+\begin{DoxyCompactList}\small\item\em surcharge de l\textquotesingle{}operateur == \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_complexe_a6a308deefdd0f0b21a21d69752348179}{afficher}} (ostream \&flux) const
+\begin{DoxyCompactList}\small\item\em afficheur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+la classe \mbox{\hyperlink{class_c_complexe}{CComplexe}} sert a representer l\textquotesingle{}ensemble des nombres complexes en ecriture algebrique 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_complexe_a49f6efb5107c1baae56f0875c141e6d0}\label{class_c_complexe_a49f6efb5107c1baae56f0875c141e6d0}} 
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{CComplexe()}{CComplexe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily CComplexe\+::\+CComplexe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} par defaut 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a2fee4c04b2b24b88abc3a86368173f76}\label{class_c_complexe_a2fee4c04b2b24b88abc3a86368173f76}} 
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{CComplexe()}{CComplexe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily CComplexe\+::\+CComplexe (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur\+Reelle,  }\item[{double}]{d\+Valeur\+Imaginaire }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} avec indication des parties reelles et imaginaires 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur\+Reelle \+: valeur de la partie reelle \\
+\hline
+{\em double} & d\+Valeur\+Imaginaire \+: valeur de la partie imaginaire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a3286e1e178f4f95c77b846e3b52a05a5}\label{class_c_complexe_a3286e1e178f4f95c77b846e3b52a05a5}} 
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{CComplexe()}{CComplexe()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily CComplexe\+::\+CComplexe (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur\+Reelle }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} avec indication de la partie reelle (la partie imaginaire est mise a 0) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur\+Reelle \+: valeur de la partie reelle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_ac774226a523410985890c1b7a2caf6fa}\label{class_c_complexe_ac774226a523410985890c1b7a2caf6fa}} 
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\index{CComplexe@{CComplexe}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{CComplexe()}{CComplexe()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily CComplexe\+::\+CComplexe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_complexe}{CComplexe}} \&}]{COMComplexe }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} de recopie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_c_complexe}{CComplexe}}} & \& COMcomplexe \+: \mbox{\hyperlink{class_c_complexe}{CComplexe}} a recopier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a6dfa179b48b5bb2ba5eb55fec7e971b8}\label{class_c_complexe_a6dfa179b48b5bb2ba5eb55fec7e971b8}} 
+\index{CComplexe@{CComplexe}!````~CComplexe@{$\sim$CComplexe}}
+\index{````~CComplexe@{$\sim$CComplexe}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{$\sim$CComplexe()}{~CComplexe()}}
+{\footnotesize\ttfamily CComplexe\+::$\sim$\+CComplexe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructeur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_complexe_a6a308deefdd0f0b21a21d69752348179}\label{class_c_complexe_a6a308deefdd0f0b21a21d69752348179}} 
+\index{CComplexe@{CComplexe}!afficher@{afficher}}
+\index{afficher@{afficher}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void CComplexe\+::afficher (\begin{DoxyParamCaption}\item[{ostream \&}]{flux }\end{DoxyParamCaption}) const}
+
+
+
+afficheur de \mbox{\hyperlink{class_c_complexe}{CComplexe}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::ostream} & \& flux \+: flux de sortie correspondant a cout \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a1f5dd664958bd7725ddf7f8aaf6ff9dc}\label{class_c_complexe_a1f5dd664958bd7725ddf7f8aaf6ff9dc}} 
+\index{CComplexe@{CComplexe}!COMconjugue@{COMconjugue}}
+\index{COMconjugue@{COMconjugue}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{COMconjugue()}{COMconjugue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::\+COMconjugue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+cette methode renvoie le conjugue du \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: conjugue du \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a68504245aa3f4999becf3b3a977ecb79}\label{class_c_complexe_a68504245aa3f4999becf3b3a977ecb79}} 
+\index{CComplexe@{CComplexe}!COMgetPartieImaginaire@{COMgetPartieImaginaire}}
+\index{COMgetPartieImaginaire@{COMgetPartieImaginaire}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{COMgetPartieImaginaire()}{COMgetPartieImaginaire()}}
+{\footnotesize\ttfamily double CComplexe\+::\+COMget\+Partie\+Imaginaire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l\textquotesingle{}attribut d\+COMpartie\+Imaginaire 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this-\/$>$d\+COMpartie\+Imaginaire \+: partie imaginaire du \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_aaaedc4f6319c7b29698bcc155c3c1065}\label{class_c_complexe_aaaedc4f6319c7b29698bcc155c3c1065}} 
+\index{CComplexe@{CComplexe}!COMgetPartieReelle@{COMgetPartieReelle}}
+\index{COMgetPartieReelle@{COMgetPartieReelle}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{COMgetPartieReelle()}{COMgetPartieReelle()}}
+{\footnotesize\ttfamily double CComplexe\+::\+COMget\+Partie\+Reelle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l\textquotesingle{}attribut d\+COMpartie\+Reelle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+d\+COMpartie\+Reelle \+: partie reelle du \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a9ba9702a39d601e604ba6342348349db}\label{class_c_complexe_a9ba9702a39d601e604ba6342348349db}} 
+\index{CComplexe@{CComplexe}!COMsetPartieImaginaire@{COMsetPartieImaginaire}}
+\index{COMsetPartieImaginaire@{COMsetPartieImaginaire}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{COMsetPartieImaginaire()}{COMsetPartieImaginaire()}}
+{\footnotesize\ttfamily void CComplexe\+::\+COMset\+Partie\+Imaginaire (\begin{DoxyParamCaption}\item[{double}]{d\+Partie\+Imaginaire }\end{DoxyParamCaption})}
+
+
+
+setter de l\textquotesingle{}attribut d\+COMpartie\+Imaginaire 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Partie\+Imaginaire \+: nouvelle valeur de la partie imaginaire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a829a0828830bfd8f44d2569d24b895c1}\label{class_c_complexe_a829a0828830bfd8f44d2569d24b895c1}} 
+\index{CComplexe@{CComplexe}!COMsetPartieReelle@{COMsetPartieReelle}}
+\index{COMsetPartieReelle@{COMsetPartieReelle}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{COMsetPartieReelle()}{COMsetPartieReelle()}}
+{\footnotesize\ttfamily void CComplexe\+::\+COMset\+Partie\+Reelle (\begin{DoxyParamCaption}\item[{double}]{d\+Partie\+Reelle }\end{DoxyParamCaption})}
+
+
+
+setter de l\textquotesingle{}attribut d\+Partie\+Reelle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Partie\+Reelle \+: nouvelle valeur de la partie reelle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a1c13928d164d5917b40d726916303453}\label{class_c_complexe_a1c13928d164d5917b40d726916303453}} 
+\index{CComplexe@{CComplexe}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&}]{COMc1 }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur $\ast$, renvoie le resultat de la multiplication entre deux CComplexes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \mbox{\hyperlink{class_c_complexe}{CComplexe}} \& COMc1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de la multiplication 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a6d4a7d6efb52a85ea17f3ce3661d400e}\label{class_c_complexe_a6d4a7d6efb52a85ea17f3ce3661d400e}} 
+\index{CComplexe@{CComplexe}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur $\ast$, renvoie le resultat de la multiplication entre un \mbox{\hyperlink{class_c_complexe}{CComplexe}} et un double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur \+: valeur reelle par laquelle on multiplie le \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuiel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de la multiplication 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_abcad4678f191a0f5e8edebbd5b8f5fba}\label{class_c_complexe_abcad4678f191a0f5e8edebbd5b8f5fba}} 
+\index{CComplexe@{CComplexe}!operator+@{operator+}}
+\index{operator+@{operator+}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&}]{COMc1 }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur +, renvoie le resultat de l\textquotesingle{}addition entre deux CComplexes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \mbox{\hyperlink{class_c_complexe}{CComplexe}} \& COMc1 \+: \mbox{\hyperlink{class_c_complexe}{CComplexe}} a additionnerau \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de l\textquotesingle{}addition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a33e0edd4be18342f5e77a90480f971e1}\label{class_c_complexe_a33e0edd4be18342f5e77a90480f971e1}} 
+\index{CComplexe@{CComplexe}!operator+@{operator+}}
+\index{operator+@{operator+}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator+ (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur +, renvoie le resultat de l\textquotesingle{}addition d\textquotesingle{}un \mbox{\hyperlink{class_c_complexe}{CComplexe}} et d\textquotesingle{}un double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur \+: valeur reelle qu\textquotesingle{}on ajoute au \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de l\textquotesingle{}addition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a71e71d1679175028b8ad62bd2b7c420f}\label{class_c_complexe_a71e71d1679175028b8ad62bd2b7c420f}} 
+\index{CComplexe@{CComplexe}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&}]{COMc1 }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur -\/, renvoie le resultat de la soustraction entre deux CComplexes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \mbox{\hyperlink{class_c_complexe}{CComplexe}} \& COMc1 \+: \mbox{\hyperlink{class_c_complexe}{CComplexe}} a soustraire au \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de la soustraction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_ad342e24db87cb353afaec40b4b2116f3}\label{class_c_complexe_ad342e24db87cb353afaec40b4b2116f3}} 
+\index{CComplexe@{CComplexe}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator-\/ (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur -\/, renvoie le resultat de la soustraction entre un \mbox{\hyperlink{class_c_complexe}{CComplexe}} et un double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur \+: valeur reelle a soustraire au \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de la soustraction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_ac014e1b9f216e75b9f73712f4c9d62af}\label{class_c_complexe_ac014e1b9f216e75b9f73712f4c9d62af}} 
+\index{CComplexe@{CComplexe}!operator/@{operator/}}
+\index{operator/@{operator/}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_complexe}{CComplexe}} \&}]{COMc1 }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur /, renvoie le resultat de la divison de deux CComplexes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_c_complexe}{CComplexe}}} & \& COMc1 \+: diviseur du \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de la division 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_af3c72e14940c2fded627c30079cfaad5}\label{class_c_complexe_af3c72e14940c2fded627c30079cfaad5}} 
+\index{CComplexe@{CComplexe}!operator/@{operator/}}
+\index{operator/@{operator/}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_complexe}{CComplexe}} CComplexe\+::operator/ (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur /, renvoie le resultat de la division d\textquotesingle{}un \mbox{\hyperlink{class_c_complexe}{CComplexe}} par un double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur \+: valeur reelle par laquelle on divise lle \mbox{\hyperlink{class_c_complexe}{CComplexe}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_complexe}{CComplexe}} COMresultat \+: resultat de la division 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_aaf2e0c00d680714ce295dc4e4d615b64}\label{class_c_complexe_aaf2e0c00d680714ce295dc4e4d615b64}} 
+\index{CComplexe@{CComplexe}!operator=@{operator=}}
+\index{operator=@{operator=}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void CComplexe\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&}]{COMc1 }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur = 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \mbox{\hyperlink{class_c_complexe}{CComplexe}} \&COMc1 \+: le \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel prendra cette valeur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_a682e81a5bcfd929b90b97b51c992a4c7}\label{class_c_complexe_a682e81a5bcfd929b90b97b51c992a4c7}} 
+\index{CComplexe@{CComplexe}!operator=@{operator=}}
+\index{operator=@{operator=}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void CComplexe\+::operator= (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur = 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur \+: valeur reelle qu\textquotesingle{}on impose au \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel (la partie imaginaire est mise a 0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_ac6c18b27ff686fe004ed8d38f355274c}\label{class_c_complexe_ac6c18b27ff686fe004ed8d38f355274c}} 
+\index{CComplexe@{CComplexe}!operator==@{operator==}}
+\index{operator==@{operator==}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool CComplexe\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_complexe}{CComplexe}} \&}]{COMc1 }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur == 
+
+surcharge de l\textquotesingle{}operateur
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_c_complexe}{CComplexe}}} & \&COMc1 \+: \mbox{\hyperlink{class_c_complexe}{CComplexe}} avec lequel on compare le \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool resultat \+: 1 si les CComplexes sont egaux, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_complexe_aee4d62185ddb6679973d1ef61d1c22e2}\label{class_c_complexe_aee4d62185ddb6679973d1ef61d1c22e2}} 
+\index{CComplexe@{CComplexe}!operator==@{operator==}}
+\index{operator==@{operator==}!CComplexe@{CComplexe}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool CComplexe\+::operator== (\begin{DoxyParamCaption}\item[{double}]{d\+Valeur }\end{DoxyParamCaption})}
+
+
+
+surcharge de l\textquotesingle{}operateur == 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & d\+Valeur \+: valeur reelle avec laquelle on compare le \mbox{\hyperlink{class_c_complexe}{CComplexe}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool resultat \+: 1 si le \mbox{\hyperlink{class_c_complexe}{CComplexe}} est egal a la valeur reelle, 0 sinon 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_complexe_8h}{CComplexe.\+h}}\item 
+\mbox{\hyperlink{_c_complexe_8cpp}{CComplexe.\+cpp}}\end{DoxyCompactItemize}

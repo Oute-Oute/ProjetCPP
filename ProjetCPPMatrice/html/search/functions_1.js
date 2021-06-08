@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['lecgetnbcolonnes_45',['LECGetNbColonnes',['../class_c_lecture.html#a8ba1d627776a24ab156fd839f0460066',1,'CLecture']]],
-  ['lecgetnblignes_46',['LECGetNbLignes',['../class_c_lecture.html#a6e6097cd337057e72c4407c2d18e2df6',1,'CLecture']]],
-  ['lecgetnomtype_47',['LECGetnomType',['../class_c_lecture.html#ad97123abc2abac7a9d5c16cfafc5656c',1,'CLecture']]],
-  ['lecgettabvaleurs_48',['LECGetTabValeurs',['../class_c_lecture.html#a20896ddf7e6ba96a12e9e9be8067bfcf',1,'CLecture']]],
-  ['lecsetnbcolonne_49',['LECSetNbColonne',['../class_c_lecture.html#ab20fb1617f7d0e5750e226bd6035cdc0',1,'CLecture']]],
-  ['lecsetnbligne_50',['LECSetNbLigne',['../class_c_lecture.html#acbe1aefb2b14b4ace92ae27172d61c1d',1,'CLecture']]],
-  ['lecsetnomfichier_51',['LECSetNomFichier',['../class_c_lecture.html#a45bc71740468351fdd4102b7b71772de',1,'CLecture']]],
-  ['lecsetnomtype_52',['LECSetNomType',['../class_c_lecture.html#aa0838a681b21b762447ffef0306b2314',1,'CLecture']]],
-  ['lecsettabvaleurs_53',['LECSetTabValeurs',['../class_c_lecture.html#a3b30e8da1bdc80f29023ffaaea0ae0d2',1,'CLecture']]]
+  ['ccomplexe_56',['CComplexe',['../class_c_complexe.html#a49f6efb5107c1baae56f0875c141e6d0',1,'CComplexe::CComplexe()'],['../class_c_complexe.html#a2fee4c04b2b24b88abc3a86368173f76',1,'CComplexe::CComplexe(double dValeurReelle, double dValeurImaginaire)'],['../class_c_complexe.html#a3286e1e178f4f95c77b846e3b52a05a5',1,'CComplexe::CComplexe(double dValeurReelle)'],['../class_c_complexe.html#ac774226a523410985890c1b7a2caf6fa',1,'CComplexe::CComplexe(CComplexe &amp;COMComplexe)']]],
+  ['comconjugue_57',['COMconjugue',['../class_c_complexe.html#a1f5dd664958bd7725ddf7f8aaf6ff9dc',1,'CComplexe']]],
+  ['comgetpartieimaginaire_58',['COMgetPartieImaginaire',['../class_c_complexe.html#a68504245aa3f4999becf3b3a977ecb79',1,'CComplexe']]],
+  ['comgetpartiereelle_59',['COMgetPartieReelle',['../class_c_complexe.html#aaaedc4f6319c7b29698bcc155c3c1065',1,'CComplexe']]],
+  ['comsetpartieimaginaire_60',['COMsetPartieImaginaire',['../class_c_complexe.html#a9ba9702a39d601e604ba6342348349db',1,'CComplexe']]],
+  ['comsetpartiereelle_61',['COMsetPartieReelle',['../class_c_complexe.html#a829a0828830bfd8f44d2569d24b895c1',1,'CComplexe']]]
 ];

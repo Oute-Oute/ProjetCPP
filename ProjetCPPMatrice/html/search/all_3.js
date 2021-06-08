@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['mataffichermatrice_20',['MATAfficherMatrice',['../class_c_matrice.html#abd4b15ae4003bddc1448769332caac71',1,'CMatrice']]],
-  ['matcalcultransposee_21',['MATCalculTransposee',['../class_c_matrice.html#addb1ccd63616f83a01c6e88717389ba4',1,'CMatrice::MATCalculTransposee()'],['../class_c_operations_matrice.html#a3ec4eccc2e67e8ed37e738010f3e6344',1,'COperationsMatrice::MATCalculTransposee()']]],
-  ['matgetnbcolonne_22',['MATGetNbColonne',['../class_c_matrice.html#a6cae3f9c22797b18099bdf3a6a96bb59',1,'CMatrice']]],
-  ['matgetnbligne_23',['MATGetNbLigne',['../class_c_matrice.html#a914c784f2ab53a46abec3d980c7a2aba',1,'CMatrice']]],
-  ['matgetnomtype_24',['MATGetNomType',['../class_c_matrice.html#a3abc9037900d82c765c04a0aa7fadbf7',1,'CMatrice']]],
-  ['matgettabvaleurs_25',['MATGetTabValeurs',['../class_c_matrice.html#a0cff29a6eeb89457108592851a94d930',1,'CMatrice']]],
-  ['matsetnbcolonne_26',['MATSetNbColonne',['../class_c_matrice.html#a6bb7066ab33d6fe35e2038c73ec0ebbd',1,'CMatrice']]],
-  ['matsetnbligne_27',['MATSetNbLigne',['../class_c_matrice.html#a3147a19dcc12c0c498bbafae20f0d3c2',1,'CMatrice']]],
-  ['matsetnomtype_28',['MATSetNomType',['../class_c_matrice.html#aaf2787a336a713bbdca90ffc5da5b37e',1,'CMatrice']]],
-  ['matsettabvaleur_29',['MATSetTabValeur',['../class_c_matrice.html#a504621e9a465fd3f66a423ce1f582239',1,'CMatrice']]]
+  ['lecgetnbcolonnes_20',['LECGetNbColonnes',['../class_c_lecture.html#a8ba1d627776a24ab156fd839f0460066',1,'CLecture']]],
+  ['lecgetnblignes_21',['LECGetNbLignes',['../class_c_lecture.html#a6e6097cd337057e72c4407c2d18e2df6',1,'CLecture']]],
+  ['lecgetnomtype_22',['LECGetnomType',['../class_c_lecture.html#ad97123abc2abac7a9d5c16cfafc5656c',1,'CLecture']]],
+  ['lecgettabvaleurs_23',['LECGetTabValeurs',['../class_c_lecture.html#a20896ddf7e6ba96a12e9e9be8067bfcf',1,'CLecture']]],
+  ['lecsetnbcolonne_24',['LECSetNbColonne',['../class_c_lecture.html#ab20fb1617f7d0e5750e226bd6035cdc0',1,'CLecture']]],
+  ['lecsetnbligne_25',['LECSetNbLigne',['../class_c_lecture.html#acbe1aefb2b14b4ace92ae27172d61c1d',1,'CLecture']]],
+  ['lecsetnomfichier_26',['LECSetNomFichier',['../class_c_lecture.html#a45bc71740468351fdd4102b7b71772de',1,'CLecture']]],
+  ['lecsetnomtype_27',['LECSetNomType',['../class_c_lecture.html#aa0838a681b21b762447ffef0306b2314',1,'CLecture']]],
+  ['lecsettabvaleurs_28',['LECSetTabValeurs',['../class_c_lecture.html#a3b30e8da1bdc80f29023ffaaea0ae0d2',1,'CLecture']]]
 ];
