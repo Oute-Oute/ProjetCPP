@@ -36,6 +36,11 @@ int main()
 		cout << "z1-5=" << z1 - 5 << endl;
 		cout << "z1*5=" << z1 * 5 << endl;
 		cout << "z1/2=" << z1 / 5 << endl;
+		cout << "z1+5+5+5=" << z1 + 5 << endl;
+		cout << "z1-5-2-5=" << z1 - 5 - 2 - 5 << endl;
+		cout << "z1*5*5*5=" << z1 * 5 * 5 * 5 << endl;
+		cout << "z1/2/2/2=" << z1 / 2 / 2 / 2 << endl;
+		cout << "z1+2/2*2+2=" << z1 + 2 / 2 * 2 + 2 << endl;
 		cout << "verification de l'operateur == (1 pour vrai 0 pour faux)" << endl;
 		cout << "z1==1 donne: " << (z1 == 1) << endl;
 		cout << "avant d'executer la suite on a fait z1=1" << endl;
