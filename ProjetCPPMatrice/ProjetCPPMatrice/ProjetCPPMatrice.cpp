@@ -147,6 +147,9 @@ int main()
 	CMATmatriceResultats = CMATmatriceResultats * pMATtab[1];
 	CMATmatriceResultats.MATAfficherMatrice();
 	
+
+	system("pause");
+
 	return 0;
 }
 
