@@ -6,6 +6,7 @@
 /// @date 2021-02-06
 ///
 
+#include "CException.h"
 #include "CComplexe.h"
 #include <iostream>
 using namespace std;
@@ -154,6 +155,14 @@ CComplexe CComplexe::operator / (CComplexe & COMc1)
 
 	Ddeno = COMdeno.COMgetPartieReelle();
 
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('/');
+
+	if (Ddeno == 0) {
+		EXCexception->EXCSetMessage((char*)"Division par 0+0i!");
+		throw (EXCexception);
+	}
+
 	COMresultat = COMnum / Ddeno;
 
 	return COMresultat;
@@ -220,6 +229,15 @@ CComplexe CComplexe::operator * (double dValeur)
 ///@return CComplexe COMresultat : resultat de la division
 CComplexe CComplexe::operator / (double dValeur)
 {
+
+	CException *EXCexception = new CException();
+	EXCexception->EXCSetOperation('/');
+
+	if (dValeur == 0) {
+		EXCexception->EXCSetMessage((char*)"Division par 0!");
+		throw (EXCexception);
+	}
+
 	CComplexe COMresultat(this->COMgetPartieReelle()/dValeur, this->COMgetPartieImaginaire()/dValeur);
 
 	return COMresultat;

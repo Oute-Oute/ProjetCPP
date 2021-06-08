@@ -98,7 +98,7 @@ public:
 	///@return RIEN
 	void operator = (const CComplexe &COMc1);
 
-	///@brief surcharge de l'operateur
+	///@brief surcharge de l'operateur ==
 	///@param CComplexe &COMc1 : CComplexe avec lequel on compare le CComplexe actuel
 	///@return bool resultat : 1 si les CComplexes sont egaux, 0 sinon
 	bool operator == (CComplexe &COMc1);

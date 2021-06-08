@@ -24,31 +24,52 @@ ostream& operator<<(ostream &flux, CComplexe const& COMcomplexe)
 
 int main()
 {
-	cout << endl << "//////tests sur un complexe: z1//////" << endl << endl;
 	CComplexe z1(1, 1);
-	cout << "z1=" << z1 << endl;
-	cout << "conjugue de z1=" << z1.COMconjugue() << endl;
-	cout << "z1+5=" << z1+5 << endl;
-	cout << "z1-5=" << z1-5 << endl;
-	cout << "z1*5=" << z1 * 5 << endl;
-	cout << "z1/2=" << z1 / 2 << endl;
-	cout << "verification de l'operateur == (1 pour vrai 0 pour faux)" << endl;
-	cout << "z1==1 donne: " << (z1 == 1) << endl;
-	cout << "avant d'executer la suite on a fait z1=1" << endl;
-	z1 = 1;
-	cout << "z1= " << z1 << endl;
-	cout << "z1==1 donne: " << (z1 == 1)  << endl;
-
-	cout <<endl<< "//////tests sur deux complexes: z1 et z2//////" << endl <<endl;
-	z1.COMsetPartieImaginaire(1);
 	CComplexe z2(2, 2);
-	cout << "z1=" << z1 <<endl;
-	cout << "z2=" << z2 << endl << endl;
-	cout << "addition :" << endl;
-	cout << "z1+z2=" << z2+z1 << endl << endl;
-	cout << "soustraction :" << endl;
-	cout << "z1-z2=" << z1 - z2 << endl;
+	CComplexe z3(0, 0);
+	try {
+		cout << endl << "//////tests sur un complexe: z1//////" << endl << endl;
 
+		cout << "z1=" << z1 << endl;
+		cout << "conjugue de z1=" << z1.COMconjugue() << endl;
+		cout << "z1+5=" << z1 + 5 << endl;
+		cout << "z1-5=" << z1 - 5 << endl;
+		cout << "z1*5=" << z1 * 5 << endl;
+		cout << "z1/2=" << z1 / 5 << endl;
+		cout << "verification de l'operateur == (1 pour vrai 0 pour faux)" << endl;
+		cout << "z1==1 donne: " << (z1 == 1) << endl;
+		cout << "avant d'executer la suite on a fait z1=1" << endl;
+		z1 = 1;
+		cout << "z1= " << z1 << endl;
+		cout << "z1==1 donne: " << (z1 == 1) << endl;
+		cout << "division par un reel nul (devrait lever une exception) :" << endl;
+		cout << "z1/0=" << z1 / 0 << endl;
+	}
+
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
+	}
+
+	try{
+		cout << endl << "//////tests sur deux complexes: z1 et z2//////" << endl << endl;
+		z1.COMsetPartieImaginaire(1);
+		cout << "z1=" << z1 << endl;
+		cout << "z2=" << z2 << endl << endl;
+		cout << "addition :" << endl;
+		cout << "z1+z2=" << z2 + z1 << endl << endl;
+		cout << "soustraction :" << endl;
+		cout << "z1-z2=" << z1 - z2 << endl;
+		cout << "multiplication :" << endl;
+		cout << "z1*z2=" << z2 * z1 << endl << endl;
+		cout << "division :" << endl;
+		cout << "z1/z2=" << z1 / z2 << endl;
+		cout << "division par un complexe nul (devrait lever une exception) :" << endl;
+		cout << "z1/(0+0i)=" << z1 / z3 << endl;
+	}
+
+	catch (CException *EXCexception) {
+		EXCexception->EXCAfficherException();
+	}
 
 	
 	unsigned int uiboucle;
